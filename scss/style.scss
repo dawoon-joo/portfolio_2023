@@ -1,0 +1,452 @@
+@charset 'utf-8';
+@import "reset.scss";
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+
+body {
+    background-color: #fdfdfd;
+
+    #header {
+        width: 100%;
+
+        .inner {
+            width: 1180px;
+            height: 140px;
+            margin: 0 auto;
+            position: relative;
+
+            &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                background: #eee;
+                top: 78px;
+                z-index: -1;
+            }
+
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 3px;
+                background: #999;
+                bottom: 0px;
+                z-index: -1;
+            }
+
+            h1 {
+                position: absolute;
+                left: 0;
+                top: 20px;
+
+                a {
+                    color: #444;
+                }
+            }
+
+            .gnb {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+
+                li {
+                    float: left;
+
+                    a {
+                        position: relative;
+                        display: block;
+                        padding: 24px 30px;
+                        font: 14px/1 'arial';
+                        color: #999;
+
+                        &:hover,
+                        &.on {
+                            color: #475568;
+                            transition: 0.5s;
+                        }
+
+                        &:hover::after,
+                        &.on::after {
+                            padding: 1px 0;
+                            width: 100%;
+                            content: "";
+                            display: block;
+                            position: absolute;
+                            top: 0;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            border-top: 3px solid #475568;
+                            transition: 0.5s;
+                        }
+                    }
+                }
+            }
+
+            .utill {
+                position: absolute;
+                right: 0;
+                top: 30px;
+
+                li {
+                    position: relative;
+                    float: left;
+                    margin-left: 20px;
+
+                    &:first-of-type::after {
+                        content: "";
+                        display: block;
+                        width: 1px;
+                        height: 50%;
+                        background: #ddd;
+                        position: absolute;
+                        top: 60%;
+                        right: -10px;
+                        transform: translateY(-50%);
+                    }
+
+                    a {
+                        font: 12px/1 'arial';
+                        color: #999;
+                    }
+                }
+            }
+
+            input::-webkit-search-decoration,
+            input::-webkit-search-cancel-button,
+            input::-webkit-search-results-button,
+            input::-webkit-search-results-decoration {
+                display: none;
+            }
+
+            .inputWrap {
+                position: absolute;
+                bottom: 17px;
+                right: 100px;
+
+                input {
+                    width: 150px;
+                    height: 30px;
+                    border: 1px solid #eee;
+                }
+
+                button {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 10px;
+                    border: none;
+                    background: none;
+                    color: #aaa;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    #visual {
+        // width: 100%;
+        padding: 50px 0;
+        height: 500px;
+        background: #eee;
+        width: 1180px;
+        margin: 0 auto;
+
+        .inner {
+            width: 1180px;
+            margin: 0 auto;
+        }
+    }
+
+    #services {
+        width: 100%;
+        padding: 50px 0;
+
+        .inner {
+            width: 1180px;
+            margin: 0 auto;
+
+            .boxWrap {
+                width: 100%;
+
+                &::after {
+                    content: "";
+                    display: block;
+                    clear: both;
+                }
+
+                >div {
+                    float: left;
+
+                    &.left_box {
+                        width: 20%;
+                        margin-right: 20px;
+                        border-top: 5px solid #999;
+                        padding: 20px 0px 10px 10px;
+
+                        h1 {
+                            font: bold 18px/1 'arial';
+                            color: #444;
+                        }
+
+                        ul {
+                            width: 100%;
+
+                            li {
+                                border-bottom: 1px solid #bbb;
+
+                                &:hover a,
+                                &:hover i {
+                                    color: #475568;
+                                }
+
+                                a {
+                                    display: block;
+                                    color: #bbb;
+                                    padding: 10px 0;
+                                    font: 14px/1 'arial';
+
+                                    i {
+                                        font-size: 12px;
+                                        margin-right: 10px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &.right_box {
+                        width: calc(80% - 20px);
+
+                        ul {
+                            width: 100%;
+
+                            &::after {
+                                content: "";
+                                display: block;
+                                clear: both;
+                            }
+
+                            li {
+                                float: left;
+                                width: calc(33.333% - 10px);
+                                margin-right: 10px;
+                                border-top: 3px solid #475568;
+                                box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+                                border-radius: 0 0 0 25px;
+
+                                &::after {
+                                    content: "";
+                                    display: block;
+                                    clear: both;
+                                }
+
+                                &:last-of-type {
+                                    margin-right: 0;
+                                }
+
+                                .title {
+                                    width: 100%;
+                                    height: 100px;
+                                    background: #eee;
+                                    padding: 0 25px;
+                                    position: relative;
+
+                                    h1 {
+                                        font: bold 20px/100px 'arial';
+                                        letter-spacing: 1px;
+                                        color: #475568;
+                                    }
+
+                                    span {
+                                        display: block;
+                                        width: 65px;
+                                        height: 65px;
+                                        background: #475568;
+                                        border-radius: 50%;
+                                        position: absolute;
+                                        top: 50%;
+                                        right: 45px;
+                                        transform: translateY(-50%);
+
+                                        i {
+                                            position: absolute;
+                                            top: 50%;
+                                            left: 50%;
+                                            transform: translate(-50%, -50%);
+                                            font-size: 30px;
+                                            color: #fff;
+                                        }
+                                    }
+                                }
+
+                                .txt_box {
+                                    background: #ddd;
+                                    padding: 15px 25px;
+                                    border-radius: 0 0 0 25px;
+
+                                    h2 {
+                                        font: 16px/1.5 'Kdam Thmor Pro';
+                                        font-style: oblique;
+                                        color: #444;
+                                        letter-spacing: 1px;
+                                        margin-bottom: 15px;
+                                    }
+
+                                    p {
+                                        font: 14px/1.7 'arial';
+                                        color: #555;
+                                        margin-bottom: 25px;
+                                    }
+
+                                    a {
+                                        color: #475568;
+                                        font: 14px/1 'arial';
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #projects {
+        width: 100%;
+        padding: 50px 0;
+
+        .inner {
+            width: 1180px;
+            margin: 0 auto;
+
+            .boxWrap {
+                &::after {
+                    content: "";
+                    display: block;
+                    clear: both;
+                }
+
+                width: 100%;
+
+                >div {
+                    float: left;
+
+                    &::after {
+                        content: "";
+                        display: block;
+                        clear: both;
+                    }
+
+                    &.left_box {
+                        width: 20%;
+                        margin-right: 20px;
+                        border-top: 5px solid #999;
+                        padding: 20px 0px 10px 10px;
+
+                        h1 {
+                            font: bold 18px/1 'arial';
+                            color: #444;
+                            position: relative;
+                            margin-bottom: 40px;
+
+                            &::after {
+                                content: "";
+                                display: block;
+                                position: absolute;
+                                top: 30px;
+                                left: 0;
+                                width: 30px;
+                                height: 2px;
+                                background: #ccc;
+                            }
+                        }
+
+                        ul {
+                            li {
+                                &:hover ul {
+                                    display: block;
+                                    transition: 0.5s;
+                                }
+                                &:hover >a::after{
+                                    content: "▼";
+                                }
+
+                                >a {
+                                    font: 12px/1 'arial';
+                                    color: #475568;
+                                    position: relative;
+                                    &::after{
+                                        content: "▲";
+                                        display: block;
+                                        position: absolute;
+                                        top: 2px;
+                                        right: -13px;
+                                        font-size: 10px;
+                                    }
+                                }
+
+                                ul {
+                                    display: none;
+
+                                    li {
+                                        a {
+                                            font: 12px/1 'arial';
+                                            color: #475568;
+                                            &::after{
+                                                display: none;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &.right_box {
+                        width: calc(80% - 20px);
+
+                        ul {
+                            width: 100%;
+
+                            li {
+                                float: left;
+                                width: calc(33.333% - 10px);
+                                margin-right: 10px;
+                                box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+
+                                &::after {
+                                    content: "";
+                                    display: block;
+                                    clear: both;
+                                }
+
+                                &:last-of-type {
+                                    margin-right: 0;
+                                }
+
+                                .bg_box {
+                                    width: 100%;
+                                    height: 200px;
+
+                                    &.bg_box1 {
+                                        background: url(../img/pic1.jpg) no-repeat center/cover;
+                                    }
+
+                                    &.bg_box2 {
+                                        background: url(../img/pic2.jpg) no-repeat center/cover;
+                                    }
+
+                                    &.bg_box3 {
+                                        background: url(../img/pic3.jpg) no-repeat center/cover;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

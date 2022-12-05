@@ -1,0 +1,387 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: #fdfdfd;
+}
+body #header {
+  width: 100%;
+}
+body #header .inner {
+  width: 1180px;
+  height: 140px;
+  margin: 0 auto;
+  position: relative;
+}
+body #header .inner::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #eee;
+  top: 78px;
+  z-index: -1;
+}
+body #header .inner::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: #999;
+  bottom: 0px;
+  z-index: -1;
+}
+body #header .inner h1 {
+  position: absolute;
+  left: 0;
+  top: 20px;
+}
+body #header .inner h1 a {
+  color: #444;
+}
+body #header .inner .gnb {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+body #header .inner .gnb li {
+  float: left;
+}
+body #header .inner .gnb li a {
+  position: relative;
+  display: block;
+  padding: 24px 30px;
+  font: 14px/1 "arial";
+  color: #999;
+}
+body #header .inner .gnb li a:hover, body #header .inner .gnb li a.on {
+  color: #475568;
+  transition: 0.5s;
+}
+body #header .inner .gnb li a:hover::after, body #header .inner .gnb li a.on::after {
+  padding: 1px 0;
+  width: 100%;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-top: 3px solid #475568;
+  transition: 0.5s;
+}
+body #header .inner .utill {
+  position: absolute;
+  right: 0;
+  top: 30px;
+}
+body #header .inner .utill li {
+  position: relative;
+  float: left;
+  margin-left: 20px;
+}
+body #header .inner .utill li:first-of-type::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 50%;
+  background: #ddd;
+  position: absolute;
+  top: 60%;
+  right: -10px;
+  transform: translateY(-50%);
+}
+body #header .inner .utill li a {
+  font: 12px/1 "arial";
+  color: #999;
+}
+body #header .inner input::-webkit-search-decoration,
+body #header .inner input::-webkit-search-cancel-button,
+body #header .inner input::-webkit-search-results-button,
+body #header .inner input::-webkit-search-results-decoration {
+  display: none;
+}
+body #header .inner .inputWrap {
+  position: absolute;
+  bottom: 17px;
+  right: 100px;
+}
+body #header .inner .inputWrap input {
+  width: 150px;
+  height: 30px;
+  border: 1px solid #eee;
+}
+body #header .inner .inputWrap button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  border: none;
+  background: none;
+  color: #aaa;
+  cursor: pointer;
+}
+body #visual {
+  padding: 50px 0;
+  height: 500px;
+  background: #eee;
+  width: 1180px;
+  margin: 0 auto;
+}
+body #visual .inner {
+  width: 1180px;
+  margin: 0 auto;
+}
+body #services {
+  width: 100%;
+  padding: 50px 0;
+}
+body #services .inner {
+  width: 1180px;
+  margin: 0 auto;
+}
+body #services .inner .boxWrap {
+  width: 100%;
+}
+body #services .inner .boxWrap::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+body #services .inner .boxWrap > div {
+  float: left;
+}
+body #services .inner .boxWrap > div.left_box {
+  width: 20%;
+  margin-right: 20px;
+  border-top: 5px solid #999;
+  padding: 20px 0px 10px 10px;
+}
+body #services .inner .boxWrap > div.left_box h1 {
+  font: bold 18px/1 "arial";
+  color: #444;
+}
+body #services .inner .boxWrap > div.left_box ul {
+  width: 100%;
+}
+body #services .inner .boxWrap > div.left_box ul li {
+  border-bottom: 1px solid #bbb;
+}
+body #services .inner .boxWrap > div.left_box ul li:hover a, body #services .inner .boxWrap > div.left_box ul li:hover i {
+  color: #475568;
+}
+body #services .inner .boxWrap > div.left_box ul li a {
+  display: block;
+  color: #bbb;
+  padding: 10px 0;
+  font: 14px/1 "arial";
+}
+body #services .inner .boxWrap > div.left_box ul li a i {
+  font-size: 12px;
+  margin-right: 10px;
+}
+body #services .inner .boxWrap > div.right_box {
+  width: calc(80% - 20px);
+}
+body #services .inner .boxWrap > div.right_box ul {
+  width: 100%;
+}
+body #services .inner .boxWrap > div.right_box ul::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+body #services .inner .boxWrap > div.right_box ul li {
+  float: left;
+  width: calc(33.333% - 10px);
+  margin-right: 10px;
+  border-top: 3px solid #475568;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+  border-radius: 0 0 0 25px;
+}
+body #services .inner .boxWrap > div.right_box ul li::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+body #services .inner .boxWrap > div.right_box ul li:last-of-type {
+  margin-right: 0;
+}
+body #services .inner .boxWrap > div.right_box ul li .title {
+  width: 100%;
+  height: 100px;
+  background: #eee;
+  padding: 0 25px;
+  position: relative;
+}
+body #services .inner .boxWrap > div.right_box ul li .title h1 {
+  font: bold 20px/100px "arial";
+  letter-spacing: 1px;
+  color: #475568;
+}
+body #services .inner .boxWrap > div.right_box ul li .title span {
+  display: block;
+  width: 65px;
+  height: 65px;
+  background: #475568;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  right: 45px;
+  transform: translateY(-50%);
+}
+body #services .inner .boxWrap > div.right_box ul li .title span i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  color: #fff;
+}
+body #services .inner .boxWrap > div.right_box ul li .txt_box {
+  background: #ddd;
+  padding: 15px 25px;
+  border-radius: 0 0 0 25px;
+}
+body #services .inner .boxWrap > div.right_box ul li .txt_box h2 {
+  font: 16px/1.5 "Kdam Thmor Pro";
+  font-style: oblique;
+  color: #444;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+body #services .inner .boxWrap > div.right_box ul li .txt_box p {
+  font: 14px/1.7 "arial";
+  color: #555;
+  margin-bottom: 25px;
+}
+body #services .inner .boxWrap > div.right_box ul li .txt_box a {
+  color: #475568;
+  font: 14px/1 "arial";
+}
+body #projects {
+  width: 100%;
+  padding: 50px 0;
+}
+body #projects .inner {
+  width: 1180px;
+  margin: 0 auto;
+}
+body #projects .inner .boxWrap {
+  width: 100%;
+}
+body #projects .inner .boxWrap::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+body #projects .inner .boxWrap > div {
+  float: left;
+}
+body #projects .inner .boxWrap > div::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+body #projects .inner .boxWrap > div.left_box {
+  width: 20%;
+  margin-right: 20px;
+  border-top: 5px solid #999;
+  padding: 20px 0px 10px 10px;
+}
+body #projects .inner .boxWrap > div.left_box h1 {
+  font: bold 18px/1 "arial";
+  color: #444;
+  position: relative;
+  margin-bottom: 40px;
+}
+body #projects .inner .boxWrap > div.left_box h1::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background: #ccc;
+}
+body #projects .inner .boxWrap > div.left_box ul li:hover ul {
+  display: block;
+  transition: 0.5s;
+}
+body #projects .inner .boxWrap > div.left_box ul li:hover > a::after {
+  content: "▼";
+}
+body #projects .inner .boxWrap > div.left_box ul li > a {
+  font: 12px/1 "arial";
+  color: #475568;
+  position: relative;
+}
+body #projects .inner .boxWrap > div.left_box ul li > a::after {
+  content: "▲";
+  display: block;
+  position: absolute;
+  top: 2px;
+  right: -13px;
+  font-size: 10px;
+}
+body #projects .inner .boxWrap > div.left_box ul li ul {
+  display: none;
+}
+body #projects .inner .boxWrap > div.left_box ul li ul li a {
+  font: 12px/1 "arial";
+  color: #475568;
+}
+body #projects .inner .boxWrap > div.left_box ul li ul li a::after {
+  display: none;
+}
+body #projects .inner .boxWrap > div.right_box {
+  width: calc(80% - 20px);
+}
+body #projects .inner .boxWrap > div.right_box ul {
+  width: 100%;
+}
+body #projects .inner .boxWrap > div.right_box ul li {
+  float: left;
+  width: calc(33.333% - 10px);
+  margin-right: 10px;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+}
+body #projects .inner .boxWrap > div.right_box ul li::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+body #projects .inner .boxWrap > div.right_box ul li:last-of-type {
+  margin-right: 0;
+}
+body #projects .inner .boxWrap > div.right_box ul li .bg_box {
+  width: 100%;
+  height: 200px;
+}
+body #projects .inner .boxWrap > div.right_box ul li .bg_box.bg_box1 {
+  background: url(../img/pic1.jpg) no-repeat center/cover;
+}
+body #projects .inner .boxWrap > div.right_box ul li .bg_box.bg_box2 {
+  background: url(../img/pic2.jpg) no-repeat center/cover;
+}
+body #projects .inner .boxWrap > div.right_box ul li .bg_box.bg_box3 {
+  background: url(../img/pic3.jpg) no-repeat center/cover;
+}
+
+/*# sourceMappingURL=style.css.map */
