@@ -227,93 +227,9 @@ body {
                             top: 0;
                             left: 0;
                             display: none;
-                            &.on{
+
+                            &.on {
                                 display: block;
-                            }
-                            &.box2{
-                                width: 100%;
-                                border-top: 3px solid #475568;
-                                // background: #eee;
-                                li{
-                                    float: left;
-                                    width: 100%;
-                                    border: none;
-                                    padding: 20px 0;
-                                    box-shadow: none;
-                                    border-radius: none;
-
-                                    &:nth-of-type(1){
-                                        width: calc(20% - 10px);
-                                        .pic{
-                                            width: 100%;
-                                            height: 200px;
-                                            background: url(../img/pic4.jpg) no-repeat center/cover; 
-                                            
-                                        }
-                                    }
-                                    &:nth-of-type(2){
-                                        width: calc(55% - 10px);
-                                        h1{
-                                            font:bold 20px/1 'arial';
-                                            color: #475568;
-                                            margin-bottom: 20px;
-                                        }
-                                        p{
-                                            font:14px/1.3 'arial';
-                                            color: #333;
-                                            margin-bottom: 20px;
-                                        }
-                                        a{
-                                            display: block;
-                                            width: 80px;
-                                            height: 30px;
-                                            background: #475568;
-                                            display: flex;
-                                            justify-content: center;
-                                            align-items: center;
-                                            font:12px/1 'arial';
-                                            color: #fff;
-                                            border-radius: 5px;
-                                        }
-                                    }
-                                    &:nth-of-type(3){
-                                        width: calc(25% - 10px);
-                                        h1{
-                                            font:bold 20px/1 'arial';
-                                            color: #475568;
-                                            margin-bottom: 20px;
-                                        }
-
-                                        h2{
-                                            font:bold 18px/1 'arial';
-                                            color: #475568;
-                                            margin-bottom: 20px;
-                                        }
-                                        p{
-                                            font:14px/1.3 'arial';
-                                            color: #333;
-                                            margin-bottom: 20px;
-                                        }
-                                        a{
-                                            display: block;
-                                            width: 80px;
-                                            height: 30px;
-                                            background: #475568;
-                                            display: flex;
-                                            justify-content: center;
-                                            align-items: center;
-                                            font:12px/1 'arial';
-                                            color: #fff;
-                                            border-radius: 5px;
-                                        }
-                                    }
-                                }
-                            }
-                            &.box3{
-                                display: none;
-                            }
-                            &.box4{
-                                display: none;
                             }
 
                             &::after {
@@ -400,6 +316,181 @@ body {
                                     }
                                 }
                             }
+
+                            &.box2 {
+                                width: 100%;
+                                border-top: 3px solid #475568;
+
+                                // background: #eee;
+                                li {
+                                    float: left;
+                                    width: 100%;
+                                    border: none;
+                                    padding: 20px 20px 20px 0;
+                                    box-shadow: none;
+                                    border-radius: none;
+
+                                    &:nth-of-type(1) {
+                                        width: calc(30% - 10px);
+
+                                        .pic {
+                                            width: 100%;
+                                            height: 250px;
+                                            background: url(../img/pic4.jpg) no-repeat center/cover;
+
+                                        }
+                                    }
+
+                                    &:nth-of-type(2) {
+                                        width: calc(40% - 10px);
+
+                                        h1 {
+                                            font: bold 20px/1 'arial';
+                                            color: #475568;
+                                            margin-bottom: 20px;
+                                        }
+
+                                        p {
+                                            font: 14px/1.3 'arial';
+                                            color: #333;
+                                            margin-bottom: 20px;
+                                        }
+
+                                        a {
+                                            display: block;
+                                            width: 80px;
+                                            height: 30px;
+                                            background: #475568;
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                            font: 12px/1 'arial';
+                                            color: #fff;
+                                            border-radius: 5px;
+                                        }
+                                    }
+
+                                    &:nth-of-type(3) {
+                                        width: calc(30% - 10px);
+
+                                        h1 {
+                                            font: bold 20px/1 'arial';
+                                            color: #475568;
+                                            margin-bottom: 20px;
+                                        }
+
+                                        h2 {
+                                            font: bold 18px/1 'arial';
+                                            color: #475568;
+                                            margin-bottom: 20px;
+                                        }
+
+                                        p {
+                                            font: 14px/1.3 'arial';
+                                            color: #333;
+                                            margin-bottom: 20px;
+                                        }
+
+                                        a {
+                                            display: block;
+                                            width: 80px;
+                                            height: 30px;
+                                            background: #475568;
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                            font: 12px/1 'arial';
+                                            color: #fff;
+                                            border-radius: 5px;
+                                        }
+                                    }
+                                }
+                            }
+
+                            &.box3 {
+                                li {
+                                    position: relative;
+                                    border: none;
+                                    box-shadow: none;
+                                    border-radius: none;
+                                    overflow: hidden;
+                                    transition: 0.5s;
+                                    &:hover .pic{
+                                        transform: scale(1.2);
+                                        transition: 0.5s;
+                                    }
+
+                                    .pic {
+                                        width: 100%;
+                                        height: 350px;
+                                        background: url(../img/pic5.jpg) no-repeat center/cover;
+                                    }
+
+                                    &:nth-of-type(2) .pic {
+                                        background: url(../img/pic6.jpg) no-repeat center/cover;
+                                    }
+
+                                    &:nth-of-type(3) .pic {
+                                        background: url(../img/pic7.jpg) no-repeat center/cover;
+                                    }
+
+                                    .txt_box {
+                                        border-radius: 0;
+                                        background: transparent;
+                                        width: 100%;
+                                        position: absolute;
+                                        bottom: 0;
+                                        left: 0;
+                                        text-align: center;
+
+                                        h2{
+                                            font-size: 14px;
+                                            color: #fff;
+                                            letter-spacing: 1px;
+                                            margin-bottom: 5px;
+                                        }
+                                        p{
+                                            font-size: 12px;
+                                            color: #ddd;
+                                        }
+                                    }
+                                }
+
+                            }
+
+                            &.box4 {
+                                    width: 100%;
+                                    li{
+                                        width: 100%;
+                                        .pic{
+                                            width: 100%;
+                                            height: 350px;
+                                            background: url(../img/pic8.jpg) no-repeat center/cover;
+                                            background-attachment: fixed;
+                                        }
+                                        .txt_box {
+                                            border-radius: 0;
+                                            background: transparent;
+                                            width: 100%;
+                                            position: absolute;
+                                            top: 50%;
+                                            left: 50%;
+                                            transform: translate(-50%, -50%);
+                                            text-align: center;
+    
+                                            h2{
+                                                font-size: 28px;
+                                                color: #fff;
+                                                letter-spacing: 1px;
+                                                margin-bottom: 5px;
+                                            }
+                                            p{
+                                                font-size: 20px;
+                                                color: #ddd;
+                                            }
+                                        }
+                                    }
+                            }
                         }
                     }
                 }
@@ -463,7 +554,8 @@ body {
                                     display: block;
                                     transition: 0.5s;
                                 }
-                                &:hover >a::after{
+
+                                &:hover>a::after {
                                     content: "▼";
                                 }
 
@@ -471,7 +563,8 @@ body {
                                     font: 12px/1 'arial';
                                     color: #475568;
                                     position: relative;
-                                    &::after{
+
+                                    &::after {
                                         content: "▲";
                                         display: block;
                                         position: absolute;
@@ -488,7 +581,8 @@ body {
                                         a {
                                             font: 12px/1 'arial';
                                             color: #475568;
-                                            &::after{
+
+                                            &::after {
                                                 display: none;
                                             }
                                         }
