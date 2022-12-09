@@ -7,6 +7,29 @@ $titleColor: #4E6298;
 body {
     background-color: #ececec;
 
+    #skipNavi{
+        position: relative;
+        z-index: 2  ;
+        li{
+            a{
+                display: block;
+                width: 100%;
+                height: 40px;
+                background: darkblue;
+                font: bold 15px/40px '맑은 고딕';
+                color: #fff;
+                text-align: center;
+                position: fixed;
+                top: -40px;
+                left: 0;
+                &.on{
+                    top: 0;
+                }
+            }
+        }
+    }
+    
+
     // background: black;
     #header {
         width: 100%;
@@ -975,13 +998,81 @@ body {
         }
     }
 
-    #footer{
+    #footer {
         width: 100%;
-        padding: 200px 0;
-        background: #303239;
-        .inner{
+        padding: 40px 0;
+        // border-top: 2px solid #999;
+        background: #ddd;
+
+        .inner {
             width: 1180px;
             margin: 0 auto;
+            padding: 10px 0 0;
+            position: relative;
+            
+            &::before {
+                content: "";
+                display: block;
+                width: 100%;
+                height: 2px;
+                background: #ccc;
+                position: absolute;
+                bottom:35%;
+                left: 0;
+            }
+
+            &::after {
+                display: block;
+                content: "";
+                clear: both;
+            }
+
+            h1 {
+                float: left;
+                color: #444;
+                font: bold 20px/1 'arial';
+                margin-bottom: 10px;
+            }
+
+            .top_box {
+                float: right;
+
+                li {
+                    float: left;
+                    margin-left: 20px;
+
+                    a {
+                        font: 14px/1 'arial';
+                        color: #444;
+                    }
+                }
+            }
+
+            address {
+                width: 100%;
+                float: left;
+                font: 14px/1.3 'arial';
+                color: #444;
+                margin-bottom: 80px;
+            }
+
+            p {
+                font: 14px/1 'arial';
+                color: #444;
+                float: left;
+            }
+
+            .bottom_box {
+                float: right;
+
+                li {
+                    float: left;
+                    margin-left: 10px;
+                    i{
+                        font-size: 20px;
+                    }
+                }
+            }
         }
     }
 }
