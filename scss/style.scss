@@ -1,10 +1,12 @@
 @charset 'utf-8';
 @import "reset.scss";
 @import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
-$boxColor:linear-gradient(#4E6298, #303239, #303239);
-$titleColor:#4E6298;
+$boxColor: linear-gradient(#4E6298, #303239, #303239);
+$titleColor: #4E6298;
+
 body {
     background-color: #ececec;
+
     // background: black;
     #header {
         width: 100%;
@@ -155,22 +157,25 @@ body {
             width: 1180px;
             margin: 0 auto;
             position: relative;
-            >.txt_box{
+
+            >.txt_box {
                 width: 100%;
                 position: relative;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 margin-bottom: 40px;
-                >h1{
-                    font:bold 36px/1 'arial';
+
+                >h1 {
+                    font: bold 36px/1 'arial';
                     color: #444;
-    
-                    >span{
+
+                    >span {
                         color: $titleColor;
                     }
                 }
-                >a{
+
+                >a {
                     display: block;
                     width: 200px;
                     height: 50px;
@@ -181,24 +186,25 @@ body {
                     border-radius: 3px;
                 }
             }
-            .content{
+
+            .content {
                 width: 100%;
                 display: flex;
                 justify-content: space-between;
 
-                #slider{
+                #slider {
                     width: calc(60% - 20px);
                     height: 400px;
                     position: relative;
                     overflow: hidden;
-                
-                    ul{
+
+                    ul {
                         position: absolute;
                         top: 0;
                         left: 0;
                         height: 100%;
-                
-                        li{
+
+                        li {
                             height: 100%;
                             font-size: 40px;
                             color: #000;
@@ -212,72 +218,93 @@ body {
                             background-repeat: no-repeat;
                             border-radius: 5px;
                             box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
-                            &[data-index="1"]{
+
+                            &[data-index="1"] {
                                 background-image: url(../img/main1.jpg);
                             }
-                            &[data-index="2"]{
+
+                            &[data-index="2"] {
                                 background-image: url(../img/main2.jpg);
                             }
-                            &[data-index="3"]{
+
+                            &[data-index="3"] {
                                 background-image: url(../img/main3.webp);
                             }
-                            &[data-index="4"]{
+
+                            &[data-index="4"] {
                                 background-image: url(../img/main4.jpg);
                             }
                         }
                     }
                 }
-                .title_box{
+
+                .title_box {
                     position: relative;
                     width: 40%;
                     border-top: 5px solid $titleColor;
                     margin-left: 20px;
-                    .prev{
+
+                    .prev {
                         position: absolute;
                         top: 20px;
                         left: 0;
                         width: 30px;
                         height: 30px;
-                        img{
+
+                        img {
                             width: 100%;
                             height: 100%;
                             object-fit: cover;
                         }
                     }
-                    .next{
+
+                    .next {
                         position: absolute;
                         top: 20px;
                         left: 30px;
                         width: 30px;
                         height: 30px;
-                        img{
+
+                        img {
                             width: 100%;
                             height: 100%;
                             object-fit: cover;
                         }
                     }
-                    .txt_box{
+
+                    .txt_box {
                         width: 100%;
                         padding: 80px 0 0;
-                        h1{
-                            font:bold 24px/1 'arial';
+
+                        h1 {
+                            font: bold 24px/1 'arial';
                             color: #444;
                             margin-bottom: 5px;
                         }
-                        >span{
+
+                        >h2 {
+                            font: 16px/1.5 'Kdam Thmor Pro';
+                            font-style: oblique;
+                            color: #444;
+                            letter-spacing: 1px;
+                            margin-bottom: 15px;
+                        }
+
+                        >span {
                             display: block;
-                            font:14px/1 'arial';
+                            font: 14px/1 'arial';
                             color: #444;
                             opacity: 0.8;
                             margin-bottom: 20px;
 
-                            >span{
+                            >span {
                                 color: $titleColor;
                                 margin-left: 15px;
                                 position: relative;
                                 margin-bottom: 20px;
                                 opacity: 1;
-                                &::after{
+
+                                &::after {
                                     content: "";
                                     display: inline-block;
                                     width: 1px;
@@ -288,14 +315,16 @@ body {
                                 }
                             }
                         }
-                        >p{
-                            font:14px/1.3 'arial';
+
+                        >p {
+                            font: 14px/1.3 'arial';
                             color: #555;
                             margin-bottom: 30px;
                         }
-                        >a{
+
+                        >a {
                             display: block;
-                            font:16px/1 'arial';
+                            font: 16px/1 'arial';
                             color: $titleColor;
                         }
                     }
@@ -560,7 +589,8 @@ body {
                                     border-radius: none;
                                     overflow: hidden;
                                     transition: 0.5s;
-                                    &:hover .pic{
+
+                                    &:hover .pic {
                                         transform: scale(1.2);
                                         transition: 0.5s;
                                     }
@@ -588,13 +618,14 @@ body {
                                         left: 0;
                                         text-align: center;
 
-                                        h2{
+                                        h2 {
                                             font-size: 14px;
                                             color: #fff;
                                             letter-spacing: 1px;
                                             margin-bottom: 5px;
                                         }
-                                        p{
+
+                                        p {
                                             font-size: 12px;
                                             color: #ddd;
                                         }
@@ -604,37 +635,41 @@ body {
                             }
 
                             &.box4 {
+                                width: 100%;
+
+                                li {
                                     width: 100%;
-                                    li{
+
+                                    .pic {
                                         width: 100%;
-                                        .pic{
-                                            width: 100%;
-                                            height: 350px;
-                                            background: url(../img/pic8.jpg) no-repeat center/cover;
-                                            background-attachment: fixed;
+                                        height: 350px;
+                                        background: url(../img/pic8.jpg) no-repeat center/cover;
+                                        background-attachment: fixed;
+                                    }
+
+                                    .txt_box {
+                                        border-radius: 0;
+                                        background: transparent;
+                                        width: 100%;
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 50%;
+                                        transform: translate(-50%, -50%);
+                                        text-align: center;
+
+                                        h2 {
+                                            font-size: 28px;
+                                            color: #fff;
+                                            letter-spacing: 1px;
+                                            margin-bottom: 5px;
                                         }
-                                        .txt_box {
-                                            border-radius: 0;
-                                            background: transparent;
-                                            width: 100%;
-                                            position: absolute;
-                                            top: 50%;
-                                            left: 50%;
-                                            transform: translate(-50%, -50%);
-                                            text-align: center;
-    
-                                            h2{
-                                                font-size: 28px;
-                                                color: #fff;
-                                                letter-spacing: 1px;
-                                                margin-bottom: 5px;
-                                            }
-                                            p{
-                                                font-size: 20px;
-                                                color: #ddd;
-                                            }
+
+                                        p {
+                                            font-size: 20px;
+                                            color: #ddd;
                                         }
                                     }
+                                }
                             }
                         }
                     }
@@ -721,10 +756,12 @@ body {
                                 .bg_box {
                                     width: 100%;
                                     height: 100%;
-                                    &:hover .txt_box{
+
+                                    &:hover .txt_box {
                                         opacity: 1;
                                         transition: 0.5s;
                                     }
+
                                     &.bg_box1 {
                                         background: url(../img/pic1.jpg) no-repeat center/cover;
                                     }
@@ -737,18 +774,19 @@ body {
                                         background: url(../img/pic3.jpg) no-repeat center/cover;
                                     }
                                 }
-                                .txt_box{
+
+                                .txt_box {
                                     opacity: 0;
                                     width: 100%;
                                     height: 100%;
                                     position: absolute;
                                     top: 0;
                                     left: 0;
-                                    background: rgb(70, 84, 103,0.7);
+                                    background: rgb(70, 84, 103, 0.7);
                                     padding: 30px 20px 0;
 
 
-                                    &::after{
+                                    &::after {
                                         content: "";
                                         display: block;
                                         position: absolute;
@@ -778,7 +816,8 @@ body {
                                         color: $titleColor;
                                         font: 14px/1 'arial';
                                     }
-                                    .bottom_txt{
+
+                                    .bottom_txt {
                                         width: 100%;
                                         position: absolute;
                                         bottom: 0;
@@ -787,19 +826,22 @@ body {
                                         justify-content: space-between;
                                         align-items: center;
                                         padding: 20px 20px;
-    
-                                        p{
-                                            font:14px/1 'arial';
+
+                                        p {
+                                            font: 14px/1 'arial';
                                             color: #fff;
-                                            i{
+
+                                            i {
                                                 margin-right: 5px;
                                             }
                                         }
-                                        a{
+
+                                        a {
                                             display: block;
-                                            font:14px/1 'arial';
+                                            font: 14px/1 'arial';
                                             color: #fff;
-                                            i{
+
+                                            i {
                                                 margin-right: 10px;
                                             }
                                         }
@@ -813,5 +855,133 @@ body {
         }
     }
 
+    #about {
+        width: 100%;
+        padding: 50px 0;
 
+        .inner {
+            width: 1180px;
+            height: 370px;
+            margin: 0 auto;
+
+            .boxWrap {
+                width: 100%;
+
+                &::after {
+                    content: "";
+                    display: block;
+                    clear: both;
+                }
+
+                >div {
+                    float: left;
+
+                    &.left_box {
+                        width: 20%;
+                        margin-right: 20px;
+                        border-top: 5px solid #999;
+                        padding: 20px 0px 10px 10px;
+
+                        h1 {
+                            font: bold 18px/1 'arial';
+                            color: #444;
+                        }
+
+                        ul {
+                            width: 100%;
+
+                            li {
+                                border-bottom: 1px solid #bbb;
+
+                                &.on a,
+                                &.on i {
+                                    color: $titleColor;
+                                }
+
+                                a {
+                                    display: block;
+                                    color: #bbb;
+                                    padding: 10px 0;
+                                    font: 14px/1 'arial';
+
+                                    i {
+                                        font-size: 12px;
+                                        margin-right: 10px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &.right_box {
+                        width: calc(80% - 20px);
+                        position: relative;
+
+                        ul {
+                            width: 100%;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            display: none;
+
+                            &.on {
+                                display: block;
+                            }
+
+                            &::after {
+                                content: "";
+                                display: block;
+                                clear: both;
+                            }
+
+                            >li {
+                                width: 100%;
+                                margin-right: 10px;
+                                padding-right: 40px;
+                                // border-top: 3px solid $titleColor;
+
+                                >h1 {
+                                    font: bold 34px/1 'arial';
+                                    letter-spacing: 1px;
+                                    color: $titleColor;
+                                    letter-spacing: 1px;
+                                    margin-bottom: 20px;
+                                }
+
+                                >h2 {
+                                    font: 16px/1.5 'Kdam Thmor Pro';
+                                    font-style: oblique;
+                                    color: #444;
+                                    letter-spacing: 1px;
+                                    margin-bottom: 15px;
+                                }
+
+                                >p {
+                                    font: 14px/1.7 'arial';
+                                    color: #555;
+                                    margin-bottom: 25px;
+                                }
+
+                                >a {
+                                    color: $titleColor;
+                                    font: 14px/1 'arial';
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    #footer{
+        width: 100%;
+        padding: 200px 0;
+        background: #303239;
+        .inner{
+            width: 1180px;
+            margin: 0 auto;
+        }
+    }
 }

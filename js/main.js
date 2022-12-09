@@ -1,7 +1,11 @@
 // tab
 const services = document.querySelector('#services');
+const services2 = document.querySelector('#about');
 const btns = services.querySelectorAll('.left_box ul li');
 const boxs = services.querySelectorAll('.right_box ul');
+const btns2 = services2.querySelectorAll('.left_box ul li');
+const boxs2 = services2.querySelectorAll('.right_box ul');
+
 
 
 btns.forEach((el, index) => {
@@ -11,6 +15,16 @@ btns.forEach((el, index) => {
         if (isOn) return;
         activatin(btns, index);
         activatin(boxs, index);
+    })
+})
+
+btns2.forEach((el, index) => {
+    el.addEventListener('click', (e) => {
+        e.preventDefault();
+        let isOn = e.currentTarget.classList.contains('on');
+        if (isOn) return;
+        activatin(btns2, index);
+        activatin(boxs2, index);
     })
 
 })

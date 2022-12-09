@@ -253,6 +253,13 @@ body #visual .inner .content .title_box .txt_box h1 {
   color: #444;
   margin-bottom: 5px;
 }
+body #visual .inner .content .title_box .txt_box > h2 {
+  font: 16px/1.5 "Kdam Thmor Pro";
+  font-style: oblique;
+  color: #444;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
 body #visual .inner .content .title_box .txt_box > span {
   display: block;
   font: 14px/1 "arial";
@@ -717,6 +724,111 @@ body #projects .inner .boxWrap > div.right_box ul li .txt_box .bottom_txt a {
 }
 body #projects .inner .boxWrap > div.right_box ul li .txt_box .bottom_txt a i {
   margin-right: 10px;
+}
+body #about {
+  width: 100%;
+  padding: 50px 0;
+}
+body #about .inner {
+  width: 1180px;
+  height: 370px;
+  margin: 0 auto;
+}
+body #about .inner .boxWrap {
+  width: 100%;
+}
+body #about .inner .boxWrap::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+body #about .inner .boxWrap > div {
+  float: left;
+}
+body #about .inner .boxWrap > div.left_box {
+  width: 20%;
+  margin-right: 20px;
+  border-top: 5px solid #999;
+  padding: 20px 0px 10px 10px;
+}
+body #about .inner .boxWrap > div.left_box h1 {
+  font: bold 18px/1 "arial";
+  color: #444;
+}
+body #about .inner .boxWrap > div.left_box ul {
+  width: 100%;
+}
+body #about .inner .boxWrap > div.left_box ul li {
+  border-bottom: 1px solid #bbb;
+}
+body #about .inner .boxWrap > div.left_box ul li.on a, body #about .inner .boxWrap > div.left_box ul li.on i {
+  color: #4E6298;
+}
+body #about .inner .boxWrap > div.left_box ul li a {
+  display: block;
+  color: #bbb;
+  padding: 10px 0;
+  font: 14px/1 "arial";
+}
+body #about .inner .boxWrap > div.left_box ul li a i {
+  font-size: 12px;
+  margin-right: 10px;
+}
+body #about .inner .boxWrap > div.right_box {
+  width: calc(80% - 20px);
+  position: relative;
+}
+body #about .inner .boxWrap > div.right_box ul {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+body #about .inner .boxWrap > div.right_box ul.on {
+  display: block;
+}
+body #about .inner .boxWrap > div.right_box ul::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+body #about .inner .boxWrap > div.right_box ul > li {
+  width: 100%;
+  margin-right: 10px;
+  padding-right: 40px;
+}
+body #about .inner .boxWrap > div.right_box ul > li > h1 {
+  font: bold 34px/1 "arial";
+  letter-spacing: 1px;
+  color: #4E6298;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+body #about .inner .boxWrap > div.right_box ul > li > h2 {
+  font: 16px/1.5 "Kdam Thmor Pro";
+  font-style: oblique;
+  color: #444;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+body #about .inner .boxWrap > div.right_box ul > li > p {
+  font: 14px/1.7 "arial";
+  color: #555;
+  margin-bottom: 25px;
+}
+body #about .inner .boxWrap > div.right_box ul > li > a {
+  color: #4E6298;
+  font: 14px/1 "arial";
+}
+body #footer {
+  width: 100%;
+  padding: 200px 0;
+  background: #303239;
+}
+body #footer .inner {
+  width: 1180px;
+  margin: 0 auto;
 }
 
 /*# sourceMappingURL=style.css.map */
