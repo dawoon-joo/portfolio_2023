@@ -30,9 +30,7 @@ const lis = ul.querySelectorAll('li');
 const prev = visual.querySelector('.prev');
 const next = visual.querySelector('.next');
 const len = lis.length;
-const ul2 = visual.querySelector('.lists');
-const lis2 = ul2.querySelectorAll('li');
-const len2 = lis2.length;
+
 
 let enableClick = true;
 init();
@@ -53,27 +51,8 @@ prev.addEventListener('click', (e) => {
     }
 })
 
-lis2.forEach((el, index)=>{
-    for(let el of lis2){
-        el.addEventListener('click', (e)=>{
-            if(enableClick){
-                moveSlide(index);
-                enableClick = false;
-            }
-        })
-    }
-})
 
-// for (let i = 0; i < len2.length; i++) {
-//     lis2[i].addEventListener('click', (e) => {
-//         e.preventDefault();
-//             if (enableClick) {
-//                 ul.style.left = `${index * -100}%`;
-//                 // enableClick = false;
-//                 i++
-//             }
-//     })
-// }
+
 
 function init() {
     ul.style.left = '-100%';
@@ -111,16 +90,3 @@ function prevSlide() {
     })
 }
 
-function moveSlide(index) {
-    new Anim(ul, {
-        prop: 'left',
-        value: '0%',
-        duration: 500,
-        callback: () => {
-            ul.style.left = `${index * -100}%`;
-            ul.prepend(ul.lastElementChild);
-            enableClick = true;
-        }
-
-    })
-}

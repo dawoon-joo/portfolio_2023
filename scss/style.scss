@@ -1,9 +1,10 @@
 @charset 'utf-8';
 @import "reset.scss";
 @import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
-
+$boxColor:linear-gradient(#4E6298, #303239, #303239);
+$titleColor:#4E6298;
 body {
-    background-color: #fdfdfd;
+    background-color: #ececec;
     // background: black;
     #header {
         width: 100%;
@@ -20,7 +21,7 @@ body {
                 position: absolute;
                 width: 100%;
                 height: 2px;
-                background: #eee;
+                background: #ddd;
                 top: 78px;
                 z-index: -1;
             }
@@ -42,7 +43,7 @@ body {
                 top: 20px;
 
                 a {
-                    color: #444;
+                    color: $titleColor;
                 }
             }
 
@@ -63,7 +64,7 @@ body {
 
                         &:hover,
                         &.on {
-                            color: #475568;
+                            color: $titleColor;
                             transition: 0.5s;
                         }
 
@@ -77,7 +78,7 @@ body {
                             top: 0;
                             left: 50%;
                             transform: translateX(-50%);
-                            border-top: 3px solid #475568;
+                            border-top: 3px solid $titleColor;
                             transition: 0.5s;
                         }
                     }
@@ -166,14 +167,14 @@ body {
                     color: #444;
     
                     >span{
-                        color: #475568;
+                        color: $titleColor;
                     }
                 }
                 >a{
                     display: block;
                     width: 200px;
                     height: 50px;
-                    background: #475568;
+                    background: $boxColor;
                     color: #fff;
                     text-align: center;
                     font: 18px/50px 'arial';
@@ -206,14 +207,22 @@ body {
                             align-items: center;
                             float: left;
                             position: relative;
+                            background-position: center;
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                            border-radius: 5px;
+                            box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
                             &[data-index="1"]{
-                                background: aqua;
+                                background-image: url(../img/main1.jpg);
                             }
                             &[data-index="2"]{
-                                background: hotpink;
+                                background-image: url(../img/main2.jpg);
                             }
                             &[data-index="3"]{
-                                background: orange;
+                                background-image: url(../img/main3.webp);
+                            }
+                            &[data-index="4"]{
+                                background-image: url(../img/main4.jpg);
                             }
                         }
                     }
@@ -221,7 +230,7 @@ body {
                 .title_box{
                     position: relative;
                     width: 40%;
-                    border-top: 5px solid #475568;
+                    border-top: 5px solid $titleColor;
                     margin-left: 20px;
                     .prev{
                         position: absolute;
@@ -263,10 +272,11 @@ body {
                             margin-bottom: 20px;
 
                             >span{
-                                color: #475568;
+                                color: $titleColor;
                                 margin-left: 15px;
                                 position: relative;
                                 margin-bottom: 20px;
+                                opacity: 1;
                                 &::after{
                                     content: "";
                                     display: inline-block;
@@ -286,30 +296,7 @@ body {
                         >a{
                             display: block;
                             font:16px/1 'arial';
-                            color: #475568;
-                        }
-                    }
-                }
-                .lists{
-                    position: absolute;
-                    right: 0;
-                    bottom: 0;
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    &::after{
-                        content: "▶";
-                        display: block;
-                        position: absolute;
-                        left: -10px;
-                        font-size: 14px;
-                    }
-                    >li{
-                        margin-left: 10px;
-                        a{
-                            font:bold 14px/1 'arial';
-                            color: #444;
-                            opacity: 0.8;
+                            color: $titleColor;
                         }
                     }
                 }
@@ -357,7 +344,7 @@ body {
 
                                 &.on a,
                                 &.on i {
-                                    color: #475568;
+                                    color: $titleColor;
                                 }
 
                                 a {
@@ -400,7 +387,7 @@ body {
                                 float: left;
                                 width: calc(33.333% - 10px);
                                 margin-right: 10px;
-                                border-top: 3px solid #475568;
+                                border-top: 3px solid $titleColor;
                                 box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
                                 border-radius: 0 0 0 25px;
 
@@ -424,14 +411,14 @@ body {
                                     h1 {
                                         font: bold 20px/100px 'arial';
                                         letter-spacing: 1px;
-                                        color: #475568;
+                                        color: $titleColor;
                                     }
 
                                     span {
                                         display: block;
                                         width: 65px;
                                         height: 65px;
-                                        background: #475568;
+                                        background: $boxColor;
                                         border-radius: 50%;
                                         position: absolute;
                                         top: 50%;
@@ -469,7 +456,7 @@ body {
                                     }
 
                                     a {
-                                        color: #475568;
+                                        color: $titleColor;
                                         font: 14px/1 'arial';
                                     }
                                 }
@@ -477,7 +464,7 @@ body {
 
                             &.box2 {
                                 width: 100%;
-                                border-top: 3px solid #475568;
+                                border-top: 3px solid $titleColor;
 
                                 // background: #eee;
                                 li {
@@ -504,7 +491,7 @@ body {
 
                                         h1 {
                                             font: bold 20px/1 'arial';
-                                            color: #475568;
+                                            color: $titleColor;
                                             margin-bottom: 20px;
                                         }
 
@@ -518,7 +505,7 @@ body {
                                             display: block;
                                             width: 80px;
                                             height: 30px;
-                                            background: #475568;
+                                            background: $boxColor;
                                             display: flex;
                                             justify-content: center;
                                             align-items: center;
@@ -533,13 +520,13 @@ body {
 
                                         h1 {
                                             font: bold 20px/1 'arial';
-                                            color: #475568;
+                                            color: $titleColor;
                                             margin-bottom: 20px;
                                         }
 
                                         h2 {
                                             font: bold 18px/1 'arial';
-                                            color: #475568;
+                                            color: $titleColor;
                                             margin-bottom: 20px;
                                         }
 
@@ -553,7 +540,7 @@ body {
                                             display: block;
                                             width: 80px;
                                             height: 30px;
-                                            background: #475568;
+                                            background: $boxColor;
                                             display: flex;
                                             justify-content: center;
                                             align-items: center;
@@ -788,7 +775,7 @@ body {
                                     }
 
                                     >a {
-                                        color: #475568;
+                                        color: $titleColor;
                                         font: 14px/1 'arial';
                                     }
                                     .bottom_txt{
