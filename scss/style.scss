@@ -1,1078 +1,1953 @@
 @charset 'utf-8';
-@import "reset.scss";
+@import 'reset.scss';
 @import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
-$boxColor: linear-gradient(#4E6298, #303239, #303239);
-$titleColor: #4E6298;
+
+$tablet: 1179px;
+$mobile: 539px;
+
+$boxColor: linear-gradient(#4e6298, #303239, #303239);
+$titleColor: #4e6298;
 
 body {
-    background-color: #ececec;
-
-    #skipNavi{
-        position: relative;
-        z-index: 2  ;
-        li{
-            a{
-                display: block;
-                width: 100%;
-                height: 40px;
-                background: darkblue;
-                font: bold 15px/40px '맑은 고딕';
-                color: #fff;
-                text-align: center;
-                position: fixed;
-                top: -40px;
-                left: 0;
-                &.on{
-                    top: 0;
-                }
-            }
-        }
-    }
-    
-
-    // background: black;
-    #header {
-        width: 100%;
-
-        .inner {
-            width: 1180px;
-            height: 140px;
-            margin: 0 auto;
-            position: relative;
-
-            &::after {
-                content: "";
-                display: block;
-                position: absolute;
-                width: 100%;
-                height: 2px;
-                background: #ddd;
-                top: 78px;
-                z-index: -1;
-            }
-
-            &::before {
-                content: "";
-                display: block;
-                position: absolute;
-                width: 100%;
-                height: 3px;
-                background: #999;
-                bottom: 0px;
-                z-index: -1;
-            }
-
-            h1 {
-                position: absolute;
-                left: 0;
-                top: 20px;
-
-                a {
-                    color: $titleColor;
-                }
-            }
-
-            .gnb {
-                position: absolute;
-                left: 0;
-                bottom: 0;
-
-                li {
-                    float: left;
-
-                    a {
-                        position: relative;
-                        display: block;
-                        padding: 24px 30px;
-                        font: 14px/1 'arial';
-                        color: #999;
-
-                        &:hover,
-                        &.on {
-                            color: $titleColor;
-                            transition: 0.5s;
-                        }
-
-                        &:hover::after,
-                        &.on::after {
-                            padding: 1px 0;
-                            width: 100%;
-                            content: "";
-                            display: block;
-                            position: absolute;
-                            top: 0;
-                            left: 50%;
-                            transform: translateX(-50%);
-                            border-top: 3px solid $titleColor;
-                            transition: 0.5s;
-                        }
-                    }
-                }
-            }
-
-            .utill {
-                position: absolute;
-                right: 0;
-                top: 30px;
-
-                li {
-                    position: relative;
-                    float: left;
-                    margin-left: 20px;
-
-                    &:first-of-type::after {
-                        content: "";
-                        display: block;
-                        width: 1px;
-                        height: 50%;
-                        background: #ddd;
-                        position: absolute;
-                        top: 60%;
-                        right: -10px;
-                        transform: translateY(-50%);
-                    }
-
-                    a {
-                        font: 12px/1 'arial';
-                        color: #999;
-                    }
-                }
-            }
-
-            input::-webkit-search-decoration,
-            input::-webkit-search-cancel-button,
-            input::-webkit-search-results-button,
-            input::-webkit-search-results-decoration {
-                display: none;
-            }
-
-            .inputWrap {
-                position: absolute;
-                bottom: 17px;
-                right: 100px;
-
-                input {
-                    width: 150px;
-                    height: 30px;
-                    border: 1px solid #eee;
-                }
-
-                button {
-                    position: absolute;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    right: 10px;
-                    border: none;
-                    background: none;
-                    color: #aaa;
-                    cursor: pointer;
-                }
-            }
-        }
-    }
-
-    #visual {
-        width: 100%;
-        padding: 50px 0;
-        margin: 0 auto;
-
-        .inner {
-            width: 1180px;
-            margin: 0 auto;
-            position: relative;
-
-            >.txt_box {
-                width: 100%;
-                position: relative;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                margin-bottom: 40px;
-
-                >h1 {
-                    font: bold 36px/1 'arial';
-                    color: #444;
-
-                    >span {
-                        color: $titleColor;
-                    }
-                }
-
-                >a {
-                    display: block;
-                    width: 200px;
-                    height: 50px;
-                    background: $boxColor;
-                    color: #fff;
-                    text-align: center;
-                    font: 18px/50px 'arial';
-                    border-radius: 3px;
-                }
-            }
-
-            .content {
-                width: 100%;
-                display: flex;
-                justify-content: space-between;
-
-                #slider {
-                    width: calc(60% - 20px);
-                    height: 400px;
-                    position: relative;
-                    overflow: hidden;
-
-                    ul {
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        height: 100%;
-
-                        li {
-                            height: 100%;
-                            font-size: 40px;
-                            color: #000;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            float: left;
-                            position: relative;
-                            background-position: center;
-                            background-size: cover;
-                            background-repeat: no-repeat;
-                            border-radius: 5px;
-                            box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
-
-                            &[data-index="1"] {
-                                background-image: url(../img/main1.jpg);
-                            }
-
-                            &[data-index="2"] {
-                                background-image: url(../img/main2.jpg);
-                            }
-
-                            &[data-index="3"] {
-                                background-image: url(../img/main3.webp);
-                            }
-
-                            &[data-index="4"] {
-                                background-image: url(../img/main4.jpg);
-                            }
-                        }
-                    }
-                }
-
-                .title_box {
-                    position: relative;
-                    width: 40%;
-                    border-top: 5px solid $titleColor;
-                    margin-left: 20px;
-
-                    .prev {
-                        position: absolute;
-                        top: 20px;
-                        left: 0;
-                        width: 30px;
-                        height: 30px;
-
-                        img {
-                            width: 100%;
-                            height: 100%;
-                            object-fit: cover;
-                        }
-                    }
-
-                    .next {
-                        position: absolute;
-                        top: 20px;
-                        left: 30px;
-                        width: 30px;
-                        height: 30px;
-
-                        img {
-                            width: 100%;
-                            height: 100%;
-                            object-fit: cover;
-                        }
-                    }
-
-                    .txt_box {
-                        width: 100%;
-                        padding: 80px 0 0;
-
-                        h1 {
-                            font: bold 24px/1 'arial';
-                            color: #444;
-                            margin-bottom: 5px;
-                        }
-
-                        >h2 {
-                            font: 16px/1.5 'Kdam Thmor Pro';
-                            font-style: oblique;
-                            color: #444;
-                            letter-spacing: 1px;
-                            margin-bottom: 15px;
-                        }
-
-                        >span {
-                            display: block;
-                            font: 14px/1 'arial';
-                            color: #444;
-                            opacity: 0.8;
-                            margin-bottom: 20px;
-
-                            >span {
-                                color: $titleColor;
-                                margin-left: 15px;
-                                position: relative;
-                                margin-bottom: 20px;
-                                opacity: 1;
-
-                                &::after {
-                                    content: "";
-                                    display: inline-block;
-                                    width: 1px;
-                                    height: 10px;
-                                    background: 222;
-                                    background: #444;
-                                    margin-left: -40px;
-                                }
-                            }
-                        }
-
-                        >p {
-                            font: 14px/1.3 'arial';
-                            color: #555;
-                            margin-bottom: 30px;
-                        }
-
-                        >a {
-                            display: block;
-                            font: 16px/1 'arial';
-                            color: $titleColor;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    #services {
-        width: 100%;
-        padding: 50px 0;
-
-        .inner {
-            width: 1180px;
-            height: 370px;
-            margin: 0 auto;
-
-            .boxWrap {
-                width: 100%;
-
-                &::after {
-                    content: "";
-                    display: block;
-                    clear: both;
-                }
-
-                >div {
-                    float: left;
-
-                    &.left_box {
-                        width: 20%;
-                        margin-right: 20px;
-                        border-top: 5px solid #999;
-                        padding: 20px 0px 10px 10px;
-
-                        h1 {
-                            font: bold 18px/1 'arial';
-                            color: #444;
-                        }
-
-                        ul {
-                            width: 100%;
-
-                            li {
-                                border-bottom: 1px solid #bbb;
-
-                                &.on a,
-                                &.on i {
-                                    color: $titleColor;
-                                }
-
-                                a {
-                                    display: block;
-                                    color: #bbb;
-                                    padding: 10px 0;
-                                    font: 14px/1 'arial';
-
-                                    i {
-                                        font-size: 12px;
-                                        margin-right: 10px;
-                                    }
-                                }
-                            }
-                        }
-                    }
-
-                    &.right_box {
-                        width: calc(80% - 20px);
-                        position: relative;
-
-                        ul {
-                            width: 100%;
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            display: none;
-
-                            &.on {
-                                display: block;
-                            }
-
-                            &::after {
-                                content: "";
-                                display: block;
-                                clear: both;
-                            }
-
-                            li {
-                                float: left;
-                                width: calc(33.333% - 10px);
-                                margin-right: 10px;
-                                border-top: 3px solid $titleColor;
-                                box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
-                                border-radius: 0 0 0 25px;
-
-                                &::after {
-                                    content: "";
-                                    display: block;
-                                    clear: both;
-                                }
-
-                                &:last-of-type {
-                                    margin-right: 0;
-                                }
-
-                                .title {
-                                    width: 100%;
-                                    height: 100px;
-                                    background: #eee;
-                                    padding: 0 25px;
-                                    position: relative;
-
-                                    h1 {
-                                        font: bold 20px/100px 'arial';
-                                        letter-spacing: 1px;
-                                        color: $titleColor;
-                                    }
-
-                                    span {
-                                        display: block;
-                                        width: 65px;
-                                        height: 65px;
-                                        background: $boxColor;
-                                        border-radius: 50%;
-                                        position: absolute;
-                                        top: 50%;
-                                        right: 45px;
-                                        transform: translateY(-50%);
-
-                                        i {
-                                            position: absolute;
-                                            top: 50%;
-                                            left: 50%;
-                                            transform: translate(-50%, -50%);
-                                            font-size: 30px;
-                                            color: #fff;
-                                        }
-                                    }
-                                }
-
-                                .txt_box {
-                                    background: #ddd;
-                                    padding: 15px 25px;
-                                    border-radius: 0 0 0 25px;
-
-                                    h2 {
-                                        font: 16px/1.5 'Kdam Thmor Pro';
-                                        font-style: oblique;
-                                        color: #444;
-                                        letter-spacing: 1px;
-                                        margin-bottom: 15px;
-                                    }
-
-                                    p {
-                                        font: 14px/1.7 'arial';
-                                        color: #555;
-                                        margin-bottom: 25px;
-                                    }
-
-                                    a {
-                                        color: $titleColor;
-                                        font: 14px/1 'arial';
-                                    }
-                                }
-                            }
-
-                            &.box2 {
-                                width: 100%;
-                                border-top: 3px solid $titleColor;
-
-                                // background: #eee;
-                                li {
-                                    float: left;
-                                    width: 100%;
-                                    border: none;
-                                    padding: 20px 20px 20px 0;
-                                    box-shadow: none;
-                                    border-radius: none;
-
-                                    &:nth-of-type(1) {
-                                        width: calc(30% - 10px);
-
-                                        .pic {
-                                            width: 100%;
-                                            height: 250px;
-                                            background: url(../img/pic4.jpg) no-repeat center/cover;
-
-                                        }
-                                    }
-
-                                    &:nth-of-type(2) {
-                                        width: calc(40% - 10px);
-
-                                        h1 {
-                                            font: bold 20px/1 'arial';
-                                            color: $titleColor;
-                                            margin-bottom: 20px;
-                                        }
-
-                                        p {
-                                            font: 14px/1.3 'arial';
-                                            color: #333;
-                                            margin-bottom: 20px;
-                                        }
-
-                                        a {
-                                            display: block;
-                                            width: 80px;
-                                            height: 30px;
-                                            background: $boxColor;
-                                            display: flex;
-                                            justify-content: center;
-                                            align-items: center;
-                                            font: 12px/1 'arial';
-                                            color: #fff;
-                                            border-radius: 5px;
-                                        }
-                                    }
-
-                                    &:nth-of-type(3) {
-                                        width: calc(30% - 10px);
-
-                                        h1 {
-                                            font: bold 20px/1 'arial';
-                                            color: $titleColor;
-                                            margin-bottom: 20px;
-                                        }
-
-                                        h2 {
-                                            font: bold 18px/1 'arial';
-                                            color: $titleColor;
-                                            margin-bottom: 20px;
-                                        }
-
-                                        p {
-                                            font: 14px/1.3 'arial';
-                                            color: #333;
-                                            margin-bottom: 20px;
-                                        }
-
-                                        a {
-                                            display: block;
-                                            width: 80px;
-                                            height: 30px;
-                                            background: $boxColor;
-                                            display: flex;
-                                            justify-content: center;
-                                            align-items: center;
-                                            font: 12px/1 'arial';
-                                            color: #fff;
-                                            border-radius: 5px;
-                                        }
-                                    }
-                                }
-                            }
-
-                            &.box3 {
-                                li {
-                                    position: relative;
-                                    border: none;
-                                    box-shadow: none;
-                                    border-radius: none;
-                                    overflow: hidden;
-                                    transition: 0.5s;
-
-                                    &:hover .pic {
-                                        transform: scale(1.2);
-                                        transition: 0.5s;
-                                    }
-
-                                    .pic {
-                                        width: 100%;
-                                        height: 350px;
-                                        background: url(../img/pic5.jpg) no-repeat center/cover;
-                                    }
-
-                                    &:nth-of-type(2) .pic {
-                                        background: url(../img/pic6.jpg) no-repeat center/cover;
-                                    }
-
-                                    &:nth-of-type(3) .pic {
-                                        background: url(../img/pic7.jpg) no-repeat center/cover;
-                                    }
-
-                                    .txt_box {
-                                        border-radius: 0;
-                                        background: transparent;
-                                        width: 100%;
-                                        position: absolute;
-                                        bottom: 0;
-                                        left: 0;
-                                        text-align: center;
-
-                                        h2 {
-                                            font-size: 14px;
-                                            color: #fff;
-                                            letter-spacing: 1px;
-                                            margin-bottom: 5px;
-                                        }
-
-                                        p {
-                                            font-size: 12px;
-                                            color: #ddd;
-                                        }
-                                    }
-                                }
-
-                            }
-
-                            &.box4 {
-                                width: 100%;
-
-                                li {
-                                    width: 100%;
-
-                                    .pic {
-                                        width: 100%;
-                                        height: 350px;
-                                        background: url(../img/pic8.jpg) no-repeat center/cover;
-                                        background-attachment: fixed;
-                                    }
-
-                                    .txt_box {
-                                        border-radius: 0;
-                                        background: transparent;
-                                        width: 100%;
-                                        position: absolute;
-                                        top: 50%;
-                                        left: 50%;
-                                        transform: translate(-50%, -50%);
-                                        text-align: center;
-
-                                        h2 {
-                                            font-size: 28px;
-                                            color: #fff;
-                                            letter-spacing: 1px;
-                                            margin-bottom: 5px;
-                                        }
-
-                                        p {
-                                            font-size: 20px;
-                                            color: #ddd;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    #projects {
-        width: 100%;
-        padding: 50px 0;
-
-        .inner {
-            width: 1180px;
-            margin: 0 auto;
-
-            .boxWrap {
-                &::after {
-                    content: "";
-                    display: block;
-                    clear: both;
-                }
-
-                width: 100%;
-
-                >div {
-                    float: left;
-
-                    &::after {
-                        content: "";
-                        display: block;
-                        clear: both;
-                    }
-
-                    &.left_box {
-                        width: 20%;
-                        margin-right: 20px;
-                        border-top: 5px solid #999;
-                        padding: 20px 0px 10px 10px;
-
-                        h1 {
-                            font: bold 18px/1 'arial';
-                            color: #444;
-                            position: relative;
-                            margin-bottom: 40px;
-
-                            &::after {
-                                content: "";
-                                display: block;
-                                position: absolute;
-                                top: 30px;
-                                left: 0;
-                                width: 30px;
-                                height: 2px;
-                                background: #ccc;
-                            }
-                        }
-                    }
-
-                    &.right_box {
-                        width: calc(80% - 20px);
-
-                        ul {
-                            width: 100%;
-
-                            li {
-                                float: left;
-                                width: calc(33.333% - 10px);
-                                height: 250px;
-                                margin-right: 10px;
-                                box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
-                                position: relative;
-
-                                &::after {
-                                    content: "";
-                                    display: block;
-                                    clear: both;
-                                }
-
-                                &:last-of-type {
-                                    margin-right: 0;
-                                }
-
-                                .bg_box {
-                                    width: 100%;
-                                    height: 100%;
-
-                                    &:hover .txt_box {
-                                        opacity: 1;
-                                        transition: 0.5s;
-                                    }
-
-                                    &.bg_box1 {
-                                        background: url(../img/pic1.jpg) no-repeat center/cover;
-                                    }
-
-                                    &.bg_box2 {
-                                        background: url(../img/pic2.jpg) no-repeat center/cover;
-                                    }
-
-                                    &.bg_box3 {
-                                        background: url(../img/pic3.jpg) no-repeat center/cover;
-                                    }
-                                }
-
-                                .txt_box {
-                                    opacity: 0;
-                                    width: 100%;
-                                    height: 100%;
-                                    position: absolute;
-                                    top: 0;
-                                    left: 0;
-                                    background: rgb(70, 84, 103, 0.7);
-                                    padding: 30px 20px 0;
-
-
-                                    &::after {
-                                        content: "";
-                                        display: block;
-                                        position: absolute;
-                                        bottom: 60px;
-                                        left: 50%;
-                                        transform: translateX(-50%);
-                                        width: calc(100% - 40px);
-                                        height: 2px;
-                                        background: #fff;
-                                    }
-
-                                    >h2 {
-                                        font: 14px/1.5 'Kdam Thmor Pro';
-                                        font-style: oblique;
-                                        color: #fff;
-                                        letter-spacing: 1px;
-                                        margin-bottom: 15px;
-                                    }
-
-                                    >p {
-                                        font: 12px/1.7 'arial';
-                                        color: #fff;
-                                        margin-bottom: 25px;
-                                    }
-
-                                    >a {
-                                        color: $titleColor;
-                                        font: 14px/1 'arial';
-                                    }
-
-                                    .bottom_txt {
-                                        width: 100%;
-                                        position: absolute;
-                                        bottom: 0;
-                                        left: 0;
-                                        display: flex;
-                                        justify-content: space-between;
-                                        align-items: center;
-                                        padding: 20px 20px;
-
-                                        p {
-                                            font: 14px/1 'arial';
-                                            color: #fff;
-
-                                            i {
-                                                margin-right: 5px;
-                                            }
-                                        }
-
-                                        a {
-                                            display: block;
-                                            font: 14px/1 'arial';
-                                            color: #fff;
-
-                                            i {
-                                                margin-right: 10px;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    #about {
-        width: 100%;
-        padding: 50px 0;
-
-        .inner {
-            width: 1180px;
-            height: 370px;
-            margin: 0 auto;
-
-            .boxWrap {
-                width: 100%;
-
-                &::after {
-                    content: "";
-                    display: block;
-                    clear: both;
-                }
-
-                >div {
-                    float: left;
-
-                    &.left_box {
-                        width: 20%;
-                        margin-right: 20px;
-                        border-top: 5px solid #999;
-                        padding: 20px 0px 10px 10px;
-
-                        h1 {
-                            font: bold 18px/1 'arial';
-                            color: #444;
-                        }
-
-                        ul {
-                            width: 100%;
-
-                            li {
-                                border-bottom: 1px solid #bbb;
-
-                                &.on a,
-                                &.on i {
-                                    color: $titleColor;
-                                }
-
-                                a {
-                                    display: block;
-                                    color: #bbb;
-                                    padding: 10px 0;
-                                    font: 14px/1 'arial';
-
-                                    i {
-                                        font-size: 12px;
-                                        margin-right: 10px;
-                                    }
-                                }
-                            }
-                        }
-                    }
-
-                    &.right_box {
-                        width: calc(80% - 20px);
-                        position: relative;
-
-                        ul {
-                            width: 100%;
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            display: none;
-
-                            &.on {
-                                display: block;
-                            }
-
-                            &::after {
-                                content: "";
-                                display: block;
-                                clear: both;
-                            }
-
-                            >li {
-                                width: 100%;
-                                margin-right: 10px;
-                                padding-right: 40px;
-                                // border-top: 3px solid $titleColor;
-
-                                >h1 {
-                                    font: bold 34px/1 'arial';
-                                    letter-spacing: 1px;
-                                    color: $titleColor;
-                                    letter-spacing: 1px;
-                                    margin-bottom: 20px;
-                                }
-
-                                >h2 {
-                                    font: 16px/1.5 'Kdam Thmor Pro';
-                                    font-style: oblique;
-                                    color: #444;
-                                    letter-spacing: 1px;
-                                    margin-bottom: 15px;
-                                }
-
-                                >p {
-                                    font: 14px/1.7 'arial';
-                                    color: #555;
-                                    margin-bottom: 25px;
-                                }
-
-                                >a {
-                                    color: $titleColor;
-                                    font: 14px/1 'arial';
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-
-        }
-    }
-
-    #footer {
-        width: 100%;
-        padding: 40px 0;
-        // border-top: 2px solid #999;
-        background: #ddd;
-
-        .inner {
-            width: 1180px;
-            margin: 0 auto;
-            padding: 10px 0 0;
-            position: relative;
-            
-            &::before {
-                content: "";
-                display: block;
-                width: 100%;
-                height: 2px;
-                background: #ccc;
-                position: absolute;
-                bottom:35%;
-                left: 0;
-            }
-
-            &::after {
-                display: block;
-                content: "";
-                clear: both;
-            }
-
-            h1 {
-                float: left;
-                color: #444;
-                font: bold 20px/1 'arial';
-                margin-bottom: 10px;
-            }
-
-            .top_box {
-                float: right;
-
-                li {
-                    float: left;
-                    margin-left: 20px;
-
-                    a {
-                        font: 14px/1 'arial';
-                        color: #444;
-                    }
-                }
-            }
-
-            address {
-                width: 100%;
-                float: left;
-                font: 14px/1.3 'arial';
-                color: #444;
-                margin-bottom: 80px;
-            }
-
-            p {
-                font: 14px/1 'arial';
-                color: #444;
-                float: left;
-            }
-
-            .bottom_box {
-                float: right;
-
-                li {
-                    float: left;
-                    margin-left: 10px;
-                    i{
-                        font-size: 20px;
-                    }
-                }
-            }
-        }
-    }
+	background-color: #ececec;
+
+	#skipNavi {
+		position: relative;
+		z-index: 2;
+		li {
+			a {
+				display: block;
+				width: 100%;
+				height: 40px;
+				background: darkblue;
+				font: bold 15px/40px '맑은 고딕';
+				color: #fff;
+				text-align: center;
+				position: fixed;
+				top: -40px;
+				left: 0;
+				&.on {
+					top: 0;
+				}
+			}
+		}
+	}
+
+	// background: black;
+	#header {
+		width: 100%;
+
+		.inner {
+			width: 1180px;
+			height: 140px;
+			margin: 0 auto;
+			position: relative;
+			transition: 0.5s;
+
+			&::after {
+				content: '';
+				display: block;
+				position: absolute;
+				width: 100%;
+				height: 2px;
+				background: #ddd;
+				top: 78px;
+				z-index: -1;
+			}
+
+			&::before {
+				content: '';
+				display: block;
+				position: absolute;
+				width: 100%;
+				height: 3px;
+				background: #999;
+				bottom: 0px;
+				z-index: -1;
+			}
+
+			> h1 {
+				position: absolute;
+				left: 0;
+				top: 20px;
+
+				a {
+					color: $titleColor;
+				}
+			}
+
+			.gnb {
+				position: absolute;
+				left: 0;
+				bottom: 0;
+
+				li {
+					float: left;
+
+					a {
+						position: relative;
+						display: block;
+						padding: 24px 30px;
+						font: 14px/1 'arial';
+						color: #999;
+
+						&:hover,
+						&.on {
+							color: $titleColor;
+							transition: 0.5s;
+						}
+
+						&:hover::after,
+						&.on::after {
+							padding: 1px 0;
+							width: 100%;
+							content: '';
+							display: block;
+							position: absolute;
+							top: 0;
+							left: 50%;
+							transform: translateX(-50%);
+							border-top: 3px solid $titleColor;
+							transition: 0.5s;
+						}
+					}
+				}
+			}
+
+			.utill {
+				position: absolute;
+				right: 0;
+				top: 30px;
+
+				li {
+					position: relative;
+					float: left;
+					margin-left: 20px;
+
+					&:first-of-type::after {
+						content: '';
+						display: block;
+						width: 1px;
+						height: 50%;
+						background: #ddd;
+						position: absolute;
+						top: 60%;
+						right: -10px;
+						transform: translateY(-50%);
+					}
+
+					a {
+						font: 12px/1 'arial';
+						color: #999;
+					}
+				}
+			}
+
+			.btnCall {
+				position: absolute;
+				right: 30px;
+				top: 50%;
+				transform: translateY(-50%);
+				display: none;
+				width: 20px;
+				height: 20px;
+				&::before {
+					content: '';
+					display: block;
+					width: 100%;
+					height: 2px;
+					background: #000;
+					position: absolute;
+					top: 0;
+					left: 0;
+					transition: top 0.5s 0s, transform 0.5s 0.5s;
+				}
+				&::after {
+					content: '';
+					display: block;
+					width: 100%;
+					height: 2px;
+					background: #000;
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					transition: bottom 0.5s 0s, transform 0.5s 0.5s;
+				}
+				span {
+					display: block;
+					width: 100%;
+					height: 2px;
+					background: #000;
+					position: absolute;
+					top: 50%;
+					left: 0;
+					margin-top: -1px;
+					transition: 1s;
+					text-indent: -9999px;
+				}
+				&.on {
+					&::before {
+						top: 50%;
+						margin-top: -1px;
+						transform: rotate(45deg);
+					}
+					&::after {
+						bottom: 50%;
+						margin-bottom: -1px;
+						transform: rotate(-45deg);
+					}
+					span {
+						transform: translateX(100%);
+						opacity: 0;
+					}
+				}
+			}
+
+			.menuMo {
+				width: 270px;
+				height: 100vh;
+				background: $boxColor;
+				position: fixed;
+				top: 0;
+				left: -270px;
+				padding: 35px 30px;
+				z-index: 10;
+				transition: 0.5s;
+				display: none;
+				&.on {
+					left: 0;
+				}
+				> .inputWrap {
+					position: absolute;
+					top: 80px;
+					left: 50%;
+					transform: translateX(-50%);
+					width: 150px;
+					height: 30px;
+				}
+				h1 {
+					padding-bottom: 60px;
+					border-bottom: 1px solid #fff;
+					a {
+						display: block;
+						font: bold 24px/1 'arial';
+						color: #fff;
+						text-align: center;
+					}
+					span {
+						font-size: 12px;
+						color: #fff;
+					}
+				}
+				#gnbMo {
+					li {
+						a {
+							display: block;
+							width: 100%;
+							padding: 20px 0;
+							border-bottom: 1px solid #888;
+							font: bold 14px/1 'arial';
+							color: #fff;
+							text-align: center;
+						}
+					}
+				}
+			}
+
+			.inputWrap {
+				position: absolute;
+				bottom: 17px;
+				right: 100px;
+
+				input {
+					width: 150px;
+					height: 30px;
+					border: 1px solid #eee;
+				}
+
+				button {
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+					right: 10px;
+					border: none;
+					background: none;
+					color: #aaa;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+
+	#visual {
+		width: 100%;
+		padding: 50px 0;
+		margin: 0 auto;
+
+		.inner {
+			width: 1180px;
+			margin: 0 auto;
+			position: relative;
+			transition: 0.5s;
+			> .txt_box {
+				width: 100%;
+				position: relative;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				margin-bottom: 40px;
+
+				> h1 {
+					font: bold 36px/1 'arial';
+					color: #444;
+
+					> span {
+						color: $titleColor;
+					}
+				}
+
+				> a {
+					display: block;
+					width: 200px;
+					height: 50px;
+					background: $boxColor;
+					color: #fff;
+					text-align: center;
+					font: 18px/50px 'arial';
+					border-radius: 3px;
+				}
+			}
+
+			.content {
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+
+				#slider {
+					width: calc(60% - 20px);
+					height: 400px;
+					position: relative;
+					overflow: hidden;
+
+					ul {
+						position: absolute;
+						top: 0;
+						left: 0;
+						height: 100%;
+
+						li {
+							height: 100%;
+							font-size: 40px;
+							color: #000;
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							float: left;
+							position: relative;
+							background-position: center;
+							background-size: cover;
+							background-repeat: no-repeat;
+							border-radius: 5px;
+							box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+
+							&[data-index='1'] {
+								background-image: url(../img/main1.jpg);
+							}
+
+							&[data-index='2'] {
+								background-image: url(../img/main2.jpg);
+							}
+
+							&[data-index='3'] {
+								background-image: url(../img/main3.webp);
+							}
+
+							&[data-index='4'] {
+								background-image: url(../img/main4.jpg);
+							}
+						}
+					}
+				}
+
+				.title_box {
+					position: relative;
+					width: 40%;
+					border-top: 5px solid $titleColor;
+					margin-left: 20px;
+
+					.prev {
+						position: absolute;
+						top: 20px;
+						left: 0;
+						width: 30px;
+						height: 30px;
+
+						img {
+							width: 100%;
+							height: 100%;
+							object-fit: cover;
+						}
+					}
+
+					.next {
+						position: absolute;
+						top: 20px;
+						left: 30px;
+						width: 30px;
+						height: 30px;
+
+						img {
+							width: 100%;
+							height: 100%;
+							object-fit: cover;
+						}
+					}
+
+					.txt_box {
+						width: 100%;
+						padding: 80px 0 0;
+
+						h1 {
+							font: bold 24px/1 'arial';
+							color: #444;
+							margin-bottom: 5px;
+						}
+
+						> h2 {
+							font: 16px/1.5 'Kdam Thmor Pro';
+							font-style: oblique;
+							color: #444;
+							letter-spacing: 1px;
+							margin-bottom: 15px;
+						}
+
+						> span {
+							display: block;
+							font: 14px/1 'arial';
+							color: #444;
+							opacity: 0.8;
+							margin-bottom: 20px;
+
+							> span {
+								color: $titleColor;
+								margin-left: 15px;
+								position: relative;
+								margin-bottom: 20px;
+								opacity: 1;
+
+								&::after {
+									content: '';
+									display: inline-block;
+									width: 1px;
+									height: 10px;
+									background: 222;
+									background: #444;
+									margin-left: -40px;
+								}
+							}
+						}
+
+						> p {
+							font: 14px/1.3 'arial';
+							color: #555;
+							margin-bottom: 30px;
+						}
+
+						> a {
+							display: block;
+							font: 16px/1 'arial';
+							color: $titleColor;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#services {
+		width: 100%;
+		padding: 50px 0;
+		transition: 0.5s;
+		.inner {
+			width: 1180px;
+			height: 370px;
+			margin: 0 auto;
+
+			.boxWrap {
+				width: 100%;
+
+				&::after {
+					content: '';
+					display: block;
+					clear: both;
+				}
+
+				> div {
+					float: left;
+
+					&.left_box {
+						width: 20%;
+						margin-right: 20px;
+						border-top: 5px solid #999;
+						padding: 20px 0px 10px 10px;
+
+						h1 {
+							font: bold 18px/1 'arial';
+							color: #444;
+						}
+
+						ul {
+							width: 100%;
+
+							li {
+								border-bottom: 1px solid #bbb;
+
+								&.on a,
+								&.on i {
+									color: $titleColor;
+								}
+
+								a {
+									display: block;
+									color: #bbb;
+									padding: 10px 0;
+									font: 14px/1 'arial';
+
+									i {
+										font-size: 12px;
+										margin-right: 10px;
+									}
+								}
+							}
+						}
+					}
+
+					&.right_box {
+						width: calc(80% - 20px);
+						position: relative;
+						height: 400px;
+
+						ul {
+							width: 100%;
+							height: 400px;
+							position: absolute;
+							top: 0;
+							left: 0;
+							display: none;
+
+							&.on {
+								display: block;
+							}
+
+							&::after {
+								content: '';
+								display: block;
+								clear: both;
+							}
+
+							li {
+								float: left;
+								width: calc(33.333% - 10px);
+								margin-right: 10px;
+								border-top: 3px solid $titleColor;
+								box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+								border-radius: 0 0 0 25px;
+
+								&::after {
+									content: '';
+									display: block;
+									clear: both;
+								}
+
+								&:last-of-type {
+									margin-right: 0;
+								}
+
+								.title {
+									width: 100%;
+									height: 100px;
+									background: #eee;
+									padding: 0 25px;
+									position: relative;
+
+									h1 {
+										font: bold 20px/100px 'arial';
+										letter-spacing: 1px;
+										color: $titleColor;
+									}
+
+									span {
+										display: block;
+										width: 65px;
+										height: 65px;
+										background: $boxColor;
+										border-radius: 50%;
+										position: absolute;
+										top: 50%;
+										right: 45px;
+										transform: translateY(-50%);
+
+										i {
+											position: absolute;
+											top: 50%;
+											left: 50%;
+											transform: translate(-50%, -50%);
+											font-size: 30px;
+											color: #fff;
+										}
+									}
+								}
+
+								.txt_box {
+									background: #ddd;
+									padding: 15px 25px;
+									border-radius: 0 0 0 25px;
+
+									h2 {
+										font: 16px/1.5 'Kdam Thmor Pro';
+										font-style: oblique;
+										color: #444;
+										letter-spacing: 1px;
+										margin-bottom: 15px;
+									}
+
+									p {
+										font: 14px/1.7 'arial';
+										color: #555;
+										margin-bottom: 25px;
+									}
+
+									a {
+										color: $titleColor;
+										font: 14px/1 'arial';
+									}
+								}
+							}
+
+							&.box2 {
+								width: 100%;
+								border-top: 3px solid $titleColor;
+
+								// background: #eee;
+								li {
+									float: left;
+									width: 100%;
+									border: none;
+									padding: 20px 20px 20px 0;
+									box-shadow: none;
+									border-radius: none;
+
+									&:nth-of-type(1) {
+										width: calc(30% - 10px);
+
+										.pic {
+											width: 100%;
+											height: 250px;
+											background: url(../img/pic4.jpg) no-repeat center/cover;
+										}
+									}
+
+									&:nth-of-type(2) {
+										width: calc(40% - 10px);
+
+										h1 {
+											font: bold 20px/1 'arial';
+											color: $titleColor;
+											margin-bottom: 20px;
+										}
+
+										p {
+											font: 14px/1.3 'arial';
+											color: #333;
+											margin-bottom: 20px;
+										}
+
+										a {
+											display: block;
+											width: 80px;
+											height: 30px;
+											background: $boxColor;
+											display: flex;
+											justify-content: center;
+											align-items: center;
+											font: 12px/1 'arial';
+											color: #fff;
+											border-radius: 5px;
+										}
+									}
+
+									&:nth-of-type(3) {
+										width: calc(30% - 10px);
+
+										h1 {
+											font: bold 20px/1 'arial';
+											color: $titleColor;
+											margin-bottom: 20px;
+										}
+
+										h2 {
+											font: bold 18px/1 'arial';
+											color: $titleColor;
+											margin-bottom: 20px;
+										}
+
+										p {
+											font: 14px/1.3 'arial';
+											color: #333;
+											margin-bottom: 20px;
+										}
+
+										a {
+											display: block;
+											width: 80px;
+											height: 30px;
+											background: $boxColor;
+											display: flex;
+											justify-content: center;
+											align-items: center;
+											font: 12px/1 'arial';
+											color: #fff;
+											border-radius: 5px;
+										}
+									}
+								}
+							}
+
+							&.box3 {
+								li {
+									position: relative;
+									border: none;
+									box-shadow: none;
+									border-radius: none;
+									overflow: hidden;
+									transition: 0.5s;
+
+									&:hover .pic {
+										transform: scale(1.2);
+										transition: 0.5s;
+									}
+
+									.pic {
+										width: 100%;
+										height: 350px;
+										background: url(../img/pic5.jpg) no-repeat center/cover;
+									}
+
+									&:nth-of-type(2) .pic {
+										background: url(../img/pic6.jpg) no-repeat center/cover;
+									}
+
+									&:nth-of-type(3) .pic {
+										background: url(../img/pic7.jpg) no-repeat center/cover;
+									}
+
+									.txt_box {
+										border-radius: 0;
+										background: transparent;
+										width: 100%;
+										position: absolute;
+										bottom: 0;
+										left: 0;
+										text-align: center;
+
+										h2 {
+											font-size: 14px;
+											color: #fff;
+											letter-spacing: 1px;
+											margin-bottom: 5px;
+										}
+
+										p {
+											font-size: 12px;
+											color: #ddd;
+										}
+									}
+								}
+							}
+
+							&.box4 {
+								width: 100%;
+
+								li {
+									width: 100%;
+
+									.pic {
+										width: 100%;
+										height: 350px;
+										background: url(../img/pic8.jpg) no-repeat center/cover;
+										background-attachment: fixed;
+									}
+
+									.txt_box {
+										border-radius: 0;
+										background: transparent;
+										width: 100%;
+										position: absolute;
+										top: 50%;
+										left: 50%;
+										transform: translate(-50%, -50%);
+										text-align: center;
+
+										h2 {
+											font-size: 28px;
+											color: #fff;
+											letter-spacing: 1px;
+											margin-bottom: 5px;
+										}
+
+										p {
+											font-size: 20px;
+											color: #ddd;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#projects {
+		width: 100%;
+		padding: 50px 0;
+
+		.inner {
+			width: 1180px;
+			margin: 0 auto;
+
+			.boxWrap {
+				&::after {
+					content: '';
+					display: block;
+					clear: both;
+				}
+
+				width: 100%;
+
+				> div {
+					float: left;
+
+					&::after {
+						content: '';
+						display: block;
+						clear: both;
+					}
+
+					&.left_box {
+						width: 20%;
+						margin-right: 20px;
+						border-top: 5px solid #999;
+						padding: 20px 0px 10px 10px;
+
+						h1 {
+							font: bold 18px/1 'arial';
+							color: #444;
+							position: relative;
+							margin-bottom: 40px;
+
+							&::after {
+								content: '';
+								display: block;
+								position: absolute;
+								top: 30px;
+								left: 0;
+								width: 30px;
+								height: 2px;
+								background: #ccc;
+							}
+						}
+					}
+
+					&.right_box {
+						width: calc(80% - 20px);
+
+						ul {
+							width: 100%;
+
+							li {
+								float: left;
+								width: calc(33.333% - 10px);
+								height: 250px;
+								margin-right: 10px;
+								box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+								position: relative;
+
+								&::after {
+									content: '';
+									display: block;
+									clear: both;
+								}
+
+								&:last-of-type {
+									margin-right: 0;
+								}
+
+								.bg_box {
+									width: 100%;
+									height: 100%;
+
+									&:hover .txt_box {
+										opacity: 1;
+										transition: 0.5s;
+									}
+
+									&.bg_box1 {
+										background: url(../img/pic1.jpg) no-repeat center/cover;
+									}
+
+									&.bg_box2 {
+										background: url(../img/pic2.jpg) no-repeat center/cover;
+									}
+
+									&.bg_box3 {
+										background: url(../img/pic3.jpg) no-repeat center/cover;
+									}
+								}
+
+								.txt_box {
+									opacity: 0;
+									width: 100%;
+									height: 100%;
+									position: absolute;
+									top: 0;
+									left: 0;
+									background: rgb(70, 84, 103, 0.7);
+									padding: 30px 20px 0;
+
+									&::after {
+										content: '';
+										display: block;
+										position: absolute;
+										bottom: 60px;
+										left: 50%;
+										transform: translateX(-50%);
+										width: calc(100% - 40px);
+										height: 2px;
+										background: #fff;
+									}
+
+									> h2 {
+										font: 14px/1.5 'Kdam Thmor Pro';
+										font-style: oblique;
+										color: #fff;
+										letter-spacing: 1px;
+										margin-bottom: 15px;
+									}
+
+									> p {
+										font: 12px/1.7 'arial';
+										color: #fff;
+										margin-bottom: 25px;
+									}
+
+									> a {
+										color: $titleColor;
+										font: 14px/1 'arial';
+									}
+
+									.bottom_txt {
+										width: 100%;
+										position: absolute;
+										bottom: 0;
+										left: 0;
+										display: flex;
+										justify-content: space-between;
+										align-items: center;
+										padding: 20px 20px;
+
+										p {
+											font: 14px/1 'arial';
+											color: #fff;
+
+											i {
+												margin-right: 5px;
+											}
+										}
+
+										a {
+											display: block;
+											font: 14px/1 'arial';
+											color: #fff;
+
+											i {
+												margin-right: 10px;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#about {
+		width: 100%;
+		padding: 50px 0;
+
+		.inner {
+			width: 1180px;
+			height: 370px;
+			margin: 0 auto;
+
+			.boxWrap {
+				width: 100%;
+
+				&::after {
+					content: '';
+					display: block;
+					clear: both;
+				}
+
+				> div {
+					float: left;
+
+					&.left_box {
+						width: 20%;
+						margin-right: 20px;
+						border-top: 5px solid #999;
+						padding: 20px 0px 10px 10px;
+
+						h1 {
+							font: bold 18px/1 'arial';
+							color: #444;
+						}
+
+						ul {
+							width: 100%;
+
+							li {
+								border-bottom: 1px solid #bbb;
+
+								&.on a,
+								&.on i {
+									color: $titleColor;
+								}
+
+								a {
+									display: block;
+									color: #bbb;
+									padding: 10px 0;
+									font: 14px/1 'arial';
+
+									i {
+										font-size: 12px;
+										margin-right: 10px;
+									}
+								}
+							}
+						}
+					}
+
+					&.right_box {
+						width: calc(80% - 20px);
+						position: relative;
+
+						ul {
+							width: 100%;
+							position: absolute;
+							top: 0;
+							left: 0;
+							display: none;
+
+							&.on {
+								display: block;
+							}
+
+							&::after {
+								content: '';
+								display: block;
+								clear: both;
+							}
+
+							> li {
+								width: 100%;
+								margin-right: 10px;
+								padding-right: 40px;
+								// border-top: 3px solid $titleColor;
+
+								> h1 {
+									font: bold 34px/1 'arial';
+									letter-spacing: 1px;
+									color: $titleColor;
+									letter-spacing: 1px;
+									margin-bottom: 20px;
+								}
+
+								> h2 {
+									font: 16px/1.5 'Kdam Thmor Pro';
+									font-style: oblique;
+									color: #444;
+									letter-spacing: 1px;
+									margin-bottom: 15px;
+								}
+
+								> p {
+									font: 14px/1.7 'arial';
+									color: #555;
+									margin-bottom: 25px;
+								}
+
+								> a {
+									color: $titleColor;
+									font: 14px/1 'arial';
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#footer {
+		width: 100%;
+		padding: 40px 0;
+		// border-top: 2px solid #999;
+		background: #ddd;
+
+		.inner {
+			width: 1180px;
+			margin: 0 auto;
+			padding: 10px 0 0;
+			position: relative;
+
+			&::before {
+				content: '';
+				display: block;
+				width: 100%;
+				height: 2px;
+				background: #ccc;
+				position: absolute;
+				bottom: 35%;
+				left: 0;
+			}
+
+			&::after {
+				display: block;
+				content: '';
+				clear: both;
+			}
+
+			h1 {
+				float: left;
+				color: #444;
+				font: bold 20px/1 'arial';
+				margin-bottom: 10px;
+			}
+
+			.top_box {
+				float: right;
+
+				li {
+					float: left;
+					margin-left: 20px;
+
+					a {
+						font: 14px/1 'arial';
+						color: #444;
+					}
+				}
+			}
+
+			address {
+				width: 100%;
+				float: left;
+				font: 14px/1.3 'arial';
+				color: #444;
+				margin-bottom: 80px;
+			}
+
+			p {
+				font: 14px/1 'arial';
+				color: #444;
+				float: left;
+			}
+
+			.bottom_box {
+				float: right;
+
+				li {
+					float: left;
+					margin-left: 10px;
+					i {
+						font-size: 20px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $tablet) {
+	body {
+		#header {
+			width: 100%;
+			.inner {
+				width: 100%;
+				height: 100px;
+				&::after {
+					display: none;
+				}
+				&::before {
+					height: 2px;
+				}
+				> h1 {
+					left: 20px;
+					top: 50%;
+					transform: translateY(-50%);
+				}
+				.menuWeb {
+					display: none;
+				}
+				.btnCall {
+					display: block;
+				}
+				.menuMo {
+					display: block;
+				}
+			}
+		}
+		#visual {
+			padding: 50px 20px;
+
+			.inner {
+				width: 100%;
+				> .txt_box {
+					> h1 {
+						font: bold 30px/1 'arial';
+					}
+
+					> a {
+						font: 16px/50px 'arial';
+					}
+				}
+
+				.content {
+					.title_box {
+						.txt_box {
+							h1 {
+								font: bold 20px/1 'arial';
+							}
+
+							> h2 {
+								font: 14px/1.5 'Kdam Thmor Pro';
+							}
+
+							> span {
+								font: 14px/1 'arial';
+							}
+
+							> p {
+								font: 14px/1.3 'arial';
+								color: #555;
+								margin-bottom: 30px;
+							}
+
+							> a {
+								display: block;
+								font: 14px/1 'arial';
+								color: $titleColor;
+							}
+						}
+					}
+				}
+			}
+		}
+		#services {
+			padding: 50px 20px;
+
+			.inner {
+				width: 100%;
+				height: auto;
+				margin: 0 auto;
+
+				.boxWrap {
+					width: 100%;
+
+					> div {
+						float: none;
+
+						&.left_box {
+							width: 100%;
+							margin-right: 0;
+							text-align: center;
+							padding: 20px 0px 40px 10px;
+
+							h1 {
+								font: bold 16px/1 'arial';
+							}
+
+							ul {
+								width: 100%;
+
+								li {
+									float: left;
+									width: calc(100% / 4);
+									border-bottom: none;
+									a {
+										font: 14px/1 'arial';
+										i {
+											font-size: 12px;
+										}
+									}
+								}
+							}
+						}
+
+						&.right_box {
+							width: calc(100%);
+							position: relative;
+							ul {
+								&.on {
+									display: block;
+									display: flex;
+									justify-content: space-between;
+								}
+								li {
+									width: calc(100% / 3);
+
+									.title {
+										height: 30%;
+
+										h1 {
+											font: bold 16px/1 'arial';
+											position: absolute;
+											top: 50%;
+											left: 2.5vw;
+											transform: translateY(-50%);
+										}
+
+										span {
+											width: 45px;
+											height: 45px;
+											right: 2.5vw;
+											i {
+												font-size: 20px;
+											}
+										}
+									}
+
+									.txt_box {
+										height: 70%;
+
+										h2 {
+											font: 14px/1.5 'Kdam Thmor Pro';
+										}
+
+										p {
+											font: 14px/1.7 'arial';
+										}
+
+										a {
+											font: 14px/1 'arial';
+										}
+									}
+								}
+
+								&.box2 {
+									width: 100%;
+									border-top: 3px solid $titleColor;
+
+									// background: #eee;
+									li {
+										float: left;
+										width: 100%;
+										border: none;
+										padding: 20px 20px 20px 0;
+										box-shadow: none;
+										border-radius: none;
+
+										&:nth-of-type(1) {
+											width: calc(30% - 10px);
+
+											.pic {
+												width: 100%;
+												height: 250px;
+												background: url(../img/pic4.jpg) no-repeat center/cover;
+											}
+										}
+
+										&:nth-of-type(2) {
+											width: calc(40% - 10px);
+
+											h1 {
+												font: bold 20px/1 'arial';
+												color: $titleColor;
+												margin-bottom: 20px;
+											}
+
+											p {
+												font: 14px/1.3 'arial';
+												color: #333;
+												margin-bottom: 20px;
+											}
+
+											a {
+												display: block;
+												width: 80px;
+												height: 30px;
+												background: $boxColor;
+												display: flex;
+												justify-content: center;
+												align-items: center;
+												font: 12px/1 'arial';
+												color: #fff;
+												border-radius: 5px;
+											}
+										}
+
+										&:nth-of-type(3) {
+											width: calc(30% - 10px);
+
+											h1 {
+												font: bold 20px/1 'arial';
+												color: $titleColor;
+												margin-bottom: 20px;
+											}
+
+											h2 {
+												font: bold 18px/1 'arial';
+												color: $titleColor;
+												margin-bottom: 20px;
+											}
+
+											p {
+												font: 14px/1.3 'arial';
+												color: #333;
+												margin-bottom: 20px;
+											}
+
+											a {
+												display: block;
+												width: 80px;
+												height: 30px;
+												background: $boxColor;
+												display: flex;
+												justify-content: center;
+												align-items: center;
+												font: 12px/1 'arial';
+												color: #fff;
+												border-radius: 5px;
+											}
+										}
+									}
+								}
+
+								&.box3 {
+									li {
+										position: relative;
+										border: none;
+										box-shadow: none;
+										border-radius: none;
+										overflow: hidden;
+										transition: 0.5s;
+
+										&:hover .pic {
+											transform: scale(1.2);
+											transition: 0.5s;
+										}
+
+										.pic {
+											width: 100%;
+											height: 350px;
+											background: url(../img/pic5.jpg) no-repeat center/cover;
+										}
+
+										&:nth-of-type(2) .pic {
+											background: url(../img/pic6.jpg) no-repeat center/cover;
+										}
+
+										&:nth-of-type(3) .pic {
+											background: url(../img/pic7.jpg) no-repeat center/cover;
+										}
+
+										.txt_box {
+											border-radius: 0;
+											background: transparent;
+											width: 100%;
+											position: absolute;
+											bottom: 0;
+											left: 0;
+											text-align: center;
+
+											h2 {
+												font-size: 14px;
+												color: #fff;
+												letter-spacing: 1px;
+												margin-bottom: 5px;
+											}
+
+											p {
+												font-size: 12px;
+												color: #ddd;
+											}
+										}
+									}
+								}
+
+								&.box4 {
+									width: 100%;
+
+									li {
+										width: 100%;
+
+										.pic {
+											width: 100%;
+											height: 100%;
+											background: url(../img/pic8.jpg) no-repeat center/cover;
+											background-attachment: fixed;
+										}
+
+										.txt_box {
+											border-radius: 0;
+											background: transparent;
+											width: 100%;
+											position: absolute;
+											top: 50%;
+											left: 50%;
+											transform: translate(-50%, -50%);
+											text-align: center;
+
+											h2 {
+												font-size: 28px;
+												color: #fff;
+												letter-spacing: 1px;
+												margin-bottom: 5px;
+											}
+
+											p {
+												font-size: 20px;
+												color: #ddd;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: '750px') {
+	body {
+		#services {
+			padding: 50px 20px;
+
+			.inner {
+				width: 100%;
+				height: auto;
+				margin: 0 auto;
+
+				.boxWrap {
+					width: 100%;
+
+					> div {
+						float: none;
+
+						&.left_box {
+							width: 100%;
+							margin-right: 0;
+							text-align: center;
+							padding: 20px 0px 50px 10px;
+
+							h1 {
+								font: bold 16px/1 'arial';
+							}
+
+							ul {
+								width: 100%;
+
+								li {
+									float: left;
+									width: calc(100% / 4);
+									position: relative;
+									border-bottom: none;
+									a {
+										display: block;
+										font: 12px/1 'arial';
+										text-align: center;
+										i {
+											display: none;
+										}
+
+										&::before {
+											content: '';
+											display: block;
+											height: 50%;
+											width: 1px;
+											background: #ccc;
+											position: absolute;
+											left: 0px;
+											top: 50%;
+											transform: translateY(-50%);
+										}
+									}
+								}
+							}
+						}
+
+						&.right_box {
+							width: calc(100%);
+							height: 500px;
+							position: relative;
+							ul {
+								&.on {
+									display: block;
+									display: flex;
+									justify-content: space-between;
+								}
+								li {
+									.title {
+										height: 30%;
+
+										h1 {
+											font: bold 16px/1 'arial';
+											position: absolute;
+											top: 50%;
+											left: 25px;
+											transform: translateY(-50%);
+										}
+
+										span {
+											width: 45px;
+											height: 45px;
+											right: 25px;
+											i {
+												font-size: 20px;
+											}
+										}
+									}
+
+									.txt_box {
+										height: 70%;
+
+										h2 {
+											font: 14px/1.5 'Kdam Thmor Pro';
+										}
+
+										p {
+											font: 14px/1.7 'arial';
+										}
+
+										a {
+											font: 14px/1 'arial';
+										}
+									}
+								}
+								&.box1 {
+									height: 500px;
+									&.on {
+										display: block;
+										width: 100%;
+									}
+									li {
+										display: block;
+										width: 100%;
+										height: calc(100% / 3 - 2vh);
+										float: none;
+										margin-bottom: 2vh;
+										&:last-of-type {
+											margin-bottom: 0;
+										}
+										.title {
+											height: 40%;
+										}
+										.txt_box {
+											height: 60%;
+										}
+										p {
+											display: none;
+										}
+									}
+								}
+								&.box2 {
+									width: 100%;
+									border-top: 3px solid $titleColor;
+
+									// background: #eee;
+									li {
+										float: left;
+										width: 100%;
+										border: none;
+										padding: 20px 20px 20px 0;
+										box-shadow: none;
+										border-radius: none;
+
+										&:nth-of-type(1) {
+											width: calc(30% - 10px);
+
+											.pic {
+												width: 100%;
+												height: 250px;
+												background: url(../img/pic4.jpg) no-repeat center/cover;
+											}
+										}
+
+										&:nth-of-type(2) {
+											width: calc(40% - 10px);
+
+											h1 {
+												font: bold 20px/1 'arial';
+												color: $titleColor;
+												margin-bottom: 20px;
+											}
+
+											p {
+												font: 14px/1.3 'arial';
+												color: #333;
+												margin-bottom: 20px;
+											}
+
+											a {
+												display: block;
+												width: 80px;
+												height: 30px;
+												background: $boxColor;
+												display: flex;
+												justify-content: center;
+												align-items: center;
+												font: 12px/1 'arial';
+												color: #fff;
+												border-radius: 5px;
+											}
+										}
+
+										&:nth-of-type(3) {
+											width: calc(30% - 10px);
+
+											h1 {
+												font: bold 20px/1 'arial';
+												color: $titleColor;
+												margin-bottom: 20px;
+											}
+
+											h2 {
+												font: bold 18px/1 'arial';
+												color: $titleColor;
+												margin-bottom: 20px;
+											}
+
+											p {
+												font: 14px/1.3 'arial';
+												color: #333;
+												margin-bottom: 20px;
+											}
+
+											a {
+												display: block;
+												width: 80px;
+												height: 30px;
+												background: $boxColor;
+												display: flex;
+												justify-content: center;
+												align-items: center;
+												font: 12px/1 'arial';
+												color: #fff;
+												border-radius: 5px;
+											}
+										}
+									}
+								}
+								&.box3 {
+									li {
+										.pic {
+											height: 100%;
+										}
+									}
+								}
+								&.box4 {
+									li {
+										width: 100%;
+
+										.pic {
+											height: 100%;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: $mobile) {
+	body {
+		#visual {
+			padding: 20px;
+			.inner {
+				> .txt_box {
+					width: 100%;
+					display: block;
+					margin-bottom: 20px;
+
+					> h1 {
+						width: 100%;
+						font: bold 22px/1 'arial';
+						text-align: center;
+						margin-bottom: 5px;
+					}
+
+					> a {
+						margin: 0 auto;
+						width: 120px;
+						height: 30px;
+						font: 14px/30px 'arial';
+					}
+				}
+
+				.content {
+					display: block;
+
+					#slider {
+						width: calc(100%);
+						margin-bottom: 20px;
+					}
+
+					.title_box {
+						width: 100%;
+						margin-left: 0;
+
+						.prev {
+							left: auto;
+							right: 20px;
+						}
+
+						.next {
+							left: auto;
+							right: 0;
+						}
+
+						.txt_box {
+							width: 100%;
+							padding: 20px 0 0;
+
+							h1 {
+								font: bold 20px/1 'arial';
+							}
+
+							> h2 {
+								font: 14px/1.5 'Kdam Thmor Pro';
+							}
+
+							> span {
+								font: 12px/1 'arial';
+							}
+
+							> p {
+								font: 12px/1.3 'arial';
+								color: #555;
+								margin-bottom: 30px;
+							}
+
+							> a {
+								font: 12px/1 'arial';
+							}
+						}
+					}
+				}
+			}
+		}
+		#services {
+			padding: 20px;
+			.inner {
+				.boxWrap {
+					> div {
+						&.right_box {
+							ul {
+								li {
+									.title {
+										h1 {
+											font: bold 14px/1 'arial';
+										}
+										span {
+											width: 35px;
+											height: 35px;
+											i {
+												font-size: 15px;
+											}
+										}
+									}
+
+									.txt_box {
+										height: 70%;
+
+										h2 {
+											font: 12px/1 'Kdam Thmor Pro';
+										}
+
+										a {
+											font: 12px/1 'arial';
+										}
+									}
+								}
+								&.box2 {
+									width: 100%;
+									border-top: 3px solid $titleColor;
+									&.on {
+										display: block;
+									}
+									// background: #eee;
+									li {
+										float: left;
+										width: 100%;
+										border: none;
+										padding: 20px 20px 20px 0;
+										box-shadow: none;
+										border-radius: none;
+
+										&:nth-of-type(1) {
+											width: calc(100%);
+											padding: 20px 0 0;
+											.pic {
+												height: 200px;
+												background: url(../img/pic4.jpg) no-repeat center/cover;
+											}
+										}
+
+										&:nth-of-type(2) {
+											width: calc(100%);
+											h1 {
+												font: bold 16px/1 'arial';
+												color: $titleColor;
+												margin-bottom: 5px;
+											}
+
+											p {
+												font: 12px/1.3 'arial';
+												margin-bottom: 10px;
+											}
+										}
+
+										&:nth-of-type(3) {
+											display: none;
+										}
+									}
+								}
+								&.box3 {
+									&.on {
+										display: block;
+									}
+									li {
+										width: calc(100%);
+										height: calc(100% / 3);
+										border-radius: 0;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }

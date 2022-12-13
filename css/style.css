@@ -44,6 +44,7 @@ body #header .inner {
   height: 140px;
   margin: 0 auto;
   position: relative;
+  transition: 0.5s;
 }
 body #header .inner::after {
   content: "";
@@ -65,13 +66,13 @@ body #header .inner::before {
   bottom: 0px;
   z-index: -1;
 }
-body #header .inner h1 {
+body #header .inner > h1 {
   position: absolute;
   left: 0;
   top: 20px;
 }
-body #header .inner h1 a {
-  color: #4E6298;
+body #header .inner > h1 a {
+  color: #4e6298;
 }
 body #header .inner .gnb {
   position: absolute;
@@ -89,7 +90,7 @@ body #header .inner .gnb li a {
   color: #999;
 }
 body #header .inner .gnb li a:hover, body #header .inner .gnb li a.on {
-  color: #4E6298;
+  color: #4e6298;
   transition: 0.5s;
 }
 body #header .inner .gnb li a:hover::after, body #header .inner .gnb li a.on::after {
@@ -101,7 +102,7 @@ body #header .inner .gnb li a:hover::after, body #header .inner .gnb li a.on::af
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  border-top: 3px solid #4E6298;
+  border-top: 3px solid #4e6298;
   transition: 0.5s;
 }
 body #header .inner .utill {
@@ -129,11 +130,108 @@ body #header .inner .utill li a {
   font: 12px/1 "arial";
   color: #999;
 }
-body #header .inner input::-webkit-search-decoration,
-body #header .inner input::-webkit-search-cancel-button,
-body #header .inner input::-webkit-search-results-button,
-body #header .inner input::-webkit-search-results-decoration {
+body #header .inner .btnCall {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
   display: none;
+  width: 20px;
+  height: 20px;
+}
+body #header .inner .btnCall::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: top 0.5s 0s, transform 0.5s 0.5s;
+}
+body #header .inner .btnCall::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #000;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: bottom 0.5s 0s, transform 0.5s 0.5s;
+}
+body #header .inner .btnCall span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #000;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -1px;
+  transition: 1s;
+  text-indent: -9999px;
+}
+body #header .inner .btnCall.on::before {
+  top: 50%;
+  margin-top: -1px;
+  transform: rotate(45deg);
+}
+body #header .inner .btnCall.on::after {
+  bottom: 50%;
+  margin-bottom: -1px;
+  transform: rotate(-45deg);
+}
+body #header .inner .btnCall.on span {
+  transform: translateX(100%);
+  opacity: 0;
+}
+body #header .inner .menuMo {
+  width: 270px;
+  height: 100vh;
+  background: linear-gradient(#4e6298, #303239, #303239);
+  position: fixed;
+  top: 0;
+  left: -270px;
+  padding: 35px 30px;
+  z-index: 10;
+  transition: 0.5s;
+  display: none;
+}
+body #header .inner .menuMo.on {
+  left: 0;
+}
+body #header .inner .menuMo > .inputWrap {
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 30px;
+}
+body #header .inner .menuMo h1 {
+  padding-bottom: 60px;
+  border-bottom: 1px solid #fff;
+}
+body #header .inner .menuMo h1 a {
+  display: block;
+  font: bold 24px/1 "arial";
+  color: #fff;
+  text-align: center;
+}
+body #header .inner .menuMo h1 span {
+  font-size: 12px;
+  color: #fff;
+}
+body #header .inner .menuMo #gnbMo li a {
+  display: block;
+  width: 100%;
+  padding: 20px 0;
+  border-bottom: 1px solid #888;
+  font: bold 14px/1 "arial";
+  color: #fff;
+  text-align: center;
 }
 body #header .inner .inputWrap {
   position: absolute;
@@ -164,6 +262,7 @@ body #visual .inner {
   width: 1180px;
   margin: 0 auto;
   position: relative;
+  transition: 0.5s;
 }
 body #visual .inner > .txt_box {
   width: 100%;
@@ -178,13 +277,13 @@ body #visual .inner > .txt_box > h1 {
   color: #444;
 }
 body #visual .inner > .txt_box > h1 > span {
-  color: #4E6298;
+  color: #4e6298;
 }
 body #visual .inner > .txt_box > a {
   display: block;
   width: 200px;
   height: 50px;
-  background: linear-gradient(#4E6298, #303239, #303239);
+  background: linear-gradient(#4e6298, #303239, #303239);
   color: #fff;
   text-align: center;
   font: 18px/50px "arial";
@@ -237,7 +336,7 @@ body #visual .inner .content #slider ul li[data-index="4"] {
 body #visual .inner .content .title_box {
   position: relative;
   width: 40%;
-  border-top: 5px solid #4E6298;
+  border-top: 5px solid #4e6298;
   margin-left: 20px;
 }
 body #visual .inner .content .title_box .prev {
@@ -288,7 +387,7 @@ body #visual .inner .content .title_box .txt_box > span {
   margin-bottom: 20px;
 }
 body #visual .inner .content .title_box .txt_box > span > span {
-  color: #4E6298;
+  color: #4e6298;
   margin-left: 15px;
   position: relative;
   margin-bottom: 20px;
@@ -311,11 +410,12 @@ body #visual .inner .content .title_box .txt_box > p {
 body #visual .inner .content .title_box .txt_box > a {
   display: block;
   font: 16px/1 "arial";
-  color: #4E6298;
+  color: #4e6298;
 }
 body #services {
   width: 100%;
   padding: 50px 0;
+  transition: 0.5s;
 }
 body #services .inner {
   width: 1180px;
@@ -350,7 +450,7 @@ body #services .inner .boxWrap > div.left_box ul li {
   border-bottom: 1px solid #bbb;
 }
 body #services .inner .boxWrap > div.left_box ul li.on a, body #services .inner .boxWrap > div.left_box ul li.on i {
-  color: #4E6298;
+  color: #4e6298;
 }
 body #services .inner .boxWrap > div.left_box ul li a {
   display: block;
@@ -365,9 +465,11 @@ body #services .inner .boxWrap > div.left_box ul li a i {
 body #services .inner .boxWrap > div.right_box {
   width: calc(80% - 20px);
   position: relative;
+  height: 400px;
 }
 body #services .inner .boxWrap > div.right_box ul {
   width: 100%;
+  height: 400px;
   position: absolute;
   top: 0;
   left: 0;
@@ -385,7 +487,7 @@ body #services .inner .boxWrap > div.right_box ul li {
   float: left;
   width: calc(33.333% - 10px);
   margin-right: 10px;
-  border-top: 3px solid #4E6298;
+  border-top: 3px solid #4e6298;
   box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
   border-radius: 0 0 0 25px;
 }
@@ -407,13 +509,13 @@ body #services .inner .boxWrap > div.right_box ul li .title {
 body #services .inner .boxWrap > div.right_box ul li .title h1 {
   font: bold 20px/100px "arial";
   letter-spacing: 1px;
-  color: #4E6298;
+  color: #4e6298;
 }
 body #services .inner .boxWrap > div.right_box ul li .title span {
   display: block;
   width: 65px;
   height: 65px;
-  background: linear-gradient(#4E6298, #303239, #303239);
+  background: linear-gradient(#4e6298, #303239, #303239);
   border-radius: 50%;
   position: absolute;
   top: 50%;
@@ -446,12 +548,12 @@ body #services .inner .boxWrap > div.right_box ul li .txt_box p {
   margin-bottom: 25px;
 }
 body #services .inner .boxWrap > div.right_box ul li .txt_box a {
-  color: #4E6298;
+  color: #4e6298;
   font: 14px/1 "arial";
 }
 body #services .inner .boxWrap > div.right_box ul.box2 {
   width: 100%;
-  border-top: 3px solid #4E6298;
+  border-top: 3px solid #4e6298;
 }
 body #services .inner .boxWrap > div.right_box ul.box2 li {
   float: left;
@@ -474,7 +576,7 @@ body #services .inner .boxWrap > div.right_box ul.box2 li:nth-of-type(2) {
 }
 body #services .inner .boxWrap > div.right_box ul.box2 li:nth-of-type(2) h1 {
   font: bold 20px/1 "arial";
-  color: #4E6298;
+  color: #4e6298;
   margin-bottom: 20px;
 }
 body #services .inner .boxWrap > div.right_box ul.box2 li:nth-of-type(2) p {
@@ -486,7 +588,7 @@ body #services .inner .boxWrap > div.right_box ul.box2 li:nth-of-type(2) a {
   display: block;
   width: 80px;
   height: 30px;
-  background: linear-gradient(#4E6298, #303239, #303239);
+  background: linear-gradient(#4e6298, #303239, #303239);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -499,12 +601,12 @@ body #services .inner .boxWrap > div.right_box ul.box2 li:nth-of-type(3) {
 }
 body #services .inner .boxWrap > div.right_box ul.box2 li:nth-of-type(3) h1 {
   font: bold 20px/1 "arial";
-  color: #4E6298;
+  color: #4e6298;
   margin-bottom: 20px;
 }
 body #services .inner .boxWrap > div.right_box ul.box2 li:nth-of-type(3) h2 {
   font: bold 18px/1 "arial";
-  color: #4E6298;
+  color: #4e6298;
   margin-bottom: 20px;
 }
 body #services .inner .boxWrap > div.right_box ul.box2 li:nth-of-type(3) p {
@@ -516,7 +618,7 @@ body #services .inner .boxWrap > div.right_box ul.box2 li:nth-of-type(3) a {
   display: block;
   width: 80px;
   height: 30px;
-  background: linear-gradient(#4E6298, #303239, #303239);
+  background: linear-gradient(#4e6298, #303239, #303239);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -717,7 +819,7 @@ body #projects .inner .boxWrap > div.right_box ul li .txt_box > p {
   margin-bottom: 25px;
 }
 body #projects .inner .boxWrap > div.right_box ul li .txt_box > a {
-  color: #4E6298;
+  color: #4e6298;
   font: 14px/1 "arial";
 }
 body #projects .inner .boxWrap > div.right_box ul li .txt_box .bottom_txt {
@@ -782,7 +884,7 @@ body #about .inner .boxWrap > div.left_box ul li {
   border-bottom: 1px solid #bbb;
 }
 body #about .inner .boxWrap > div.left_box ul li.on a, body #about .inner .boxWrap > div.left_box ul li.on i {
-  color: #4E6298;
+  color: #4e6298;
 }
 body #about .inner .boxWrap > div.left_box ul li a {
   display: block;
@@ -821,7 +923,7 @@ body #about .inner .boxWrap > div.right_box ul > li {
 body #about .inner .boxWrap > div.right_box ul > li > h1 {
   font: bold 34px/1 "arial";
   letter-spacing: 1px;
-  color: #4E6298;
+  color: #4e6298;
   letter-spacing: 1px;
   margin-bottom: 20px;
 }
@@ -838,7 +940,7 @@ body #about .inner .boxWrap > div.right_box ul > li > p {
   margin-bottom: 25px;
 }
 body #about .inner .boxWrap > div.right_box ul > li > a {
-  color: #4E6298;
+  color: #4e6298;
   font: 14px/1 "arial";
 }
 body #footer {
@@ -905,6 +1007,628 @@ body #footer .inner .bottom_box li {
 }
 body #footer .inner .bottom_box li i {
   font-size: 20px;
+}
+
+@media screen and (max-width: 1179px) {
+  body #header {
+    width: 100%;
+  }
+  body #header .inner {
+    width: 100%;
+    height: 100px;
+  }
+  body #header .inner::after {
+    display: none;
+  }
+  body #header .inner::before {
+    height: 2px;
+  }
+  body #header .inner > h1 {
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  body #header .inner .menuWeb {
+    display: none;
+  }
+  body #header .inner .btnCall {
+    display: block;
+  }
+  body #header .inner .menuMo {
+    display: block;
+  }
+  body #visual {
+    padding: 50px 20px;
+  }
+  body #visual .inner {
+    width: 100%;
+  }
+  body #visual .inner > .txt_box > h1 {
+    font: bold 30px/1 "arial";
+  }
+  body #visual .inner > .txt_box > a {
+    font: 16px/50px "arial";
+  }
+  body #visual .inner .content .title_box .txt_box h1 {
+    font: bold 20px/1 "arial";
+  }
+  body #visual .inner .content .title_box .txt_box > h2 {
+    font: 14px/1.5 "Kdam Thmor Pro";
+  }
+  body #visual .inner .content .title_box .txt_box > span {
+    font: 14px/1 "arial";
+  }
+  body #visual .inner .content .title_box .txt_box > p {
+    font: 14px/1.3 "arial";
+    color: #555;
+    margin-bottom: 30px;
+  }
+  body #visual .inner .content .title_box .txt_box > a {
+    display: block;
+    font: 14px/1 "arial";
+    color: #4e6298;
+  }
+  body #services {
+    padding: 50px 20px;
+  }
+  body #services .inner {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+  body #services .inner .boxWrap {
+    width: 100%;
+  }
+  body #services .inner .boxWrap > div {
+    float: none;
+  }
+  body #services .inner .boxWrap > div.left_box {
+    width: 100%;
+    margin-right: 0;
+    text-align: center;
+    padding: 20px 0px 40px 10px;
+  }
+  body #services .inner .boxWrap > div.left_box h1 {
+    font: bold 16px/1 "arial";
+  }
+  body #services .inner .boxWrap > div.left_box ul {
+    width: 100%;
+  }
+  body #services .inner .boxWrap > div.left_box ul li {
+    float: left;
+    width: 25%;
+    border-bottom: none;
+  }
+  body #services .inner .boxWrap > div.left_box ul li a {
+    font: 14px/1 "arial";
+  }
+  body #services .inner .boxWrap > div.left_box ul li a i {
+    font-size: 12px;
+  }
+  body #services .inner .boxWrap > div.right_box {
+    width: 100%;
+    position: relative;
+  }
+  body #services .inner .boxWrap > div.right_box ul.on {
+    display: block;
+    display: flex;
+    justify-content: space-between;
+  }
+  body #services .inner .boxWrap > div.right_box ul li {
+    width: 33.3333333333%;
+  }
+  body #services .inner .boxWrap > div.right_box ul li .title {
+    height: 30%;
+  }
+  body #services .inner .boxWrap > div.right_box ul li .title h1 {
+    font: bold 16px/1 "arial";
+    position: absolute;
+    top: 50%;
+    left: 2.5vw;
+    transform: translateY(-50%);
+  }
+  body #services .inner .boxWrap > div.right_box ul li .title span {
+    width: 45px;
+    height: 45px;
+    right: 2.5vw;
+  }
+  body #services .inner .boxWrap > div.right_box ul li .title span i {
+    font-size: 20px;
+  }
+  body #services .inner .boxWrap > div.right_box ul li .txt_box {
+    height: 70%;
+  }
+  body #services .inner .boxWrap > div.right_box ul li .txt_box h2 {
+    font: 14px/1.5 "Kdam Thmor Pro";
+  }
+  body #services .inner .boxWrap > div.right_box ul li .txt_box p {
+    font: 14px/1.7 "arial";
+  }
+  body #services .inner .boxWrap > div.right_box ul li .txt_box a {
+    font: 14px/1 "arial";
+  }
+  body #services .inner .boxWrap > div.right_box ul.box2 {
+    width: 100%;
+    border-top: 3px solid #4e6298;
+  }
+  body #services .inner .boxWrap > div.right_box ul.box2 li {
+    float: left;
+    width: 100%;
+    border: none;
+    padding: 20px 20px 20px 0;
+    box-shadow: none;
+    border-radius: none;
+  }
+  body #services .inner .boxWrap > div.right_box ul.box2 li:nth-of-type(1) {
+    width: calc(30% - 10px);
+  }
+  body #services .inner .boxWrap > div.right_box ul.box2 li:nth-of-type(1) .pic {
+    width: 100%;
+    height: 250px;
+    background: url(../img/pic4.jpg) no-repeat center/cover;
+  }
+  body #services .inner .boxWrap > div.right_box ul.box2 li:nth-of-type(2) {
+    width: calc(40% - 10px);
+  }
+  body #services .inner .boxWrap > div.right_box ul.box2 li:nth-of-type(2) h1 {
+    font: bold 20px/1 "arial";
+    color: #4e6298;
+    margin-bottom: 20px;
+  }
+  body #services .inner .boxWrap > div.right_box ul.box2 li:nth-of-type(2) p {
+    font: 14px/1.3 "arial";
+    color: #333;
+    margin-bottom: 20px;
+  }
+  body #services .inner .boxWrap > div.right_box ul.box2 li:nth-of-type(2) a {
+    display: block;
+    width: 80px;
+    height: 30px;
+    background: linear-gradient(#4e6298, #303239, #303239);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: 12px/1 "arial";
+    color: #fff;
+    border-radius: 5px;
+  }
+  body #services .inner .boxWrap > div.right_box ul.box2 li:nth-of-type(3) {
+    width: calc(30% - 10px);
+  }
+  body #services .inner .boxWrap > div.right_box ul.box2 li:nth-of-type(3) h1 {
+    font: bold 20px/1 "arial";
+    color: #4e6298;
+    margin-bottom: 20px;
+  }
+  body #services .inner .boxWrap > div.right_box ul.box2 li:nth-of-type(3) h2 {
+    font: bold 18px/1 "arial";
+    color: #4e6298;
+    margin-bottom: 20px;
+  }
+  body #services .inner .boxWrap > div.right_box ul.box2 li:nth-of-type(3) p {
+    font: 14px/1.3 "arial";
+    color: #333;
+    margin-bottom: 20px;
+  }
+  body #services .inner .boxWrap > div.right_box ul.box2 li:nth-of-type(3) a {
+    display: block;
+    width: 80px;
+    height: 30px;
+    background: linear-gradient(#4e6298, #303239, #303239);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: 12px/1 "arial";
+    color: #fff;
+    border-radius: 5px;
+  }
+  body #services .inner .boxWrap > div.right_box ul.box3 li {
+    position: relative;
+    border: none;
+    box-shadow: none;
+    border-radius: none;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+  body #services .inner .boxWrap > div.right_box ul.box3 li:hover .pic {
+    transform: scale(1.2);
+    transition: 0.5s;
+  }
+  body #services .inner .boxWrap > div.right_box ul.box3 li .pic {
+    width: 100%;
+    height: 350px;
+    background: url(../img/pic5.jpg) no-repeat center/cover;
+  }
+  body #services .inner .boxWrap > div.right_box ul.box3 li:nth-of-type(2) .pic {
+    background: url(../img/pic6.jpg) no-repeat center/cover;
+  }
+  body #services .inner .boxWrap > div.right_box ul.box3 li:nth-of-type(3) .pic {
+    background: url(../img/pic7.jpg) no-repeat center/cover;
+  }
+  body #services .inner .boxWrap > div.right_box ul.box3 li .txt_box {
+    border-radius: 0;
+    background: transparent;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+  }
+  body #services .inner .boxWrap > div.right_box ul.box3 li .txt_box h2 {
+    font-size: 14px;
+    color: #fff;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+  }
+  body #services .inner .boxWrap > div.right_box ul.box3 li .txt_box p {
+    font-size: 12px;
+    color: #ddd;
+  }
+  body #services .inner .boxWrap > div.right_box ul.box4 {
+    width: 100%;
+  }
+  body #services .inner .boxWrap > div.right_box ul.box4 li {
+    width: 100%;
+  }
+  body #services .inner .boxWrap > div.right_box ul.box4 li .pic {
+    width: 100%;
+    height: 100%;
+    background: url(../img/pic8.jpg) no-repeat center/cover;
+    background-attachment: fixed;
+  }
+  body #services .inner .boxWrap > div.right_box ul.box4 li .txt_box {
+    border-radius: 0;
+    background: transparent;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  body #services .inner .boxWrap > div.right_box ul.box4 li .txt_box h2 {
+    font-size: 28px;
+    color: #fff;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+  }
+  body #services .inner .boxWrap > div.right_box ul.box4 li .txt_box p {
+    font-size: 20px;
+    color: #ddd;
+  }
+}
+@media screen and (max-width: 750px) {
+  body #services {
+    padding: 50px 20px;
+  }
+  body #services .inner {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+  body #services .inner .boxWrap {
+    width: 100%;
+  }
+  body #services .inner .boxWrap > div {
+    float: none;
+  }
+  body #services .inner .boxWrap > div.left_box {
+    width: 100%;
+    margin-right: 0;
+    text-align: center;
+    padding: 20px 0px 50px 10px;
+  }
+  body #services .inner .boxWrap > div.left_box h1 {
+    font: bold 16px/1 "arial";
+  }
+  body #services .inner .boxWrap > div.left_box ul {
+    width: 100%;
+  }
+  body #services .inner .boxWrap > div.left_box ul li {
+    float: left;
+    width: 25%;
+    position: relative;
+    border-bottom: none;
+  }
+  body #services .inner .boxWrap > div.left_box ul li a {
+    display: block;
+    font: 12px/1 "arial";
+    text-align: center;
+  }
+  body #services .inner .boxWrap > div.left_box ul li a i {
+    display: none;
+  }
+  body #services .inner .boxWrap > div.left_box ul li a::before {
+    content: "";
+    display: block;
+    height: 50%;
+    width: 1px;
+    background: #ccc;
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  body #services .inner .boxWrap > div.right_box {
+    width: 100%;
+    height: 500px;
+    position: relative;
+  }
+  body #services .inner .boxWrap > div.right_box ul.on {
+    display: block;
+    display: flex;
+    justify-content: space-between;
+  }
+  body #services .inner .boxWrap > div.right_box ul li .title {
+    height: 30%;
+  }
+  body #services .inner .boxWrap > div.right_box ul li .title h1 {
+    font: bold 16px/1 "arial";
+    position: absolute;
+    top: 50%;
+    left: 25px;
+    transform: translateY(-50%);
+  }
+  body #services .inner .boxWrap > div.right_box ul li .title span {
+    width: 45px;
+    height: 45px;
+    right: 25px;
+  }
+  body #services .inner .boxWrap > div.right_box ul li .title span i {
+    font-size: 20px;
+  }
+  body #services .inner .boxWrap > div.right_box ul li .txt_box {
+    height: 70%;
+  }
+  body #services .inner .boxWrap > div.right_box ul li .txt_box h2 {
+    font: 14px/1.5 "Kdam Thmor Pro";
+  }
+  body #services .inner .boxWrap > div.right_box ul li .txt_box p {
+    font: 14px/1.7 "arial";
+  }
+  body #services .inner .boxWrap > div.right_box ul li .txt_box a {
+    font: 14px/1 "arial";
+  }
+  body #services .inner .boxWrap > div.right_box ul.box1 {
+    height: 500px;
+  }
+  body #services .inner .boxWrap > div.right_box ul.box1.on {
+    display: block;
+    width: 100%;
+  }
+  body #services .inner .boxWrap > div.right_box ul.box1 li {
+    display: block;
+    width: 100%;
+    height: calc(33.3333333333% - 2vh);
+    float: none;
+    margin-bottom: 2vh;
+  }
+  body #services .inner .boxWrap > div.right_box ul.box1 li:last-of-type {
+    margin-bottom: 0;
+  }
+  body #services .inner .boxWrap > div.right_box ul.box1 li .title {
+    height: 40%;
+  }
+  body #services .inner .boxWrap > div.right_box ul.box1 li .txt_box {
+    height: 60%;
+  }
+  body #services .inner .boxWrap > div.right_box ul.box1 li p {
+    display: none;
+  }
+  body #services .inner .boxWrap > div.right_box ul.box2 {
+    width: 100%;
+    border-top: 3px solid #4e6298;
+  }
+  body #services .inner .boxWrap > div.right_box ul.box2 li {
+    float: left;
+    width: 100%;
+    border: none;
+    padding: 20px 20px 20px 0;
+    box-shadow: none;
+    border-radius: none;
+  }
+  body #services .inner .boxWrap > div.right_box ul.box2 li:nth-of-type(1) {
+    width: calc(30% - 10px);
+  }
+  body #services .inner .boxWrap > div.right_box ul.box2 li:nth-of-type(1) .pic {
+    width: 100%;
+    height: 250px;
+    background: url(../img/pic4.jpg) no-repeat center/cover;
+  }
+  body #services .inner .boxWrap > div.right_box ul.box2 li:nth-of-type(2) {
+    width: calc(40% - 10px);
+  }
+  body #services .inner .boxWrap > div.right_box ul.box2 li:nth-of-type(2) h1 {
+    font: bold 20px/1 "arial";
+    color: #4e6298;
+    margin-bottom: 20px;
+  }
+  body #services .inner .boxWrap > div.right_box ul.box2 li:nth-of-type(2) p {
+    font: 14px/1.3 "arial";
+    color: #333;
+    margin-bottom: 20px;
+  }
+  body #services .inner .boxWrap > div.right_box ul.box2 li:nth-of-type(2) a {
+    display: block;
+    width: 80px;
+    height: 30px;
+    background: linear-gradient(#4e6298, #303239, #303239);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: 12px/1 "arial";
+    color: #fff;
+    border-radius: 5px;
+  }
+  body #services .inner .boxWrap > div.right_box ul.box2 li:nth-of-type(3) {
+    width: calc(30% - 10px);
+  }
+  body #services .inner .boxWrap > div.right_box ul.box2 li:nth-of-type(3) h1 {
+    font: bold 20px/1 "arial";
+    color: #4e6298;
+    margin-bottom: 20px;
+  }
+  body #services .inner .boxWrap > div.right_box ul.box2 li:nth-of-type(3) h2 {
+    font: bold 18px/1 "arial";
+    color: #4e6298;
+    margin-bottom: 20px;
+  }
+  body #services .inner .boxWrap > div.right_box ul.box2 li:nth-of-type(3) p {
+    font: 14px/1.3 "arial";
+    color: #333;
+    margin-bottom: 20px;
+  }
+  body #services .inner .boxWrap > div.right_box ul.box2 li:nth-of-type(3) a {
+    display: block;
+    width: 80px;
+    height: 30px;
+    background: linear-gradient(#4e6298, #303239, #303239);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: 12px/1 "arial";
+    color: #fff;
+    border-radius: 5px;
+  }
+  body #services .inner .boxWrap > div.right_box ul.box3 li .pic {
+    height: 100%;
+  }
+  body #services .inner .boxWrap > div.right_box ul.box4 li {
+    width: 100%;
+  }
+  body #services .inner .boxWrap > div.right_box ul.box4 li .pic {
+    height: 100%;
+  }
+}
+@media screen and (max-width: 539px) {
+  body #visual {
+    padding: 20px;
+  }
+  body #visual .inner > .txt_box {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+  body #visual .inner > .txt_box > h1 {
+    width: 100%;
+    font: bold 22px/1 "arial";
+    text-align: center;
+    margin-bottom: 5px;
+  }
+  body #visual .inner > .txt_box > a {
+    margin: 0 auto;
+    width: 120px;
+    height: 30px;
+    font: 14px/30px "arial";
+  }
+  body #visual .inner .content {
+    display: block;
+  }
+  body #visual .inner .content #slider {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  body #visual .inner .content .title_box {
+    width: 100%;
+    margin-left: 0;
+  }
+  body #visual .inner .content .title_box .prev {
+    left: auto;
+    right: 20px;
+  }
+  body #visual .inner .content .title_box .next {
+    left: auto;
+    right: 0;
+  }
+  body #visual .inner .content .title_box .txt_box {
+    width: 100%;
+    padding: 20px 0 0;
+  }
+  body #visual .inner .content .title_box .txt_box h1 {
+    font: bold 20px/1 "arial";
+  }
+  body #visual .inner .content .title_box .txt_box > h2 {
+    font: 14px/1.5 "Kdam Thmor Pro";
+  }
+  body #visual .inner .content .title_box .txt_box > span {
+    font: 12px/1 "arial";
+  }
+  body #visual .inner .content .title_box .txt_box > p {
+    font: 12px/1.3 "arial";
+    color: #555;
+    margin-bottom: 30px;
+  }
+  body #visual .inner .content .title_box .txt_box > a {
+    font: 12px/1 "arial";
+  }
+  body #services {
+    padding: 20px;
+  }
+  body #services .inner .boxWrap > div.right_box ul li .title h1 {
+    font: bold 14px/1 "arial";
+  }
+  body #services .inner .boxWrap > div.right_box ul li .title span {
+    width: 35px;
+    height: 35px;
+  }
+  body #services .inner .boxWrap > div.right_box ul li .title span i {
+    font-size: 15px;
+  }
+  body #services .inner .boxWrap > div.right_box ul li .txt_box {
+    height: 70%;
+  }
+  body #services .inner .boxWrap > div.right_box ul li .txt_box h2 {
+    font: 12px/1 "Kdam Thmor Pro";
+  }
+  body #services .inner .boxWrap > div.right_box ul li .txt_box a {
+    font: 12px/1 "arial";
+  }
+  body #services .inner .boxWrap > div.right_box ul.box2 {
+    width: 100%;
+    border-top: 3px solid #4e6298;
+  }
+  body #services .inner .boxWrap > div.right_box ul.box2.on {
+    display: block;
+  }
+  body #services .inner .boxWrap > div.right_box ul.box2 li {
+    float: left;
+    width: 100%;
+    border: none;
+    padding: 20px 20px 20px 0;
+    box-shadow: none;
+    border-radius: none;
+  }
+  body #services .inner .boxWrap > div.right_box ul.box2 li:nth-of-type(1) {
+    width: 100%;
+    padding: 20px 0 0;
+  }
+  body #services .inner .boxWrap > div.right_box ul.box2 li:nth-of-type(1) .pic {
+    height: 200px;
+    background: url(../img/pic4.jpg) no-repeat center/cover;
+  }
+  body #services .inner .boxWrap > div.right_box ul.box2 li:nth-of-type(2) {
+    width: 100%;
+  }
+  body #services .inner .boxWrap > div.right_box ul.box2 li:nth-of-type(2) h1 {
+    font: bold 16px/1 "arial";
+    color: #4e6298;
+    margin-bottom: 5px;
+  }
+  body #services .inner .boxWrap > div.right_box ul.box2 li:nth-of-type(2) p {
+    font: 12px/1.3 "arial";
+    margin-bottom: 10px;
+  }
+  body #services .inner .boxWrap > div.right_box ul.box2 li:nth-of-type(3) {
+    display: none;
+  }
+  body #services .inner .boxWrap > div.right_box ul.box3.on {
+    display: block;
+  }
+  body #services .inner .boxWrap > div.right_box ul.box3 li {
+    width: 100%;
+    height: 33.3333333333%;
+    border-radius: 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
