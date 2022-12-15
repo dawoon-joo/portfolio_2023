@@ -2097,6 +2097,10 @@ body #footer .inner .bottom_box li i {
   }
 }
 @media screen and (max-width: 539px) {
+  body #scroll li {
+    width: 10px;
+    height: 10px;
+  }
   body #visual {
     padding: 20px;
   }
@@ -2117,44 +2121,44 @@ body #footer .inner .bottom_box li i {
     height: 30px;
     font: 14px/30px "arial";
   }
-  body #visual .inner .content {
+  body #visual .inner .contents {
     display: block;
   }
-  body #visual .inner .content #slider {
+  body #visual .inner .contents #slider {
     width: 100%;
     margin-bottom: 20px;
   }
-  body #visual .inner .content .title_box {
+  body #visual .inner .contents .title_box {
     width: 100%;
     margin-left: 0;
   }
-  body #visual .inner .content .title_box .prev {
+  body #visual .inner .contents .title_box .prev {
     left: auto;
     right: 20px;
   }
-  body #visual .inner .content .title_box .next {
+  body #visual .inner .contents .title_box .next {
     left: auto;
     right: 0;
   }
-  body #visual .inner .content .title_box .txt_box {
+  body #visual .inner .contents .title_box .txt_box {
     width: 100%;
     padding: 20px 0 0;
   }
-  body #visual .inner .content .title_box .txt_box h1 {
+  body #visual .inner .contents .title_box .txt_box h1 {
     font: bold 20px/1 "arial";
   }
-  body #visual .inner .content .title_box .txt_box > h2 {
+  body #visual .inner .contents .title_box .txt_box > h2 {
     font: 14px/1.5 "Kdam Thmor Pro";
   }
-  body #visual .inner .content .title_box .txt_box > span {
+  body #visual .inner .contents .title_box .txt_box > span {
     font: 12px/1 "arial";
   }
-  body #visual .inner .content .title_box .txt_box > p {
+  body #visual .inner .contents .title_box .txt_box > p {
     font: 12px/1.3 "arial";
     color: #555;
     margin-bottom: 30px;
   }
-  body #visual .inner .content .title_box .txt_box > a {
+  body #visual .inner .contents .title_box .txt_box > a {
     font: 12px/1 "arial";
   }
   body #services {

@@ -2041,6 +2041,12 @@ body {
 }
 @media screen and (max-width: $mobile) {
 	body {
+		#scroll {
+			li {
+				width: 10px;
+				height: 10px;
+			}
+		}
 		#visual {
 			padding: 20px;
 			.inner {
@@ -2064,7 +2070,7 @@ body {
 					}
 				}
 
-				.content {
+				.contents {
 					display: block;
 
 					#slider {
