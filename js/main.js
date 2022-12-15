@@ -1,8 +1,9 @@
 // tab
 const services = document.querySelector('#services');
 const services2 = document.querySelector('#about');
-const btns = services.querySelectorAll('.left_box ul li');
 const right_box = services.querySelector('.right_box');
+const right_box2 = services2.querySelector('.right_box');
+const btns = services.querySelectorAll('.left_box ul li');
 const boxs = services.querySelectorAll('.right_box ul');
 const btns2 = services2.querySelectorAll('.left_box ul li');
 const boxs2 = services2.querySelectorAll('.right_box ul');
@@ -16,19 +17,11 @@ btns.forEach((el, index) => {
 		activatin(boxs, index);
 		new Anim(right_box, {
 			prop: 'height',
-			value: matchHT(index),
+			value: matchHT(boxs, index),
 			duration: 500,
 		});
 	});
 });
-
-function matchHT(index) {
-	let ht = getComputedStyle(boxs[index]).height; //height값을 가지고 오되, 400px이라는 문자값으로 가지고 온다
-	ht = parseInt(ht); //ht를 정수값으로 변환해서 다시 ht에 대입함
-	//console.log(ht);
-	return ht; //함수밖에서 값을 적용시키위해 반환시킴
-}
-
 btns2.forEach((el, index) => {
 	el.addEventListener('click', (e) => {
 		e.preventDefault();
@@ -36,8 +29,20 @@ btns2.forEach((el, index) => {
 		if (isOn) return;
 		activatin(btns2, index);
 		activatin(boxs2, index);
+		new Anim(right_box2, {
+			prop: 'height',
+			value: matchHT(boxs2, index),
+			duration: 500,
+		});
 	});
 });
+
+function matchHT(el, index) {
+	let ht = getComputedStyle(el[index]).height; //height값을 가지고 오되, 400px이라는 문자값으로 가지고 온다
+	ht = parseInt(ht); //ht를 정수값으로 변환해서 다시 ht에 대입함
+	//console.log(ht);
+	return ht; //함수밖에서 값을 적용시키위해 반환시킴
+}
 
 function activatin(list, index) {
 	for (let el of list) {

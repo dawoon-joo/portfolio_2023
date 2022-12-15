@@ -14,6 +14,399 @@ a {
   text-decoration: none;
 }
 
+#header {
+  width: 100%;
+}
+#header .inner {
+  width: 1180px;
+  height: 140px;
+  margin: 0 auto;
+  position: relative;
+  transition: 0.5s;
+}
+#header .inner::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #ddd;
+  top: 78px;
+  z-index: -1;
+}
+#header .inner::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: #999;
+  bottom: 0px;
+  z-index: -1;
+}
+#header .inner > h1 {
+  position: absolute;
+  left: 0;
+  top: 20px;
+}
+#header .inner > h1 a {
+  color: #4e6298;
+}
+#header .inner .gnb {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+#header .inner .gnb li {
+  float: left;
+}
+#header .inner .gnb li a {
+  position: relative;
+  display: block;
+  padding: 24px 30px;
+  font: 14px/1 "arial";
+  color: #999;
+}
+#header .inner .gnb li a:hover, #header .inner .gnb li a.on {
+  color: #4e6298;
+  transition: 0.5s;
+}
+#header .inner .gnb li a:hover::after, #header .inner .gnb li a.on::after {
+  padding: 1px 0;
+  width: 100%;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-top: 3px solid #4e6298;
+  transition: 0.5s;
+}
+#header .inner .utill {
+  position: absolute;
+  right: 0;
+  top: 30px;
+}
+#header .inner .utill li {
+  position: relative;
+  float: left;
+  margin-left: 20px;
+}
+#header .inner .utill li:first-of-type::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 50%;
+  background: #ddd;
+  position: absolute;
+  top: 60%;
+  right: -10px;
+  transform: translateY(-50%);
+}
+#header .inner .utill li a {
+  font: 12px/1 "arial";
+  color: #999;
+}
+#header .inner .btnCall {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+  width: 20px;
+  height: 20px;
+}
+#header .inner .btnCall::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: top 0.5s 0s, transform 0.5s 0.5s;
+}
+#header .inner .btnCall::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #000;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: bottom 0.5s 0s, transform 0.5s 0.5s;
+}
+#header .inner .btnCall span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #000;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -1px;
+  transition: 1s;
+  text-indent: -9999px;
+}
+#header .inner .btnCall.on::before {
+  top: 50%;
+  margin-top: -1px;
+  transform: rotate(45deg);
+}
+#header .inner .btnCall.on::after {
+  bottom: 50%;
+  margin-bottom: -1px;
+  transform: rotate(-45deg);
+}
+#header .inner .btnCall.on span {
+  transform: translateX(100%);
+  opacity: 0;
+}
+#header .inner .menuMo {
+  width: 270px;
+  height: 100vh;
+  background: linear-gradient(#4e6298, #303239, #303239);
+  position: fixed;
+  top: 0;
+  left: -270px;
+  padding: 35px 30px;
+  z-index: 10;
+  transition: 0.5s;
+  display: none;
+}
+#header .inner .menuMo.on {
+  left: 0;
+}
+#header .inner .menuMo > .inputWrap {
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 30px;
+}
+#header .inner .menuMo h1 {
+  padding-bottom: 60px;
+  border-bottom: 1px solid #fff;
+}
+#header .inner .menuMo h1 a {
+  display: block;
+  font: bold 24px/1 "arial";
+  color: #fff;
+  text-align: center;
+}
+#header .inner .menuMo h1 span {
+  font-size: 12px;
+  color: #fff;
+}
+#header .inner .menuMo #gnbMo li a {
+  display: block;
+  width: 100%;
+  padding: 20px 0;
+  border-bottom: 1px solid #888;
+  font: bold 14px/1 "arial";
+  color: #fff;
+  text-align: center;
+}
+#header .inner .inputWrap {
+  position: absolute;
+  bottom: 17px;
+  right: 100px;
+}
+#header .inner .inputWrap input {
+  width: 150px;
+  height: 30px;
+  border: 1px solid #eee;
+}
+#header .inner .inputWrap button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  border: none;
+  background: none;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.content {
+  width: 100%;
+  padding: 0 0 150px;
+}
+.content .sub_visual {
+  width: 100%;
+  height: 250px;
+  background: #bbb;
+  margin-bottom: 100px;
+}
+.content .inner {
+  width: 1180px;
+  margin: 0 auto;
+  min-height: 500px;
+}
+.content .inner h1 {
+  font: normal 50px/1 "arial";
+  color: #000;
+  margin-bottom: 60px;
+}
+.content .inner h1 span {
+  font: normal 20px/1 "맑은 고딕";
+  color: #aaa;
+}
+.content .inner h1 span::before {
+  content: "/";
+  margin-right: 20px;
+  margin-left: 10px;
+}
+
+#footer {
+  width: 100%;
+  padding: 40px 0;
+  background: #ddd;
+}
+#footer .inner {
+  width: 1180px;
+  margin: 0 auto;
+  padding: 10px 0 0;
+  position: relative;
+}
+#footer .inner::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #ccc;
+  position: absolute;
+  bottom: 35%;
+  left: 0;
+}
+#footer .inner::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+#footer .inner h1 {
+  float: left;
+  color: #444;
+  font: bold 20px/1 "arial";
+  margin-bottom: 10px;
+}
+#footer .inner .top_box {
+  float: right;
+}
+#footer .inner .top_box li {
+  float: left;
+  margin-left: 20px;
+}
+#footer .inner .top_box li a {
+  font: 14px/1 "arial";
+  color: #444;
+}
+#footer .inner address {
+  width: 100%;
+  float: left;
+  font: 14px/1.3 "arial";
+  color: #444;
+  margin-bottom: 80px;
+}
+#footer .inner p {
+  font: 14px/1 "arial";
+  color: #444;
+  float: left;
+}
+#footer .inner .bottom_box {
+  float: right;
+}
+#footer .inner .bottom_box li {
+  float: left;
+  margin-left: 10px;
+}
+#footer .inner .bottom_box li i {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 1179px) {
+  body #header {
+    width: 100%;
+  }
+  body #header .inner {
+    width: 100%;
+    height: 100px;
+  }
+  body #header .inner::after {
+    display: none;
+  }
+  body #header .inner::before {
+    height: 2px;
+  }
+  body #header .inner > h1 {
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  body #header .inner .menuWeb {
+    display: none;
+  }
+  body #header .inner .btnCall {
+    display: block;
+  }
+  body #header .inner .menuMo {
+    display: block;
+  }
+  body #footer .inner {
+    width: 100%;
+    padding: 10px 20px 0;
+  }
+}
+@media screen and (max-width: 539px) {
+  body #footer {
+    padding: 20px 0;
+  }
+  body #footer .inner {
+    padding: 10px 20px 20px;
+  }
+  body #footer .inner > h1 {
+    float: none;
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+  body #footer .inner .top_box {
+    float: none;
+    display: block;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  body #footer .inner address {
+    text-align: center;
+    float: none;
+    margin-bottom: 50px;
+  }
+  body #footer .inner > p {
+    float: none;
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  body #footer .inner .bottom_box {
+    float: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  body #footer .inner .bottom_box li {
+    float: none;
+    margin-left: 0;
+    margin: 0 10px;
+  }
+}
 body {
   background-color: #ececec;
 }
@@ -855,6 +1248,7 @@ body #about .inner {
   width: 1180px;
   height: 370px;
   margin: 0 auto;
+  transition: 0.5s;
 }
 body #about .inner .boxWrap {
   width: 100%;
@@ -898,10 +1292,12 @@ body #about .inner .boxWrap > div.left_box ul li a i {
 }
 body #about .inner .boxWrap > div.right_box {
   width: calc(80% - 20px);
+  height: 400px;
   position: relative;
 }
 body #about .inner .boxWrap > div.right_box ul {
   width: 100%;
+  height: 400px;
   position: absolute;
   top: 0;
   left: 0;
@@ -1296,6 +1692,120 @@ body #footer .inner .bottom_box li i {
     font-size: 20px;
     color: #ddd;
   }
+  body #projects {
+    padding: 20px;
+  }
+  body #projects .inner {
+    width: 100%;
+    margin: 0 auto;
+    transition: 0.5s;
+  }
+  body #projects .inner .boxWrap > div {
+    float: none;
+  }
+  body #projects .inner .boxWrap > div.left_box {
+    width: 100%;
+    margin-right: 0;
+    text-align: center;
+    padding: 20px 0px 20px 10px;
+  }
+  body #projects .inner .boxWrap > div.left_box h1 {
+    font: bold 16px/1 "arial";
+    margin-bottom: 0;
+  }
+  body #projects .inner .boxWrap > div.left_box h1::after {
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+  }
+  body #projects .inner .boxWrap > div.right_box {
+    width: 100%;
+    position: relative;
+  }
+  body #projects .inner .boxWrap > div.right_box ul {
+    display: block;
+    display: flex;
+    justify-content: space-between;
+  }
+  body #projects .inner .boxWrap > div.right_box ul li {
+    float: none;
+    width: calc(33.3333333333% - 10px);
+  }
+  body #about {
+    padding: 20px;
+  }
+  body #about .inner {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+  body #about .inner .boxWrap {
+    width: 100%;
+  }
+  body #about .inner .boxWrap > div {
+    float: none;
+  }
+  body #about .inner .boxWrap > div.left_box {
+    width: 100%;
+    margin-right: 0;
+    text-align: center;
+    padding: 20px 0px 50px 10px;
+  }
+  body #about .inner .boxWrap > div.left_box h1 {
+    font: bold 16px/1 "arial";
+  }
+  body #about .inner .boxWrap > div.left_box ul li {
+    float: left;
+    width: 25%;
+    border-bottom: none;
+  }
+  body #about .inner .boxWrap > div.left_box ul li a {
+    font: 14px/1 "arial";
+  }
+  body #about .inner .boxWrap > div.left_box ul li a i {
+    font-size: 12px;
+  }
+  body #about .inner .boxWrap > div.right_box {
+    width: 100%;
+  }
+  body #about .inner .boxWrap > div.right_box ul.on {
+    display: block;
+  }
+  body #about .inner .boxWrap > div.right_box ul > li {
+    width: 100%;
+    height: 100%;
+    margin-right: 0;
+    padding-right: 0;
+    border-top: 3px solid #4e6298;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+    background: #ddd;
+    text-align: center;
+  }
+  body #about .inner .boxWrap > div.right_box ul > li > h1 {
+    font: bold 30px/1 "arial";
+    background: #eee;
+    padding: 10px 0;
+    margin-bottom: 20px;
+  }
+  body #about .inner .boxWrap > div.right_box ul > li > h2 {
+    margin-bottom: 35px;
+    padding: 0 20px;
+  }
+  body #about .inner .boxWrap > div.right_box ul > li > p {
+    margin-bottom: 35px;
+    padding: 0 20px;
+  }
+  body #about .inner .boxWrap > div.right_box ul > li > a {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  body #footer .inner {
+    width: 100%;
+    padding: 10px 20px 0;
+  }
 }
 @media screen and (max-width: 750px) {
   body #services {
@@ -1499,6 +2009,66 @@ body #footer .inner .bottom_box li i {
   body #services .inner .boxWrap > div.right_box ul.box4 li .pic {
     height: 100%;
   }
+  body #projects .inner .boxWrap > div.right_box {
+    width: 100%;
+    position: relative;
+  }
+  body #projects .inner .boxWrap > div.right_box ul {
+    display: block;
+    height: 500px;
+  }
+  body #projects .inner .boxWrap > div.right_box ul li {
+    float: none;
+    width: 100%;
+    height: calc(33.3333333333% - 2vh);
+    margin-bottom: 2vh;
+  }
+  body #projects .inner .boxWrap > div.right_box ul li:last-of-type {
+    margin-bottom: 0;
+  }
+  body #projects .inner .boxWrap > div.right_box ul li .txt_box {
+    padding: 10px 20px 0;
+  }
+  body #projects .inner .boxWrap > div.right_box ul li .txt_box::after {
+    bottom: auto;
+    top: 40px;
+  }
+  body #projects .inner .boxWrap > div.right_box ul li .txt_box .bottom_txt {
+    padding: 10px 20px;
+  }
+  body #about .inner .boxWrap > div.left_box ul li a {
+    position: relative;
+    display: block;
+    font: 12px/1 "arial";
+    text-align: center;
+  }
+  body #about .inner .boxWrap > div.left_box ul li a i {
+    display: none;
+  }
+  body #about .inner .boxWrap > div.left_box ul li a::before {
+    content: "";
+    display: block;
+    height: 50%;
+    width: 1px;
+    background: #ddd;
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  body #about .inner .boxWrap > div.right_box ul > li > h1 {
+    font: bold 24px/1 "arial";
+  }
+  body #about .inner .boxWrap > div.right_box ul > li > h2 {
+    margin-bottom: 25px;
+    font-size: 14px;
+  }
+  body #about .inner .boxWrap > div.right_box ul > li > p {
+    font-size: 12px;
+  }
+  body #about .inner .boxWrap > div.right_box ul > li > p br {
+    display: none;
+  }
 }
 @media screen and (max-width: 539px) {
   body #visual {
@@ -1628,6 +2198,70 @@ body #footer .inner .bottom_box li i {
     width: 100%;
     height: 33.3333333333%;
     border-radius: 0;
+  }
+  body #about .inner .boxWrap > div.left_box ul li a {
+    font: 10px/1 "arial";
+  }
+  body #about .inner .boxWrap > div.right_box {
+    height: 300px;
+  }
+  body #about .inner .boxWrap > div.right_box ul {
+    height: 300px;
+  }
+  body #about .inner .boxWrap > div.right_box ul > li > h1 {
+    font: bold 18px/1 "arial";
+  }
+  body #about .inner .boxWrap > div.right_box ul > li > h2 {
+    margin-bottom: 25px;
+    font-size: 12px;
+    line-height: 2;
+  }
+  body #about .inner .boxWrap > div.right_box ul > li > p {
+    display: none;
+  }
+  body #footer {
+    padding: 20px 0;
+  }
+  body #footer .inner {
+    padding: 10px 20px 20px;
+  }
+  body #footer .inner > h1 {
+    float: none;
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+  body #footer .inner .top_box {
+    float: none;
+    display: block;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  body #footer .inner address {
+    text-align: center;
+    float: none;
+    margin-bottom: 50px;
+  }
+  body #footer .inner > p {
+    float: none;
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  body #footer .inner .bottom_box {
+    float: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  body #footer .inner .bottom_box li {
+    float: none;
+    margin-left: 0;
+    margin: 0 10px;
   }
 }
 
