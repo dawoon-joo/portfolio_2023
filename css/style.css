@@ -410,6 +410,12 @@ a {
 body {
   background-color: #ececec;
 }
+body .ss {
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-size: 50px;
+}
 body #skipNavi {
   position: relative;
   z-index: 2;
@@ -428,6 +434,26 @@ body #skipNavi li a {
 }
 body #skipNavi li a.on {
   top: 0;
+}
+body #scroll {
+  position: fixed;
+  right: 1%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+}
+body #scroll li {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background: #ccc;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+body #scroll li.on {
+  height: 50px;
+  background: linear-gradient(#4e6298, #303239, #303239);
 }
 body #header {
   width: 100%;
@@ -682,24 +708,24 @@ body #visual .inner > .txt_box > a {
   font: 18px/50px "arial";
   border-radius: 3px;
 }
-body #visual .inner .content {
+body #visual .inner .contents {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-body #visual .inner .content #slider {
+body #visual .inner .contents #slider {
   width: calc(60% - 20px);
   height: 400px;
   position: relative;
   overflow: hidden;
 }
-body #visual .inner .content #slider ul {
+body #visual .inner .contents #slider ul {
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
 }
-body #visual .inner .content #slider ul li {
+body #visual .inner .contents #slider ul li {
   height: 100%;
   font-size: 40px;
   color: #000;
@@ -714,79 +740,79 @@ body #visual .inner .content #slider ul li {
   border-radius: 5px;
   box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
 }
-body #visual .inner .content #slider ul li[data-index="1"] {
+body #visual .inner .contents #slider ul li[data-index="1"] {
   background-image: url(../img/main1.jpg);
 }
-body #visual .inner .content #slider ul li[data-index="2"] {
+body #visual .inner .contents #slider ul li[data-index="2"] {
   background-image: url(../img/main2.jpg);
 }
-body #visual .inner .content #slider ul li[data-index="3"] {
+body #visual .inner .contents #slider ul li[data-index="3"] {
   background-image: url(../img/main3.webp);
 }
-body #visual .inner .content #slider ul li[data-index="4"] {
+body #visual .inner .contents #slider ul li[data-index="4"] {
   background-image: url(../img/main4.jpg);
 }
-body #visual .inner .content .title_box {
+body #visual .inner .contents .title_box {
   position: relative;
   width: 40%;
   border-top: 5px solid #4e6298;
   margin-left: 20px;
 }
-body #visual .inner .content .title_box .prev {
+body #visual .inner .contents .title_box .prev {
   position: absolute;
   top: 20px;
   left: 0;
   width: 30px;
   height: 30px;
 }
-body #visual .inner .content .title_box .prev img {
+body #visual .inner .contents .title_box .prev img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-body #visual .inner .content .title_box .next {
+body #visual .inner .contents .title_box .next {
   position: absolute;
   top: 20px;
   left: 30px;
   width: 30px;
   height: 30px;
 }
-body #visual .inner .content .title_box .next img {
+body #visual .inner .contents .title_box .next img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-body #visual .inner .content .title_box .txt_box {
+body #visual .inner .contents .title_box .txt_box {
   width: 100%;
   padding: 80px 0 0;
 }
-body #visual .inner .content .title_box .txt_box h1 {
+body #visual .inner .contents .title_box .txt_box h1 {
   font: bold 24px/1 "arial";
   color: #444;
   margin-bottom: 5px;
 }
-body #visual .inner .content .title_box .txt_box > h2 {
+body #visual .inner .contents .title_box .txt_box > h2 {
   font: 16px/1.5 "Kdam Thmor Pro";
   font-style: oblique;
   color: #444;
   letter-spacing: 1px;
   margin-bottom: 15px;
 }
-body #visual .inner .content .title_box .txt_box > span {
+body #visual .inner .contents .title_box .txt_box > span {
   display: block;
   font: 14px/1 "arial";
   color: #444;
   opacity: 0.8;
   margin-bottom: 20px;
 }
-body #visual .inner .content .title_box .txt_box > span > span {
+body #visual .inner .contents .title_box .txt_box > span > span {
   color: #4e6298;
   margin-left: 15px;
   position: relative;
   margin-bottom: 20px;
   opacity: 1;
 }
-body #visual .inner .content .title_box .txt_box > span > span::after {
+body #visual .inner .contents .title_box .txt_box > span > span::after {
   content: "";
   display: inline-block;
   width: 1px;
@@ -795,12 +821,12 @@ body #visual .inner .content .title_box .txt_box > span > span::after {
   background: #444;
   margin-left: -40px;
 }
-body #visual .inner .content .title_box .txt_box > p {
+body #visual .inner .contents .title_box .txt_box > p {
   font: 14px/1.3 "arial";
   color: #555;
   margin-bottom: 30px;
 }
-body #visual .inner .content .title_box .txt_box > a {
+body #visual .inner .contents .title_box .txt_box > a {
   display: block;
   font: 16px/1 "arial";
   color: #4e6298;
@@ -1445,21 +1471,21 @@ body #footer .inner .bottom_box li i {
   body #visual .inner > .txt_box > a {
     font: 16px/50px "arial";
   }
-  body #visual .inner .content .title_box .txt_box h1 {
+  body #visual .inner .contents .title_box .txt_box h1 {
     font: bold 20px/1 "arial";
   }
-  body #visual .inner .content .title_box .txt_box > h2 {
+  body #visual .inner .contents .title_box .txt_box > h2 {
     font: 14px/1.5 "Kdam Thmor Pro";
   }
-  body #visual .inner .content .title_box .txt_box > span {
+  body #visual .inner .contents .title_box .txt_box > span {
     font: 14px/1 "arial";
   }
-  body #visual .inner .content .title_box .txt_box > p {
+  body #visual .inner .contents .title_box .txt_box > p {
     font: 14px/1.3 "arial";
     color: #555;
     margin-bottom: 30px;
   }
-  body #visual .inner .content .title_box .txt_box > a {
+  body #visual .inner .contents .title_box .txt_box > a {
     display: block;
     font: 14px/1 "arial";
     color: #4e6298;

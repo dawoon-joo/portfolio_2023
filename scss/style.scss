@@ -17,6 +17,12 @@ $titleColor: #4e6298;
 body {
 	background-color: #ececec;
 
+	.ss {
+		position: fixed;
+		top: 0;
+		left: 0;
+		font-size: 50px;
+	}
 	#skipNavi {
 		position: relative;
 		z-index: 2;
@@ -35,6 +41,28 @@ body {
 				&.on {
 					top: 0;
 				}
+			}
+		}
+	}
+
+	#scroll {
+		position: fixed;
+		right: 1%;
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: 3;
+
+		li {
+			width: 20px;
+			height: 20px;
+			border-radius: 10px;
+			background: #ccc;
+			margin-bottom: 20px;
+			cursor: pointer;
+			transition: 0.5s;
+			&.on {
+				height: 50px;
+				background: $boxColor;
 			}
 		}
 	}
@@ -324,7 +352,7 @@ body {
 				}
 			}
 
-			.content {
+			.contents {
 				width: 100%;
 				display: flex;
 				justify-content: space-between;
@@ -1236,7 +1264,7 @@ body {
 					}
 				}
 
-				.content {
+				.contents {
 					.title_box {
 						.txt_box {
 							h1 {
