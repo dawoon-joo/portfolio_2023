@@ -14,17 +14,17 @@ a {
   text-decoration: none;
 }
 
-#header {
+#header_sub {
   width: 100%;
 }
-#header .inner {
+#header_sub .inner {
   width: 1180px;
   height: 140px;
   margin: 0 auto;
   position: relative;
   transition: 0.5s;
 }
-#header .inner::after {
+#header_sub .inner::after {
   content: "";
   display: block;
   position: absolute;
@@ -34,7 +34,7 @@ a {
   top: 78px;
   z-index: -1;
 }
-#header .inner::before {
+#header_sub .inner::before {
   content: "";
   display: block;
   position: absolute;
@@ -44,34 +44,34 @@ a {
   bottom: 0px;
   z-index: -1;
 }
-#header .inner > h1 {
+#header_sub .inner > h1 {
   position: absolute;
   left: 0;
   top: 20px;
 }
-#header .inner > h1 a {
+#header_sub .inner > h1 a {
   color: #4e6298;
 }
-#header .inner .gnb {
+#header_sub .inner .gnb {
   position: absolute;
   left: 0;
   bottom: 0;
 }
-#header .inner .gnb li {
+#header_sub .inner .gnb li {
   float: left;
 }
-#header .inner .gnb li a {
+#header_sub .inner .gnb li a {
   position: relative;
   display: block;
   padding: 24px 30px;
   font: 14px/1 "arial";
   color: #999;
 }
-#header .inner .gnb li a:hover, #header .inner .gnb li a.on {
+#header_sub .inner .gnb li a:hover, #header_sub .inner .gnb li a.on {
   color: #4e6298;
   transition: 0.5s;
 }
-#header .inner .gnb li a:hover::after, #header .inner .gnb li a.on::after {
+#header_sub .inner .gnb li a:hover::after, #header_sub .inner .gnb li a.on::after {
   padding: 1px 0;
   width: 100%;
   content: "";
@@ -83,17 +83,17 @@ a {
   border-top: 3px solid #4e6298;
   transition: 0.5s;
 }
-#header .inner .utill {
+#header_sub .inner .utill {
   position: absolute;
   right: 0;
   top: 30px;
 }
-#header .inner .utill li {
+#header_sub .inner .utill li {
   position: relative;
   float: left;
   margin-left: 20px;
 }
-#header .inner .utill li:first-of-type::after {
+#header_sub .inner .utill li:first-of-type::after {
   content: "";
   display: block;
   width: 1px;
@@ -104,11 +104,11 @@ a {
   right: -10px;
   transform: translateY(-50%);
 }
-#header .inner .utill li a {
+#header_sub .inner .utill li a {
   font: 12px/1 "arial";
   color: #999;
 }
-#header .inner .btnCall {
+#header_sub .inner .btnCall {
   position: absolute;
   right: 30px;
   top: 50%;
@@ -117,7 +117,7 @@ a {
   width: 20px;
   height: 20px;
 }
-#header .inner .btnCall::before {
+#header_sub .inner .btnCall::before {
   content: "";
   display: block;
   width: 100%;
@@ -128,7 +128,7 @@ a {
   left: 0;
   transition: top 0.5s 0s, transform 0.5s 0.5s;
 }
-#header .inner .btnCall::after {
+#header_sub .inner .btnCall::after {
   content: "";
   display: block;
   width: 100%;
@@ -139,7 +139,7 @@ a {
   left: 0;
   transition: bottom 0.5s 0s, transform 0.5s 0.5s;
 }
-#header .inner .btnCall span {
+#header_sub .inner .btnCall span {
   display: block;
   width: 100%;
   height: 2px;
@@ -151,21 +151,21 @@ a {
   transition: 1s;
   text-indent: -9999px;
 }
-#header .inner .btnCall.on::before {
+#header_sub .inner .btnCall.on::before {
   top: 50%;
   margin-top: -1px;
   transform: rotate(45deg);
 }
-#header .inner .btnCall.on::after {
+#header_sub .inner .btnCall.on::after {
   bottom: 50%;
   margin-bottom: -1px;
   transform: rotate(-45deg);
 }
-#header .inner .btnCall.on span {
+#header_sub .inner .btnCall.on span {
   transform: translateX(100%);
   opacity: 0;
 }
-#header .inner .menuMo {
+#header_sub .inner .menuMo {
   width: 270px;
   height: 100vh;
   background: linear-gradient(#4e6298, #303239, #303239);
@@ -177,10 +177,10 @@ a {
   transition: 0.5s;
   display: none;
 }
-#header .inner .menuMo.on {
+#header_sub .inner .menuMo.on {
   left: 0;
 }
-#header .inner .menuMo > .inputWrap {
+#header_sub .inner .menuMo > .inputWrap {
   position: absolute;
   top: 80px;
   left: 50%;
@@ -188,21 +188,21 @@ a {
   width: 150px;
   height: 30px;
 }
-#header .inner .menuMo h1 {
+#header_sub .inner .menuMo h1 {
   padding-bottom: 60px;
   border-bottom: 1px solid #fff;
 }
-#header .inner .menuMo h1 a {
+#header_sub .inner .menuMo h1 a {
   display: block;
   font: bold 24px/1 "arial";
   color: #fff;
   text-align: center;
 }
-#header .inner .menuMo h1 span {
+#header_sub .inner .menuMo h1 span {
   font-size: 12px;
   color: #fff;
 }
-#header .inner .menuMo #gnbMo li a {
+#header_sub .inner .menuMo #gnbMo li a {
   display: block;
   width: 100%;
   padding: 20px 0;
@@ -211,17 +211,17 @@ a {
   color: #fff;
   text-align: center;
 }
-#header .inner .inputWrap {
+#header_sub .inner .inputWrap {
   position: absolute;
   bottom: 17px;
   right: 100px;
 }
-#header .inner .inputWrap input {
+#header_sub .inner .inputWrap input {
   width: 150px;
   height: 30px;
   border: 1px solid #eee;
 }
-#header .inner .inputWrap button {
+#header_sub .inner .inputWrap button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -262,18 +262,18 @@ a {
   margin-left: 10px;
 }
 
-#footer {
+#footer_sub {
   width: 100%;
   padding: 40px 0;
   background: #ddd;
 }
-#footer .inner {
+#footer_sub .inner {
   width: 1180px;
   margin: 0 auto;
   padding: 10px 0 0;
   position: relative;
 }
-#footer .inner::before {
+#footer_sub .inner::before {
   content: "";
   display: block;
   width: 100%;
@@ -283,98 +283,98 @@ a {
   bottom: 35%;
   left: 0;
 }
-#footer .inner::after {
+#footer_sub .inner::after {
   display: block;
   content: "";
   clear: both;
 }
-#footer .inner h1 {
+#footer_sub .inner h1 {
   float: left;
   color: #444;
   font: bold 20px/1 "arial";
   margin-bottom: 10px;
 }
-#footer .inner .top_box {
+#footer_sub .inner .top_box {
   float: right;
 }
-#footer .inner .top_box li {
+#footer_sub .inner .top_box li {
   float: left;
   margin-left: 20px;
 }
-#footer .inner .top_box li a {
+#footer_sub .inner .top_box li a {
   font: 14px/1 "arial";
   color: #444;
 }
-#footer .inner address {
+#footer_sub .inner address {
   width: 100%;
   float: left;
   font: 14px/1.3 "arial";
   color: #444;
   margin-bottom: 80px;
 }
-#footer .inner p {
+#footer_sub .inner p {
   font: 14px/1 "arial";
   color: #444;
   float: left;
 }
-#footer .inner .bottom_box {
+#footer_sub .inner .bottom_box {
   float: right;
 }
-#footer .inner .bottom_box li {
+#footer_sub .inner .bottom_box li {
   float: left;
   margin-left: 10px;
 }
-#footer .inner .bottom_box li i {
+#footer_sub .inner .bottom_box li i {
   font-size: 20px;
 }
 
 @media screen and (max-width: 1179px) {
-  body #header {
+  body #header_sub {
     width: 100%;
   }
-  body #header .inner {
+  body #header_sub .inner {
     width: 100%;
     height: 100px;
   }
-  body #header .inner::after {
+  body #header_sub .inner::after {
     display: none;
   }
-  body #header .inner::before {
+  body #header_sub .inner::before {
     height: 2px;
   }
-  body #header .inner > h1 {
+  body #header_sub .inner > h1 {
     left: 20px;
     top: 50%;
     transform: translateY(-50%);
   }
-  body #header .inner .menuWeb {
+  body #header_sub .inner .menuWeb {
     display: none;
   }
-  body #header .inner .btnCall {
+  body #header_sub .inner .btnCall {
     display: block;
   }
-  body #header .inner .menuMo {
+  body #header_sub .inner .menuMo {
     display: block;
   }
-  body #footer .inner {
+  body #footer_sub .inner {
     width: 100%;
     padding: 10px 20px 0;
   }
 }
 @media screen and (max-width: 539px) {
-  body #footer {
+  body #footer_sub {
     padding: 20px 0;
   }
-  body #footer .inner {
+  body #footer_sub .inner {
     padding: 10px 20px 20px;
   }
-  body #footer .inner > h1 {
+  body #footer_sub .inner > h1 {
     float: none;
     width: 100%;
     display: block;
     text-align: center;
   }
-  body #footer .inner .top_box {
+  body #footer_sub .inner .top_box {
     float: none;
     display: block;
     width: 100%;
@@ -383,25 +383,25 @@ a {
     align-items: center;
     margin-bottom: 10px;
   }
-  body #footer .inner address {
+  body #footer_sub .inner address {
     text-align: center;
     float: none;
     margin-bottom: 50px;
   }
-  body #footer .inner > p {
+  body #footer_sub .inner > p {
     float: none;
     width: 100%;
     display: block;
     text-align: center;
     margin-bottom: 10px;
   }
-  body #footer .inner .bottom_box {
+  body #footer_sub .inner .bottom_box {
     float: none;
     width: 100%;
     display: flex;
     justify-content: center;
   }
-  body #footer .inner .bottom_box li {
+  body #footer_sub .inner .bottom_box li {
     float: none;
     margin-left: 0;
     margin: 0 10px;

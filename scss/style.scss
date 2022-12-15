@@ -8,6 +8,12 @@ $titleColor: #4e6298;
 @import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
 @import 'reset.scss';
 @import 'sub_layout.scss';
+@import 'community.scss';
+@import 'department.scss';
+@import 'gallery.scss';
+@import 'location.scss';
+@import 'youtube.scss';
+
 body {
 	background-color: #ececec;
 

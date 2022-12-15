@@ -1,4 +1,4 @@
-#header {
+#header_sub {
 	width: 100%;
 
 	.inner {
@@ -271,7 +271,7 @@
 		}
 	}
 }
-#footer {
+#footer_sub {
 	width: 100%;
 	padding: 40px 0;
 	// border-top: 2px solid #999;
@@ -351,7 +351,7 @@
 
 @media screen and (max-width: $tablet) {
 	body {
-		#header {
+		#header_sub {
 			width: 100%;
 			.inner {
 				width: 100%;
@@ -379,7 +379,7 @@
 			}
 		}
 
-		#footer {
+		#footer_sub {
 			.inner {
 				width: 100%;
 				padding: 10px 20px 0;
@@ -394,7 +394,7 @@
 }
 @media screen and (max-width: $mobile) {
 	body {
-		#footer {
+		#footer_sub {
 			padding: 20px 0;
 			.inner {
 				padding: 10px 20px 20px;
