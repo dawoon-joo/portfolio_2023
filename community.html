@@ -66,9 +66,186 @@
   </header>
 
   <section class="content community">
-    <div class="sub_visual"></div>
+    <div class="sub_visual">
+      <div class="pic"></div>
+    </div>
     <div class="inner">
-      <h1>Sub title <span>서브페이지 제목</span></h1>
+      <h1>Community <span>News</span></h1>
+
+      <fieldset>
+        <legend class="h">게시판 검색박스</legend>
+        <select name="search_type" id="search_type">
+          <option value="all">전체</option>
+          <option value="title">제목</option>
+          <option value="content">내용</option>
+        </select>
+        <input type="text" id="search_txt" name="search_txt" placeholder="검색어를 입력해 주세요">
+        <input type="button" value="search">
+      </fieldset>
+      <table>
+        <caption>커뮤니티 게시판</caption>
+        <thead>
+          <tr>
+            <th scope="col">번호</th>
+            <th scope="col">제목</th>
+            <th scope="col">첨부</th>
+            <th scope="col">등록일</th>
+            <th scope="col">조회수</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>공지</td>
+            <td>
+              <a href="#">
+                [공지] 홈페이지(인터넷창구) 서비스 일시 중단 안내
+              </a>
+            </td>
+            <td><a href="#"></a></td>
+            <td>21.04.13</td>
+            <td>23</td>
+          </tr>
+          <tr>
+            <td>공지</td>
+            <td>
+              <a href="#">
+                [공지] 2021년도 신용평가 안내
+              </a>
+            </td>
+            <td><a href="#"></a></td>
+            <td>21.04.13</td>
+            <td>273</td>
+          </tr>
+          <tr>
+            <td>251</td>
+            <td>
+              <a href="#">
+                제120회 총회(정기) 개최 알림 및 전자위임장 오픈 안내
+              </a>
+            </td>
+            <td><a href="#"></a></td>
+            <td>21.04.13</td>
+            <td>2223</td>
+          </tr>
+          <tr>
+            <td>250</td>
+            <td>
+              <a href="#">
+                (재공고)정보보호 표준 수립 및 ISMS인증 사후심사 컨설팅 용역 입찰공고
+              </a>
+            </td>
+            <td><a href="#"></a></td>
+            <td>21.04.13</td>
+            <td>13</td>
+          </tr>
+          <tr>
+            <td>249</td>
+            <td>
+              <a href="#">
+                건설공제조합 세종필드GC 진입로 조경 보완공사 정정공고
+              </a>
+            </td>
+            <td><a href="#"></a></td>
+            <td>21.04.13</td>
+            <td>55</td>
+          </tr>
+          <tr>
+            <td>248</td>
+            <td>
+              <a href="#">
+                건설회관 본부 건물 내(입주사) 코로나19 확진자 발생 알림
+              </a>
+            </td>
+            <td><a href="#"></a></td>
+            <td>21.04.13</td>
+            <td>93</td>
+          </tr>
+          <tr>
+            <td>247</td>
+            <td>
+              <a href="#">
+                업무안내 동영상(조합 신규가입 및 인터넷창구 이용방법) 게시 알림
+              </a>
+            </td>
+            <td><a href="#"></a></td>
+            <td>21.04.13</td>
+            <td>91</td>
+          </tr>
+          <tr>
+            <td>246</td>
+            <td>
+              <a href="#">
+                좌당 출자지분액 변동 안내 (2021.03.26. 적용)
+              </a>
+            </td>
+            <td><a href="#"></a></td>
+            <td>21.04.13</td>
+            <td>238</td>
+          </tr>
+          <tr>
+            <td>245</td>
+            <td>
+              <a href="#">
+                2021년도 하절기 근무복 품평회 공고
+              </a>
+            </td>
+            <td><a href="#"></a></td>
+            <td>21.04.13</td>
+            <td>153</td>
+          </tr>
+          <tr>
+            <td>244</td>
+            <td>
+              <a href="#">
+                2021년도 전산장비 구입 입찰공고
+              </a>
+            </td>
+            <td><a href="#"></a></td>
+            <td>21.04.13</td>
+            <td>473</td>
+          </tr>
+          <tr>
+            <td>243</td>
+            <td>
+              <a href="#">
+                본사 물리적 망분리 및 정보시스템 인프라 개선 사업 입찰공고
+              </a>
+            </td>
+            <td><a href="#"></a></td>
+            <td>21.04.13</td>
+            <td>230</td>
+          </tr>
+          <tr>
+            <td>242</td>
+            <td>
+              <a href="#">
+                건설공제조합 대구지점(영남보상센터) 입주 건물 내 확진자 발생 알림
+              </a>
+            </td>
+            <td><a href="#"></a></td>
+            <td>21.04.13</td>
+            <td>83</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="pagination">
+        <p class="numbers">
+          <a href="#" class="on">1</a>
+          <a href="#">2</a>
+          <a href="#">3</a>
+          <a href="#">4</a>
+          <a href="#">5</a>
+          <a href="#">6</a>
+          <a href="#">7</a>
+          <a href="#">8</a>
+          <a href="#">9</a>
+          <a href="#">10</a>
+        </p>
+
+        <a href="#" class="next "><span class="h">NEXT</span></a>
+        <a href="#" class="last "><span class="h">LAST</span></a>
+      </div>
     </div>
 
   </section>

@@ -6,12 +6,26 @@
   box-sizing: border-box;
 }
 
-ul, ol, li {
+ul,
+ol,
+li {
   list-style: none;
 }
 
 a {
   text-decoration: none;
+}
+
+.h {
+  position: absolute;
+  top: -9999px;
+  opacity: 0;
+}
+
+table,
+td,
+th {
+  border-collapse: collapse;
 }
 
 #header_sub {
@@ -234,13 +248,14 @@ a {
 
 .content {
   width: 100%;
-  padding: 0 0 150px;
+  padding: 0 0 100px;
 }
 .content .sub_visual {
-  width: 100%;
-  height: 250px;
+  width: 1180px;
+  margin: 0 auto;
+  height: 500px;
   background: #bbb;
-  margin-bottom: 100px;
+  margin-bottom: 30px;
 }
 .content .inner {
   width: 1180px;
@@ -249,8 +264,8 @@ a {
 }
 .content .inner h1 {
   font: normal 50px/1 "arial";
-  color: #000;
-  margin-bottom: 60px;
+  color: #4e6298;
+  margin-bottom: 40px;
 }
 .content .inner h1 span {
   font: normal 20px/1 "맑은 고딕";
@@ -265,7 +280,7 @@ a {
 #footer_sub {
   width: 100%;
   padding: 40px 0;
-  background: #ddd;
+  background: #eee;
 }
 #footer_sub .inner {
   width: 1180px;
@@ -407,8 +422,255 @@ a {
     margin: 0 10px;
   }
 }
-body {
-  background-color: #ececec;
+.community .sub_visual .pic {
+  width: 100%;
+  height: 100%;
+  background: url(../img/community_bg.jpg) no-repeat center/cover;
+}
+.community .inner fieldset {
+  float: right;
+  margin-bottom: 20px;
+  border: none;
+}
+.community .inner fieldset select {
+  width: 80px;
+  padding: 10px 5px;
+  background: #f6f8fa;
+  border: 1px solid #cdd6e1;
+}
+.community .inner fieldset input[type=text] {
+  width: 250px;
+  padding: 10px 5px;
+  background: #f6f8fa;
+  border: 1px solid #cdd6e1;
+}
+.community .inner fieldset input[type=button] {
+  width: 50px;
+  padding: 10px 5px;
+  border-color: black;
+  text-indent: -9999px;
+  background: #282b3a url(../img/btn-search.png) no-repeat center;
+}
+.community .inner table {
+  width: 100%;
+  border-top: 2px solid #cdd6e1;
+  margin-bottom: 30px;
+}
+.community .inner table caption {
+  position: absolute;
+  top: -9999px;
+  left: 0;
+  opacity: 0;
+}
+.community .inner table thead tr {
+  width: 100%;
+  background: #282b3a;
+  font: bold 18px/1 "Noto Sans KR";
+  color: #fff;
+}
+.community .inner table thead tr th {
+  padding: 15px 10px;
+}
+.community .inner table thead tr th:nth-of-type(1) {
+  width: 10%;
+}
+.community .inner table thead tr th:nth-of-type(2) {
+  width: 55%;
+}
+.community .inner table thead tr th:nth-of-type(3) {
+  width: 10%;
+}
+.community .inner table thead tr th:nth-of-type(4) {
+  width: 15%;
+}
+.community .inner table thead tr th:nth-of-type(5) {
+  width: 10%;
+}
+.community .inner table tbody tr {
+  width: 100%;
+  text-align: center;
+  font: normal 12px/1 "Noto Sans KR";
+  color: #444;
+  border-bottom: 1px solid #cdd6e1;
+}
+.community .inner table tbody tr:nth-child(even) {
+  background: #f6f8fa;
+}
+.community .inner table tbody tr td {
+  padding: 15px 10px;
+}
+.community .inner table tbody tr td:nth-of-type(2) {
+  text-align: left;
+}
+.community .inner table tbody tr td:nth-of-type(3) a {
+  background: url(../img/ico-file.png) no-repeat center;
+  display: block;
+  width: 18px;
+  height: 21px;
+  margin: 0 auto;
+}
+.community .inner table tbody tr td a {
+  font: bold 14px/1 "arial";
+  color: #444;
+}
+.community .inner table tbody tr td a span {
+  display: inline-block;
+  background: #282b3a;
+  font-size: 11px;
+  color: #fff;
+  padding: 3px;
+  width: 35px;
+  text-align: center;
+  vertical-align: bottom;
+  border-radius: 7px;
+}
+.community .inner .pagination {
+  width: 100%;
+  text-align: center;
+}
+.community .inner .pagination .numbers {
+  display: inline-block;
+}
+.community .inner .pagination .numbers a {
+  display: inline-block;
+  padding: 10px;
+  font: 14px/1 "arial";
+  color: #333;
+}
+.community .inner .pagination .numbers a.on {
+  color: #444;
+  border-bottom: 2px solid #cdd6e1;
+}
+.community .inner .pagination .next {
+  background: url(../img/btn-next-page.png) no-repeat center;
+  width: 20px;
+  height: 10px;
+  display: inline-block;
+}
+.community .inner .pagination .last {
+  background: url(../img/btn-last-page.png) no-repeat center;
+  width: 20px;
+  height: 10px;
+  display: inline-block;
+}
+
+@media screen and (max-width: 1179px) {
+  body .community .sub_visual {
+    width: 100%;
+  }
+  body .community .inner {
+    width: 100%;
+    padding: 0 20px;
+  }
+  body .community .inner fieldset select {
+    width: 60px;
+  }
+  body .community .inner fieldset input[type=text] {
+    width: 200px;
+  }
+  body .community .inner fieldset input[type=button] {
+    width: 40px;
+  }
+  body .community .inner table thead tr {
+    font: bold 16px/1 "Noto Sans KR";
+  }
+  body .community .inner table thead tr th:nth-of-type(1) {
+    width: 10%;
+    display: none;
+  }
+  body .community .inner table thead tr th:nth-of-type(2) {
+    width: 45%;
+  }
+  body .community .inner table thead tr th:nth-of-type(3) {
+    width: 10%;
+  }
+  body .community .inner table thead tr th:nth-of-type(4) {
+    width: 15%;
+  }
+  body .community .inner table thead tr th:nth-of-type(5) {
+    width: 20%;
+  }
+  body .community .inner table tbody tr td:nth-of-type(1) {
+    display: none;
+  }
+  body .community .inner table tbody tr td a {
+    font: bold 14px/1 "arial";
+    color: #444;
+  }
+  body .community .inner .pagination .numbers a {
+    font: 14px/1 "arial";
+    color: #333;
+  }
+  body .community .inner .pagination .numbers a:nth-of-type(n + 6):nth-of-type(-n + 10) {
+    display: none;
+  }
+}
+@media screen and (max-width: 539px) {
+  body .community .inner h1 {
+    font-size: 24px;
+  }
+  body .community .inner h1 span {
+    font-size: 14px;
+  }
+  body .community .inner fieldset select {
+    width: 50px;
+    padding: 5px 0;
+  }
+  body .community .inner fieldset input[type=text] {
+    width: 150px;
+    padding: 5px 0;
+  }
+  body .community .inner fieldset input[type=button] {
+    width: 40px;
+    padding: 5px 0;
+  }
+  body .community .inner table thead tr {
+    font: bold 14px/1 "Noto Sans KR";
+  }
+  body .community .inner table thead tr th {
+    padding: 10px;
+  }
+  body .community .inner table thead tr th:nth-of-type(1) {
+    width: 10%;
+    display: none;
+  }
+  body .community .inner table thead tr th:nth-of-type(2) {
+    width: 80%;
+  }
+  body .community .inner table thead tr th:nth-of-type(3) {
+    width: 20%;
+  }
+  body .community .inner table thead tr th:nth-of-type(4) {
+    width: 15%;
+    display: none;
+  }
+  body .community .inner table thead tr th:nth-of-type(5) {
+    width: 20%;
+    display: none;
+  }
+  body .community .inner table tbody tr td {
+    padding: 10px;
+  }
+  body .community .inner table tbody tr td:nth-of-type(1) {
+    display: none;
+  }
+  body .community .inner table tbody tr td:nth-of-type(4) {
+    display: none;
+  }
+  body .community .inner table tbody tr td:nth-of-type(5) {
+    display: none;
+  }
+  body .community .inner table tbody tr td a {
+    font: bold 12px/1.3 "arial";
+    color: #444;
+  }
+  body .community .inner .pagination .numbers a {
+    font: 12px/1 "arial";
+    color: #333;
+  }
+  body .community .inner .pagination .numbers a:nth-of-type(n + 6):nth-of-type(-n + 10) {
+    display: none;
+  }
 }
 body .ss {
   position: fixed;
@@ -424,7 +686,7 @@ body #skipNavi li a {
   display: block;
   width: 100%;
   height: 40px;
-  background: darkblue;
+  background: #282b3a;
   font: bold 15px/40px "맑은 고딕";
   color: #fff;
   text-align: center;
@@ -1368,7 +1630,7 @@ body #about .inner .boxWrap > div.right_box ul > li > a {
 body #footer {
   width: 100%;
   padding: 40px 0;
-  background: #ddd;
+  background: #eee;
 }
 body #footer .inner {
   width: 1180px;
