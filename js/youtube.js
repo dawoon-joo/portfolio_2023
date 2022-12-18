@@ -41,6 +41,24 @@ fetch(url)
             <h2>${title}</h2>
             <p>${con}</p>
             <span>${date}</span>
+            <a href='#'>view more</a>
+            <ul class='sns'>
+              <li>
+                <a href='#'>
+                  <i></i>
+                </a>
+              </li>
+              <li>
+                <a href='#'>
+                  <i></i>
+                </a>
+              </li>
+              <li>
+                <a href='#'>
+                  <i></i>
+                </a>
+              </li>
+            </ul>
           </div>
         </article>
       `;

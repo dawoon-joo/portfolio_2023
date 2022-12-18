@@ -15,36 +15,77 @@
 			align-content: flex-start;
 
 			article {
-				width: 48%;
-				border: 1px solid #555;
-				margin-bottom: 40px;
+				position: relative;
+				transition: 0.5s;
+				width: calc(100% / 3 - 30px);
+				height: 400px;
+				background: #f6f8fa;
+				border: 1px solid #cdd6e1;
+				margin-bottom: 30px;
+				box-shadow: 12px 12px 12px 10px rgb(205 214 225 / 30%);
+				overflow: hidden;
 
 				.pic {
 					display: block;
 					width: 100%;
-					height: 60%;
+					height: 50%;
+					overflow: hidden;
 					img {
+						transition: 0.5s;
+						&:hover {
+							transform: scale(1.2);
+						}
 						width: 100%;
 						height: 100%;
 						object-fit: cover;
 					}
 				}
 				.con {
+					display: block;
 					width: 100%;
-					height: 40%;
+					height: 50%;
 					padding: 20px;
 					h2 {
-						font: bold 20px/1.2 'arial';
-						color: #444;
+						font: bold 18px/1.2 'arial';
+						color: #333;
 						margin-bottom: 15px;
 					}
 					p {
 						font: 14px/1.4 'arial';
-						color: #666;
+						color: #888;
 					}
 					span {
-						font: bold 16px/1 'arial';
-						color: orange;
+						font: bold 14px/1 'arial';
+						color: #4e6298;
+					}
+					> a {
+						display: block;
+						width: 100px;
+						height: 30px;
+						background: #eee;
+						text-align: center;
+						border-radius: 5px;
+						font: 14px/30px 'arial';
+						position: absolute;
+						left: 20px;
+						bottom: 20px;
+						transition: 0.5s;
+						color: #000;
+					}
+					.sns {
+						position: absolute;
+						right: 20px;
+						bottom: 20px;
+						li {
+							float: left;
+							a {
+								i {
+									&::before {
+										content: '\f09a';
+									}
+								}
+							}
+						}
 					}
 				}
 			}
@@ -66,6 +107,64 @@
 					right: 50px;
 					color: #fff;
 					cursor: pointer;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $tablet) {
+	body {
+		.youtube {
+			.sub_visual {
+				width: 100%;
+			}
+			.inner {
+				width: 100%;
+				padding: 0 20px;
+				.vidList {
+					article {
+						width: calc(100% / 2 - 30px);
+						.con {
+							h2 {
+								font: bold 18px/1.2 'arial';
+							}
+							p {
+								font: 14px/1.4 'arial';
+							}
+							span {
+								font: bold 14px/1 'arial';
+							}
+							> a {
+								font: 14px/30px 'arial';
+							}
+						}
+					}
+					figure.pop {
+						.btnClose {
+							top: 2vh;
+							right: 2vw;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $mobile) {
+	body {
+		.youtube {
+			.inner {
+				.vidList {
+					article {
+						width: calc(100%);
+					}
+					figure.pop {
+						iframe {
+							height: 50%;
+						}
+					}
 				}
 			}
 		}
