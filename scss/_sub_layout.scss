@@ -389,12 +389,23 @@
 	}
 }
 
-@media screen and (max-width: '750px') {
-	body {
-	}
-}
+// @media screen and (max-width: '750px') {
+// 	body {
+// 	}
+// }
 @media screen and (max-width: $mobile) {
 	body {
+		.content {
+			.inner {
+				padding: 0 20px;
+				h1 {
+					font-size: 24px;
+					span {
+						font-size: 14px;
+					}
+				}
+			}
+		}
 		#footer_sub {
 			padding: 20px 0;
 			.inner {

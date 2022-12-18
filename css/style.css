@@ -377,6 +377,15 @@ th {
   }
 }
 @media screen and (max-width: 539px) {
+  body .content .inner {
+    padding: 0 20px;
+  }
+  body .content .inner h1 {
+    font-size: 24px;
+  }
+  body .content .inner h1 span {
+    font-size: 14px;
+  }
   body #footer_sub {
     padding: 20px 0;
   }
@@ -672,6 +681,321 @@ th {
     display: none;
   }
 }
+.department .sub_visual .pic {
+  width: 100%;
+  height: 100%;
+  background: url(../img/community_bg.jpg) no-repeat center/cover;
+}
+.department .inner {
+  transition: 0.5s;
+}
+.department .inner .company {
+  width: 100%;
+}
+.department .inner .company > ul {
+  width: 100%;
+}
+.department .inner .company > ul > li .profile {
+  width: 200px;
+  text-align: center;
+  margin: 0 auto 100px;
+  border: 1px solid #4e6298;
+  background: #fff;
+  position: relative;
+  padding: 20px;
+}
+.department .inner .company > ul > li .profile::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 50px;
+  position: absolute;
+  bottom: -51px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #4e6298;
+}
+.department .inner .company > ul > li .profile .pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../img/department01.jpg);
+}
+.department .inner .company > ul > li .profile > .txt_box h1 {
+  font: bold 16px/1 "arial";
+  margin-bottom: 5px;
+}
+.department .inner .company > ul > li .profile > .txt_box h2 {
+  font: 14px/1 "arial";
+  margin-bottom: 10px;
+  color: lightpink;
+}
+.department .inner .company > ul > li .profile > .txt_box p {
+  font: 14px/1.3 "arial";
+  margin-bottom: 10px;
+  color: #888;
+}
+.department .inner .company > ul > li .profile .icon_box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.department .inner .company > ul > li .profile .icon_box i {
+  margin: 0 5px;
+  color: #4e6298;
+}
+.department .inner .company > ul > li > ul {
+  width: 100%;
+  position: relative;
+}
+.department .inner .company > ul > li > ul::before {
+  content: "";
+  width: 592px;
+  height: 1px;
+  background: #4e6298;
+  position: absolute;
+  left: 50%;
+  top: -50px;
+  transform: translateX(-50%);
+}
+.department .inner .company > ul > li > ul::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.department .inner .company > ul > li > ul li {
+  float: left;
+  width: 50%;
+}
+.department .inner .company > ul > li > ul li:nth-of-type(1) .pic {
+  background-image: url(../img/department9.jpg);
+}
+.department .inner .company > ul > li > ul li:nth-of-type(2) .pic {
+  background-image: url(../img/department10.jpg);
+}
+.department .inner .company > ul > li > ul li > .profile::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 50px;
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #4e6298;
+}
+.department .inner .company > ul > li > ul li > .profile::before {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 50px;
+  position: absolute;
+  bottom: -51px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #4e6298;
+}
+.department .inner .company > ul > li > ul li > ul {
+  width: 100%;
+  position: relative;
+}
+.department .inner .company > ul > li > ul li > ul::before {
+  content: "";
+  width: 295px;
+  height: 1px;
+  background: #4e6298;
+  position: absolute;
+  left: 50%;
+  top: -50px;
+  transform: translateX(-50%);
+}
+.department .inner .company > ul > li > ul li > ul li {
+  float: left;
+  width: 50%;
+}
+.department .inner .company > ul > li > ul li > ul li:nth-of-type(1) .pic {
+  background-image: url(../img/department7.jpg);
+}
+.department .inner .company > ul > li > ul li > ul li:nth-of-type(2) .pic {
+  background-image: url(../img/department8.jpg);
+}
+.department .inner .company > ul > li > ul li > ul li .profile::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 50px;
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #4e6298;
+}
+.department .inner .company > ul > li > ul li > ul li .profile::before {
+  display: none;
+}
+.department .inner .company > ul > li > ul li:nth-of-type(2) ul li:nth-of-type(1) .pic {
+  background-image: url(../img/department5.jpg);
+}
+.department .inner .company > ul > li > ul li:nth-of-type(2) ul li:nth-of-type(2) .pic {
+  background-image: url(../img/department6.jpg);
+}
+
+@media screen and (max-width: 1179px) {
+  body .department .sub_visual {
+    width: 100%;
+  }
+  body .department .inner {
+    width: 100%;
+  }
+  body .department .inner .company > ul > li > ul::before {
+    width: 50.3vw;
+  }
+  body .department .inner .company > ul > li > ul li > ul::before {
+    content: "";
+    width: 24.9vw;
+  }
+}
+@media screen and (max-width: 880px) {
+  body .department .sub_visual {
+    width: 100%;
+  }
+  body .department .inner {
+    width: 100%;
+  }
+  body .department .inner .company > ul > li .profile::after {
+    display: none;
+  }
+  body .department .inner .company > ul > li > ul::before {
+    display: none;
+  }
+  body .department .inner .company > ul > li > ul li {
+    width: 100%;
+  }
+  body .department .inner .company > ul > li > ul li .profile::after {
+    display: none;
+  }
+  body .department .inner .company > ul > li > ul li > ul::before {
+    content: "";
+    width: 50.4vw;
+  }
+}
+@media screen and (max-width: 539px) {
+  body .department .inner {
+    padding: 0 20px;
+  }
+  body .department .inner .company > ul > li .profile {
+    width: 150px;
+    padding: 10px;
+    margin: 0 auto 80px;
+  }
+  body .department .inner .company > ul > li .profile .pic {
+    width: 100px;
+    height: 100px;
+  }
+  body .department .inner .company > ul > li .profile > .txt_box h1 {
+    font: bold 14px/1 "arial";
+    margin-bottom: 5px;
+  }
+  body .department .inner .company > ul > li .profile > .txt_box h2 {
+    font: 12px/1 "arial";
+    margin-bottom: 10px;
+    color: lightpink;
+  }
+  body .department .inner .company > ul > li .profile > .txt_box p {
+    font: 12px/1.2 "arial";
+    margin-bottom: 10px;
+    color: #888;
+  }
+  body .department .inner .company > ul > li > ul::before {
+    display: none;
+  }
+  body .department .inner .company > ul > li > ul li {
+    width: 100%;
+  }
+  body .department .inner .company > ul > li > ul li .profile::before {
+    height: 32px;
+    bottom: -32px;
+  }
+  body .department .inner .company > ul > li > ul li .profile::after {
+    display: none;
+  }
+  body .department .inner .company > ul > li > ul li > ul::before {
+    content: "";
+    width: 45.5vw;
+  }
+}
+.youtube .sub_visual .pic {
+  width: 100%;
+  height: 100%;
+  background: url(../img/community_bg.jpg) no-repeat center/cover;
+}
+.youtube .inner .vidList {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: flex-start;
+}
+.youtube .inner .vidList article {
+  width: 48%;
+  border: 1px solid #555;
+  margin-bottom: 40px;
+}
+.youtube .inner .vidList article .pic {
+  display: block;
+  width: 100%;
+  height: 60%;
+}
+.youtube .inner .vidList article .pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.youtube .inner .vidList article .con {
+  width: 100%;
+  height: 40%;
+  padding: 20px;
+}
+.youtube .inner .vidList article .con h2 {
+  font: bold 20px/1.2 "arial";
+  color: #444;
+  margin-bottom: 15px;
+}
+.youtube .inner .vidList article .con p {
+  font: 14px/1.4 "arial";
+  color: #666;
+}
+.youtube .inner .vidList article .con span {
+  font: bold 16px/1 "arial";
+  color: orange;
+}
+.youtube .inner .vidList figure.pop {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  padding: 5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.youtube .inner .vidList figure.pop .btnClose {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  color: #fff;
+  cursor: pointer;
+}
+
 body .ss {
   position: fixed;
   top: 0;
