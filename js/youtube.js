@@ -45,17 +45,17 @@ fetch(url)
             <ul class='sns'>
               <li>
                 <a href='#'>
-                  <i></i>
+                  <i class='fab fa-facebook'></i>
                 </a>
               </li>
               <li>
                 <a href='#'>
-                  <i></i>
+                  <i class='fab fa-twitter'></i>
                 </a>
               </li>
               <li>
                 <a href='#'>
-                  <i></i>
+                  <i class='fab fa-instagram'></i>
                 </a>
               </li>
             </ul>

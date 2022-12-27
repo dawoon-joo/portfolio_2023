@@ -930,6 +930,82 @@ th {
     width: 45.5vw;
   }
 }
+.gallery .inner .loading {
+  width: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 1s;
+  opacity: 1;
+}
+.gallery .inner .loading.off {
+  opacity: 0;
+}
+.gallery .inner #list {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: 1s;
+}
+.gallery .inner #list.on {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.gallery .inner #list::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.gallery .inner #list li {
+  width: 25%;
+  float: left;
+  padding: 10px;
+}
+.gallery .inner #list li div {
+  width: 100%;
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+}
+.gallery .inner #list li div a img {
+  width: 100%;
+}
+.gallery .inner #list li div p {
+  font: 12px/1.2 "arial";
+  color: #777;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+aside {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+aside img {
+  height: 100%;
+}
+aside span {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  color: #fff;
+  z-index: 3;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1179px) {
+  .gallery .inner {
+    width: 100%;
+  }
+}
 .youtube .sub_visual .pic {
   width: 100%;
   height: 100%;
@@ -1008,9 +1084,10 @@ th {
 }
 .youtube .inner .vidList article .con .sns li {
   float: left;
+  margin-left: 10px;
 }
-.youtube .inner .vidList article .con .sns li a i::before {
-  content: "\f09a";
+.youtube .inner .vidList article .con .sns li a i {
+  color: #333;
 }
 .youtube .inner .vidList figure.pop {
   width: 100%;

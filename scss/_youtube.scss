@@ -78,11 +78,10 @@
 						bottom: 20px;
 						li {
 							float: left;
+							margin-left: 10px;
 							a {
 								i {
-									&::before {
-										content: '\f09a';
-									}
+									color: #333;
 								}
 							}
 						}
