@@ -6,10 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>portfolio</title>
+  <script type="text/javascript"
+    src="//dapi.kakao.com/v2/maps/sdk.js?appkey=	3b8bb01add99784f6780d17dde6467f5"></script>
   <link rel="stylesheet" href="css/style.css">
   <script src="https://kit.fontawesome.com/5e809a2fdd.js" crossorigin="anonymous"></script>
   <script defer src="js/anime.js"></script>
   <script defer src="js/sub_page.js"></script>
+  <script defer src="js/location.js"></script>
 </head>
 
 <body>
@@ -66,9 +69,89 @@
   </header>
 
   <section class="content location">
-    <div class="sub_visual"></div>
+    <div class="sub_visual">
+      <div class="pic"></div>
+    </div>
     <div class="inner">
-      <h1>Sub title <span>서브페이지 제목</span></h1>
+      <h1>Location <span>지점 오시는 길</span></h1>
+
+      <div id="map"></div>
+      <div class="map_btns">
+        <ul class="traffic">
+          <li><a href="#">교통정보 보기</a></li>
+          <li class="on"><a href="#">교통정보 끄기</a></li>
+        </ul>
+
+        <ul class="branch">
+          <li class="on" data-index="0"><a href="#">본점</a></li>
+          <li><a href="#" data-index="1">지점1</a></li>
+          <li><a href="#" data-index="2">지점2</a></li>
+        </ul>
+      </div>
+
+      <article class="transportation">
+        <h3>Public Transportation</h3>
+        <h2>대중교통</h2>
+        <div class="bus">
+          <p>
+            <img src="img/bus.png" alt="">
+            버스 이용안내
+          </p>
+          <ul>
+            <li><span>정류장</span></li>
+            <li>
+              <span>서현역.AK플라자, 이매촌한신.서현역.AK플라자 하차</span>
+            </li>
+          </ul>
+        </div>
+        <div class="subway">
+          <p>
+            <img src="img/subway.png" alt="">
+            지하철 이용안내
+          </p>
+          <ul>
+            <li><span>수인·분당선</span></li>
+            <li>
+              <span>서현역</span>
+            </li>
+          </ul>
+        </div>
+      </article>
+      <article class="parking">
+        <h3>Parking Information</h3>
+        <h2>주차안내</h2>
+        <table>
+          <caption>주차안내</caption>
+          <thead>
+            <tr>
+              <th scope="col">구분</th>
+              <th scope="col">OPEN</th>
+              <th scope="col">CLOSE</th>
+              <th scope="col">비고</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>A주차장</td>
+              <td>9:00</td>
+              <td>22:00</td>
+              <td>야간강좌</td>
+            </tr>
+            <tr>
+              <td>B주차장</td>
+              <td>9:00</td>
+              <td>22:00</td>
+              <td>19시 이후 입차 불가</td>
+            </tr>
+            <tr>
+              <td>C주차장</td>
+              <td>9:00</td>
+              <td>22:00</td>
+              <td>19시 이후 입차 불가</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
     </div>
 
   </section>

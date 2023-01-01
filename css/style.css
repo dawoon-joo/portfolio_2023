@@ -1060,6 +1060,378 @@ aside span {
     width: 100%;
   }
 }
+.location .sub_visual .pic {
+  width: 100%;
+  height: 100%;
+  background: url(../img/community_bg.jpg) no-repeat center/cover;
+}
+.location .inner .sub_visual .pic {
+  width: 100%;
+  height: 100%;
+  background: url(../img/community_bg.jpg) no-repeat center/cover;
+}
+.location .inner #map {
+  width: 100%;
+  height: 500px;
+  border: 1px solid #000;
+  margin-bottom: 20px;
+}
+.location .inner::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.location .inner .map_btns {
+  width: 100%;
+}
+.location .inner .map_btns::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.location .inner .map_btns .traffic {
+  float: left;
+}
+.location .inner .map_btns .traffic li {
+  float: left;
+}
+.location .inner .map_btns .traffic li a {
+  display: block;
+  width: 200px;
+  height: 40px;
+  background: #f6f8fa;
+  font: bold 12px/40px "맑은 고딕";
+  color: #333;
+  text-align: center;
+  transition: 0.5s;
+}
+.location .inner .map_btns .traffic li.on a {
+  background: #282b3a;
+  color: #fff;
+}
+.location .inner .map_btns .branch {
+  float: right;
+}
+.location .inner .map_btns .branch li {
+  float: left;
+  margin-left: 10px;
+}
+.location .inner .map_btns .branch li a {
+  display: block;
+  width: 200px;
+  height: 40px;
+  background: #f6f8fa;
+  font: bold 12px/40px "맑은 고딕";
+  color: #333;
+  text-align: center;
+  transition: 0.5s;
+}
+.location .inner .map_btns .branch li.on a {
+  background: #282b3a;
+  color: #fff;
+}
+.location .inner .transportation {
+  width: 100%;
+  text-align: center;
+  padding: 50px 0;
+  box-sizing: border-box;
+}
+.location .inner .transportation h3 {
+  font: 16px/1 "arial";
+  color: #005fac;
+  margin-bottom: 10px;
+}
+.location .inner .transportation h2 {
+  font: bold 24px/1 "Noto Sans KR";
+  color: #444;
+  margin-bottom: 30px;
+}
+.location .inner .transportation .bus {
+  text-align-last: center;
+  margin-bottom: 50px;
+}
+.location .inner .transportation .bus p {
+  margin-bottom: 20px;
+  text-align-last: left;
+  font: bold 20px/1 "arial";
+  color: #333;
+}
+.location .inner .transportation .bus p img {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.location .inner .transportation .bus ul {
+  width: 100%;
+  border-top: 1px solid #cdd6e1;
+  border-bottom: 1px solid #cdd6e1;
+}
+.location .inner .transportation .bus ul::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.location .inner .transportation .bus ul li {
+  float: left;
+  padding: 25px;
+  font: 16px/1 "arial";
+  color: #333;
+}
+.location .inner .transportation .bus ul li:nth-of-type(1) {
+  width: 30%;
+  background: #f6f8fa;
+  border-right: 1px solid #cdd6e1;
+}
+.location .inner .transportation .bus ul li:nth-of-type(2) {
+  width: 70%;
+  text-align-last: left;
+  color: #888;
+}
+.location .inner .transportation .subway {
+  text-align-last: center;
+}
+.location .inner .transportation .subway p {
+  margin-bottom: 20px;
+  text-align-last: left;
+  font: bold 20px/1 "arial";
+  color: #333;
+}
+.location .inner .transportation .subway p img {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.location .inner .transportation .subway ul {
+  width: 100%;
+  border-top: 1px solid #cdd6e1;
+  border-bottom: 1px solid #cdd6e1;
+}
+.location .inner .transportation .subway ul::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.location .inner .transportation .subway ul li {
+  float: left;
+  padding: 25px;
+  font: 16px/1 "arial";
+  color: #333;
+}
+.location .inner .transportation .subway ul li:nth-of-type(1) {
+  width: 30%;
+  background: #f6f8fa;
+  border-right: 1px solid #cdd6e1;
+}
+.location .inner .transportation .subway ul li:nth-of-type(2) {
+  width: 70%;
+  text-align-last: left;
+  color: #888;
+}
+.location .inner .parking {
+  width: 100%;
+  text-align: center;
+  padding: 50px 0;
+  box-sizing: border-box;
+}
+.location .inner .parking h3 {
+  font: 16px/1 "arial";
+  color: #005fac;
+  margin-bottom: 10px;
+}
+.location .inner .parking h2 {
+  font: bold 24px/1 "Noto Sans KR";
+  color: #444;
+  margin-bottom: 50px;
+}
+.location .inner .parking table {
+  width: 100%;
+  text-align: center;
+}
+.location .inner .parking table caption {
+  position: absolute;
+  top: -9999px;
+  left: 0;
+  opacity: 0;
+}
+.location .inner .parking table thead {
+  width: 100%;
+}
+.location .inner .parking table thead tr {
+  border-top: 1px solid #005fac;
+  border-bottom: 1px solid #cdd6e1;
+  font: bold 16px/1 "arial";
+  color: #333;
+}
+.location .inner .parking table thead tr th {
+  width: 25%;
+  padding: 25px 0;
+  box-sizing: border-box;
+}
+.location .inner .parking table tbody {
+  width: 100%;
+}
+.location .inner .parking table tbody tr {
+  width: 100%;
+  border-bottom: 1px solid #cdd6e1;
+  background: #f6f8fa;
+  font: 14px/1 "arial";
+  color: #888;
+}
+.location .inner .parking table tbody tr td {
+  width: 25%;
+  padding: 25px 0;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 1179px) {
+  .location .sub_visual {
+    width: 100%;
+  }
+  .location .inner {
+    width: 100%;
+    padding: 0 20px;
+  }
+  .location .inner #map {
+    height: 400px;
+  }
+  .location .inner .map_btns {
+    width: 100%;
+  }
+  .location .inner .map_btns .traffic li a {
+    width: 150px;
+  }
+  .location .inner .map_btns .branch li a {
+    width: 150px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .location .sub_visual {
+    width: 100%;
+  }
+  .location .inner .map_btns {
+    width: 100%;
+  }
+  .location .inner .map_btns .traffic {
+    float: none;
+    display: block;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .location .inner .map_btns .traffic::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+  .location .inner .map_btns .traffic li a {
+    width: 150px;
+  }
+  .location .inner .map_btns .branch {
+    float: none;
+    display: block;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .location .inner .map_btns .branch::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+  .location .inner .map_btns .branch li a {
+    width: 150px;
+  }
+  .location .inner .transportation {
+    padding: 30px 0;
+  }
+  .location .inner .transportation h3 {
+    font: 14px/1 "arial";
+  }
+  .location .inner .transportation h2 {
+    font: bold 18px/1 "Noto Sans KR";
+  }
+  .location .inner .transportation .bus p {
+    font: bold 18px/1 "arial";
+  }
+  .location .inner .transportation .bus ul {
+    height: 70px;
+  }
+  .location .inner .transportation .bus ul li {
+    float: left;
+    height: 100%;
+    padding: 0 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: 14px/1.3 "arial";
+    color: #333;
+  }
+  .location .inner .transportation .bus ul li:nth-of-type(2) {
+    text-align: left;
+  }
+  .location .inner .transportation .subway p {
+    font: bold 18px/1 "arial";
+  }
+  .location .inner .transportation .subway ul {
+    height: 70px;
+  }
+  .location .inner .transportation .subway ul li {
+    font: 14px/1 "arial";
+    height: 100%;
+    padding: 0 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .location .inner .parking {
+    padding: 30px 0;
+  }
+  .location .inner .parking h3 {
+    font: 14px/1 "arial";
+  }
+  .location .inner .parking h2 {
+    font: bold 18px/1 "Noto Sans KR";
+  }
+  .location .inner .parking table thead tr {
+    font: bold 14px/1 "arial";
+  }
+  .location .inner .parking table tbody tr {
+    font: 14px/1.3 "arial";
+  }
+}
+@media screen and (max-width: 539px) {
+  .location .inner .map_btns .traffic li {
+    width: 50%;
+  }
+  .location .inner .map_btns .traffic li a {
+    width: 100%;
+  }
+  .location .inner .map_btns .branch {
+    justify-content: space-around;
+    margin-bottom: 10px;
+  }
+  .location .inner .map_btns .branch li {
+    width: 33.3333333333%;
+  }
+  .location .inner .map_btns .branch li:first-of-type {
+    margin-left: 0;
+  }
+  .location .inner .map_btns .branch li a {
+    width: 100%;
+  }
+  .location .inner .transportation .bus ul li {
+    font: 12px/1.3 "arial";
+  }
+  .location .inner .transportation .subway ul li {
+    font: 12px/1 "arial";
+  }
+  .location .inner .parking table thead tr {
+    font: bold 12px/1 "arial";
+  }
+  .location .inner .parking table tbody tr {
+    font: 12px/1.3 "arial";
+  }
+}
 .youtube .sub_visual .pic {
   width: 100%;
   height: 100%;
