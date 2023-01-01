@@ -1,4 +1,11 @@
 .gallery {
+	.sub_visual {
+		.pic {
+			width: 100%;
+			height: 100%;
+			background: url(../img/community_bg.jpg) no-repeat center/cover;
+		}
+	}
 	.inner {
 		.loading {
 			width: 100px;
@@ -30,23 +37,61 @@
 			li {
 				width: calc(100% / 4);
 				float: left;
-				padding: 10px;
+				padding: 5px;
 				div {
 					width: 100%;
-					background: #fff;
-					padding: 20px;
-					border-radius: 5px;
-					box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+					&:hover {
+						> a {
+							> img {
+								filter: saturate(1);
+							}
+							> span {
+								position: absolute;
+								opacity: 0;
+								bottom: -100px;
+							}
+						}
+					}
 					a {
 						img {
 							width: 100%;
+							border-radius: 5px;
+							box-shadow: 5px 5px 5px grey;
+							filter: saturate(0.1);
+							transition: 0.5s;
 						}
-					}
-					p {
-						font: 12px/1.2 'arial';
-						color: #777;
-						margin-top: 10px;
-						margin-bottom: 10px;
+						> span {
+							position: absolute;
+							left: 0;
+							bottom: 0;
+							display: block;
+							width: 100%;
+							height: 100%;
+							padding: 10px;
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							flex-direction: column;
+							text-align: center;
+							pointer-events: none;
+							transition: 0.5s;
+
+							img {
+								width: 30px;
+								height: 30px;
+								border-radius: 50%;
+								margin-bottom: 1vh;
+							}
+							p {
+								font: 12px/1.2 'arial';
+								color: #fff;
+								margin-bottom: 0.5vh;
+							}
+							strong {
+								font: 12px/1.2 'arial';
+								color: #eee;
+							}
+						}
 					}
 				}
 			}
@@ -79,8 +124,40 @@ aside {
 
 @media screen and (max-width: $tablet) {
 	.gallery {
+		.sub_visual {
+			width: 100%;
+		}
 		.inner {
 			width: 100%;
+			#list {
+				li {
+					width: calc(100% / 3);
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: '880px') {
+	.gallery {
+		.inner {
+			#list {
+				li {
+					width: calc(100% / 2);
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $mobile) {
+	.gallery {
+		.inner {
+			#list {
+				li {
+					width: calc(100% / 1);
+				}
+			}
 		}
 	}
 }

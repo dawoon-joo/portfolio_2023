@@ -14,7 +14,7 @@ const base = 'https://www.flickr.com/services/rest/?';
 const method1 = 'flickr.interestingness.getList'; //가장 관심있는 사진들의 리스트를 가지고오는
 
 const key = '2a1a0aebb34012a99c23e13b49175343';
-const per_page = 30;
+const per_page = 25;
 const format = 'json';
 
 //처음로딩시 호출하는 메서드
@@ -102,12 +102,12 @@ function createList(items) {
       <div>
         <a href=${imgSrcBig}>
           <img class='thumb' src=${imgSrc}>
+					<span>
+					<img class='profile' src="http://farm${el.farm}.staticflickr.com/${el.server}/buddyicons/${el.owner}.jpg">
+					<p>${el.title}</p>
+					<strong>${el.owner}</strong>
+					</span>
         </a>
-        <p>${el.title}</p>
-        <span>
-          <img class='profile' src="http://farm${el.farm}.staticflickr.com/${el.server}/buddyicons/${el.owner}.jpg">
-          <strong>${el.owner}</strong>
-        </span>
       </div>
     </li>
   `;
