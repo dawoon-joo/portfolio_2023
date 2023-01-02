@@ -1,19 +1,15 @@
 const sections = document.querySelectorAll('section');
 const scroll = document.querySelector('#scroll');
 const scroll_lis = scroll.querySelectorAll('li');
-console.log(lis);
 let posArr = [];
 const base = -300;
-// const h1 = document.querySelector('.ss');
 
 for (let el of sections) {
 	posArr.push(el.offsetTop);
 }
-console.log(posArr);
 
 window.addEventListener('scroll', () => {
 	let scroll = window.scrollY || window.pageYOffset;
-	// h1.innerText = scroll;
 	sections.forEach((el, index) => {
 		if (scroll >= posArr[index] + base) {
 			scroll_lis.forEach((el, index) => {
