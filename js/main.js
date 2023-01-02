@@ -134,3 +134,28 @@ btnCall.onclick = function (e) {
 	btnCall.classList.toggle('on');
 	menuMo.classList.toggle('on');
 };
+
+//textmotion
+function txtMotion(el) {
+	setTimeout(() => {
+		el.classList.add('on');
+	}, 500);
+	const txtBox = el.querySelector('.txt_box h1');
+	const txtLen = txtBox.innerText;
+	console.log(txtLen);
+	let txtTags = '';
+	for (const el of txtLen) txtTags += `<span>${el}</span>`;
+	txtBox.innerHTML = txtTags;
+
+	const txtSpan = txtBox.querySelectorAll('span');
+	txtSpan.forEach((el, idx) => {
+		el.style.transitionDelay = 0.1 * (idx / 4) + 's';
+		if (el.innerText == '') {
+			el.style.display = 'initial';
+		}
+	});
+}
+
+window.addEventListener('load', () => {
+	txtMotion(visual);
+});

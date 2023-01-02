@@ -318,6 +318,7 @@ body {
 		width: 100%;
 		padding: 50px 0;
 		margin: 0 auto;
+		overflow: hidden;
 
 		.inner {
 			width: 1180px;
@@ -333,11 +334,19 @@ body {
 				margin-bottom: 40px;
 
 				> h1 {
+					height: 50px;
 					font: bold 36px/1 'arial';
 					color: #444;
-
+					// overflow: hidden;
 					> span {
-						color: $titleColor;
+						display: inline-block;
+						transform: translateY(100%);
+						transition-duration: 0.5s;
+						opacity: 0;
+
+						&:nth-child(n + 22):nth-child(-n + 39) {
+							color: $titleColor;
+						}
 					}
 				}
 
@@ -361,8 +370,10 @@ body {
 				#slider {
 					width: calc(60% - 20px);
 					height: 400px;
+					transform: translateY(120%);
 					position: relative;
 					overflow: hidden;
+					transition: 0.5s;
 
 					ul {
 						position: absolute;
@@ -406,6 +417,8 @@ body {
 
 				.title_box {
 					position: relative;
+					transform: translateY(120%);
+					transition: 0.5s;
 					width: 40%;
 					border-top: 5px solid $titleColor;
 					margin-left: 20px;
@@ -497,11 +510,31 @@ body {
 				}
 			}
 		}
+
+		&.on {
+			.inner {
+				> .txt_box {
+					h1 {
+						span {
+							transform: translateY(0%);
+							opacity: 1;
+						}
+					}
+				}
+				.contents {
+					#slider {
+						transform: translateY(0%);
+					}
+					.title_box {
+						transform: translateY(0%);
+					}
+				}
+			}
+		}
 	}
 
 	#services {
 		width: 100%;
-		padding: 50px 0;
 		transition: 0.5s;
 		.inner {
 			width: 1180px;
@@ -846,7 +879,6 @@ body {
 
 	#projects {
 		width: 100%;
-		padding: 50px 0;
 
 		.inner {
 			width: 1180px;
@@ -1022,7 +1054,6 @@ body {
 
 	#about {
 		width: 100%;
-		padding: 50px 0;
 
 		.inner {
 			width: 1180px;
@@ -1215,6 +1246,43 @@ body {
 					i {
 						font-size: 20px;
 					}
+				}
+			}
+		}
+	}
+
+	section {
+		padding: 50px 0 100px;
+		.inner {
+			position: relative;
+			> h1 {
+				width: 100%;
+				position: absolute;
+				bottom: -100px;
+				left: 0px;
+				font: bold 100px/1 'arial';
+				color: #777;
+				opacity: 0;
+				transform: translateX(100%);
+				transition: 1s;
+			}
+		}
+
+		&:last-of-type {
+			.inner {
+				> h1 {
+					bottom: -80px;
+					text-align: right;
+					padding-right: 40px;
+				}
+			}
+		}
+		&.on {
+			.inner {
+				> h1 {
+					letter-spacing: 1.4;
+					transform: translateX(0%);
+					opacity: 0.2;
 				}
 			}
 		}

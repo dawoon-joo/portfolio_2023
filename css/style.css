@@ -1838,6 +1838,7 @@ body #visual {
   width: 100%;
   padding: 50px 0;
   margin: 0 auto;
+  overflow: hidden;
 }
 body #visual .inner {
   width: 1180px;
@@ -1854,10 +1855,17 @@ body #visual .inner > .txt_box {
   margin-bottom: 40px;
 }
 body #visual .inner > .txt_box > h1 {
+  height: 50px;
   font: bold 36px/1 "arial";
   color: #444;
 }
 body #visual .inner > .txt_box > h1 > span {
+  display: inline-block;
+  transform: translateY(100%);
+  transition-duration: 0.5s;
+  opacity: 0;
+}
+body #visual .inner > .txt_box > h1 > span:nth-child(n+22):nth-child(-n+39) {
   color: #4e6298;
 }
 body #visual .inner > .txt_box > a {
@@ -1878,8 +1886,10 @@ body #visual .inner .contents {
 body #visual .inner .contents #slider {
   width: calc(60% - 20px);
   height: 400px;
+  transform: translateY(120%);
   position: relative;
   overflow: hidden;
+  transition: 0.5s;
 }
 body #visual .inner .contents #slider ul {
   position: absolute;
@@ -1916,6 +1926,8 @@ body #visual .inner .contents #slider ul li[data-index="4"] {
 }
 body #visual .inner .contents .title_box {
   position: relative;
+  transform: translateY(120%);
+  transition: 0.5s;
   width: 40%;
   border-top: 5px solid #4e6298;
   margin-left: 20px;
@@ -1993,9 +2005,18 @@ body #visual .inner .contents .title_box .txt_box > a {
   font: 16px/1 "arial";
   color: #4e6298;
 }
+body #visual.on .inner > .txt_box h1 span {
+  transform: translateY(0%);
+  opacity: 1;
+}
+body #visual.on .inner .contents #slider {
+  transform: translateY(0%);
+}
+body #visual.on .inner .contents .title_box {
+  transform: translateY(0%);
+}
 body #services {
   width: 100%;
-  padding: 50px 0;
   transition: 0.5s;
 }
 body #services .inner {
@@ -2283,7 +2304,6 @@ body #services .inner .boxWrap > div.right_box ul.box4 li .txt_box p {
 }
 body #projects {
   width: 100%;
-  padding: 50px 0;
 }
 body #projects .inner {
   width: 1180px;
@@ -2430,7 +2450,6 @@ body #projects .inner .boxWrap > div.right_box ul li .txt_box .bottom_txt a i {
 }
 body #about {
   width: 100%;
-  padding: 50px 0;
 }
 body #about .inner {
   width: 1180px;
@@ -2591,6 +2610,33 @@ body #footer .inner .bottom_box li {
 }
 body #footer .inner .bottom_box li i {
   font-size: 20px;
+}
+body section {
+  padding: 50px 0 100px;
+}
+body section .inner {
+  position: relative;
+}
+body section .inner > h1 {
+  width: 100%;
+  position: absolute;
+  bottom: -100px;
+  left: 0px;
+  font: bold 100px/1 "arial";
+  color: #777;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: 1s;
+}
+body section:last-of-type .inner > h1 {
+  bottom: -80px;
+  text-align: right;
+  padding-right: 40px;
+}
+body section.on .inner > h1 {
+  letter-spacing: 1.4;
+  transform: translateX(0%);
+  opacity: 0.2;
 }
 
 @media screen and (max-width: 1179px) {
