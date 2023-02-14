@@ -2018,6 +2018,7 @@ body #visual.on .inner .contents .title_box {
 body #services {
   width: 100%;
   transition: 0.5s;
+  overflow: hidden;
 }
 body #services .inner {
   width: 1180px;
@@ -2304,6 +2305,7 @@ body #services .inner .boxWrap > div.right_box ul.box4 li .txt_box p {
 }
 body #projects {
   width: 100%;
+  overflow: hidden;
 }
 body #projects .inner {
   width: 1180px;
@@ -2450,6 +2452,7 @@ body #projects .inner .boxWrap > div.right_box ul li .txt_box .bottom_txt a i {
 }
 body #about {
   width: 100%;
+  overflow: hidden;
 }
 body #about .inner {
   width: 1180px;
@@ -2706,6 +2709,9 @@ body section.on .inner > h1 {
     height: auto;
     margin: 0 auto;
   }
+  body #services .inner > h1 {
+    display: none;
+  }
   body #services .inner .boxWrap {
     width: 100%;
   }
@@ -2934,6 +2940,9 @@ body section.on .inner > h1 {
     margin: 0 auto;
     transition: 0.5s;
   }
+  body #projects .inner > h1 {
+    display: none;
+  }
   body #projects .inner .boxWrap > div {
     float: none;
   }
@@ -2973,6 +2982,9 @@ body section.on .inner > h1 {
     width: 100%;
     height: auto;
     margin: 0 auto;
+  }
+  body #about .inner > h1 {
+    display: none;
   }
   body #about .inner .boxWrap {
     width: 100%;

@@ -536,6 +536,7 @@ body {
 	#services {
 		width: 100%;
 		transition: 0.5s;
+		overflow: hidden;
 		.inner {
 			width: 1180px;
 			height: 370px;
@@ -879,7 +880,7 @@ body {
 
 	#projects {
 		width: 100%;
-
+		overflow: hidden;
 		.inner {
 			width: 1180px;
 			margin: 0 auto;
@@ -1054,7 +1055,7 @@ body {
 
 	#about {
 		width: 100%;
-
+		overflow: hidden;
 		.inner {
 			width: 1180px;
 			height: 370px;
@@ -1372,6 +1373,10 @@ body {
 				height: auto;
 				margin: 0 auto;
 
+				> h1 {
+					display: none;
+				}
+
 				.boxWrap {
 					width: 100%;
 
@@ -1646,6 +1651,10 @@ body {
 				width: 100%;
 				margin: 0 auto;
 				transition: 0.5s;
+
+				> h1 {
+					display: none;
+				}
 				.boxWrap {
 					> div {
 						float: none;
@@ -1692,6 +1701,10 @@ body {
 				width: 100%;
 				height: auto;
 				margin: 0 auto;
+
+				> h1 {
+					display: none;
+				}
 
 				.boxWrap {
 					width: 100%;
